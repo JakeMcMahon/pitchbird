@@ -68,6 +68,48 @@ META = {
             ("Remember your audience", "Investors scan, not read. Lead with what helps their decision. Professional, confident tone throughout."),
             ("Call to action", "End with one specific ask. 'Schedule a 20-minute call.' Not 'we'd love to chat sometime.'"),
         ],
+        "anatomy_zones": [
+            ("Header", "top", "Logo + company name. Often the only thing the partner remembers ten minutes later — make it work.", "1"),
+            ("Headline + USP", "top", "One sentence that earns the next 14 seconds of attention. Lead with the outcome, not the mechanism.", "2"),
+            ("Problem", "mid-l", "Pain in the customer's words. Numbers if you have them, story if you don't.", "3"),
+            ("Solution + visual", "mid-r", "How you remove the pain — paired with a mock-up, screenshot or icon. Visual carries weight here.", "4"),
+            ("Traction", "low-l", "Proof. Revenue, signups, LOIs, pilots. One number beats a paragraph of optimism.", "5"),
+            ("Market + roadmap", "low-r", "Beachhead first, then the trajectory. 6/12/24-month milestones in a single timeline.", "6"),
+            ("Investment ask", "foot-l", "The amount, the structure, the deadline. Specific. No 'flexible'.", "7"),
+            ("Contact", "foot-r", "Name, email, phone, LinkedIn. The most-skipped detail. Don't skip it.", "8"),
+        ],
+        "quotes": [
+            ("You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.", "Steve Jobs", "Founder, Apple", "big"),
+            ("Chase the vision, not the money — the money will end up following you.", "Tony Hsieh", "Founder, Zappos", "small"),
+            ("The best investment you can make is in your own knowledge.", "Warren Buffett", "Berkshire Hathaway", "small"),
+            ("My biggest motivation? Just to keep challenging myself.", "Richard Branson", "Founder, Virgin Group", "small"),
+            ("Success is the journey where you reach and exist in places you never thought of before.", "Jayshree Chhajjer", "Founder, Maitree Utsav", "small"),
+        ],
+        "analytics": [
+            ("Click-through rate", "peach", "cursor-click", "The percentage of recipients who clicked your CTA. The cleanest signal that the one-pager earned a next step.", "Track per source — what works in DMs may flop in cold email."),
+            ("Time on page", "blue", "timer", "How long readers actually spend with it. Under 20 seconds = re-write. Over 90 = lower the density.", "Pair with scroll depth before drawing conclusions."),
+            ("Scroll depth", "green", "arrow-line-down", "How far down they read. Cliffs in the curve show where attention drops — fix that section first.", "Bottom-third drop-off is normal. Top-third drop-off is a red flag."),
+            ("Conversion rate", "lavender", "check-circle", "The percentage who took the requested action — booked, replied, downloaded. The number you optimise everything else for.", "If conv-rate is fine but absolute numbers are tiny, the gap is reach, not the page."),
+            ("A/B testing", "peach", "flask", "Run two versions in parallel. One change per test (headline, hero image, CTA copy). Decide on ≥30 events per arm.", "Smaller decks need ranking judgements, not statistical significance."),
+        ],
+        "optimization": [
+            ("Headline & hook", "rocket-launch", "Test 3–5 versions. The best one outperforms the average by 2–3x — and you won't pick it intuitively."),
+            ("Visual hierarchy", "chart-bar-horizontal", "Move the most-skimmed elements to the top-left and bottom-right — that's where eyes actually land."),
+            ("Content priority", "pencil-simple-line", "Reorder by what the data says — not by what feels logical to the founder. Engagement signals beat outline-logic."),
+            ("CTA testing", "cursor-click", "Position, colour, copy. 'Book a 15-min call' converts higher than 'Get in touch' on every cohort we've measured."),
+            ("Personalisation", "user-focus", "Swap the lede paragraph per investor persona. The rest stays. Drives 30–60% lifts on warm sends."),
+            ("Mobile optimisation", "device-mobile", "Most first reads happen on a phone. If the headline wraps to four lines on mobile, the document is broken."),
+            ("Channel integration", "megaphone-simple", "The one-pager and the email + DM and the deck all use the same headline, the same numbers, the same proof points. Consistency compounds."),
+            ("Feedback loop", "arrows-clockwise", "Ship, measure, edit, re-ship — weekly. The one-pager you send in month three should be unrecognisable from month one."),
+        ],
+        "reading": [
+            ("The One Page Proposal", "Patrick G. Riley", "The original framework. Forces you to defend every line on the page."),
+            ("Made to Stick", "Chip & Dan Heath", "Why some ideas survive. Six principles — apply all of them to your one-pager."),
+            ("Business Model Generation", "Osterwalder & Pigneur", "The Business Model Canvas — a different one-pager that pairs well with the investor version."),
+            ("The Lean Startup", "Eric Ries", "Validate before you polish. Your one-pager evolves with the business — let it."),
+            ("The One Page Marketing Plan", "Allan Dib", "Marketing-focused, but the brevity discipline transfers directly to investor docs."),
+            ("Storyworthy", "Matthew Dicks", "The 'homework for life' principle — find the moment in your founder story that actually lands."),
+        ],
         "advantages": [
             "Respects the investor's time — and signals you respect it too.",
             "Forces sharper thinking. If it doesn't fit on a page, the idea isn't focused yet.",
@@ -176,6 +218,50 @@ def html(meta):
     adv = "".join(f"<li>{x}</li>" for x in meta["advantages"])
     lim = "".join(f"<li>{x}</li>" for x in meta["limitations"])
 
+    # Anatomy zones (page 5)
+    anatomy_map_html = "".join(
+        f'<div class="az {zone}"><span class="az-num">{num}</span><span class="az-label">{label}</span></div>'
+        for label, zone, _desc, num in meta["anatomy_zones"]
+    )
+    anatomy_list_html = "".join(
+        f'<div class="anatomy-li"><div class="anatomy-li-num">{num}</div>'
+        f'<div><div class="anatomy-li-label">{label}</div>'
+        f'<div class="anatomy-li-desc">{desc}</div></div></div>'
+        for label, _zone, desc, num in meta["anatomy_zones"]
+    )
+
+    # Quotes (page 6) — first is big, rest in 2-col
+    qcards_html = "".join(
+        f'<div class="qcard {size}"><div class="qcard-mark">&ldquo;</div>'
+        f'<div class="qcard-text">{text}</div>'
+        f'<div class="qcard-attr">{name}</div>'
+        f'<div class="qcard-role">{role}</div></div>'
+        for text, name, role, size in meta["quotes"]
+    )
+
+    # Analytics callouts (page 7) — reuse callout_card with extra icons
+    analytics_html = "".join(
+        callout_card(theme, label, icon, headline, body)
+        for label, theme, icon, headline, body in meta["analytics"]
+    )
+
+    # Optimization rows (page 8)
+    opt_html = "".join(
+        f'<div class="opt-row"><div class="opt-icon">{icon_svg(icon)}</div>'
+        f'<div><div class="opt-body-label">{label}</div>'
+        f'<div class="opt-body-desc">{desc}</div></div></div>'
+        for label, icon, desc in meta["optimization"]
+    )
+
+    # Reading list (page 9)
+    read_html = "".join(
+        f'<div class="book"><div class="book-mark">{icon_svg("book-open-text")}</div>'
+        f'<div><div class="book-title">{title}</div>'
+        f'<div class="book-author">{author}</div>'
+        f'<div class="book-take">{take}</div></div></div>'
+        for title, author, take in meta["reading"]
+    )
+
     arrow = page_arrow()
 
     return f"""<!DOCTYPE html>
@@ -217,7 +303,7 @@ def html(meta):
 html, body {{
   font-family: Arial, 'Mulish', sans-serif;
   color: var(--ink);
-  background: var(--paper);
+  background: var(--navy);
   font-size: 11pt;
   line-height: 1.45;
   letter-spacing: -0.01em;
@@ -365,15 +451,17 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   font-size: 11pt;
   line-height: 1.55;
   color: var(--ink);
-  padding-left: 8mm;
+  padding-left: 7mm;
   position: relative;
   margin-bottom: 1.5mm;
 }}
 .cover-bullets li::before {{
   content: "";
   position: absolute;
-  left: 0; top: 2.5mm;
-  width: 3.5mm; height: 3.5mm;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.1mm; height: 2.1mm;
   background: var(--gold);
   border-radius: 50%;
 }}
@@ -664,6 +752,216 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 .callout-blue     .callout-icon svg {{ color: #1B6FA8; }}
 .callout-green    .callout-icon svg {{ color: #1A7240; }}
 .callout-lavender .callout-icon svg {{ color: #5B408C; }}
+
+/* ===== Anatomy map (page 5) ===== */
+.anatomy {{
+  margin-top: 4mm;
+  display: grid;
+  grid-template-columns: 0.8fr 1.05fr;
+  gap: 8mm;
+  align-items: start;
+}}
+.anatomy-map {{
+  background: #F4F1EA;
+  border-radius: 4mm;
+  padding: 5mm;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+  aspect-ratio: 0.78;
+  position: relative;
+}}
+.az {{
+  background: #fff;
+  border: 1.4pt solid var(--line);
+  border-radius: 2.5mm;
+  padding: 3mm 3.5mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 16mm;
+}}
+.az-num {{
+  position: absolute;
+  top: 2mm; right: 3mm;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 10pt;
+  color: var(--gold);
+}}
+.az-label {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 9pt;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}}
+.az.top {{ grid-column: 1 / -1; }}
+.az.foot-l {{ grid-column: 1; }}
+.az.foot-r {{ grid-column: 2; }}
+.anatomy-list {{ display: flex; flex-direction: column; gap: 3mm; }}
+.anatomy-li {{
+  display: flex;
+  gap: 4mm;
+  padding-top: 2.5mm;
+  border-top: 1pt solid var(--line);
+}}
+.anatomy-li:first-child {{ border-top: none; padding-top: 0; }}
+.anatomy-li-num {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 13pt;
+  color: var(--gold);
+  min-width: 7mm;
+  line-height: 1;
+}}
+.anatomy-li-label {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 10.5pt;
+  margin-bottom: 0.5mm;
+  letter-spacing: -0.005em;
+}}
+.anatomy-li-desc {{
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: var(--ink-2);
+}}
+
+/* ===== Quotes spread (page 6) ===== */
+.quote-grid {{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 4mm;
+  margin-top: 4mm;
+}}
+.qcard {{
+  background: #F4F1EA;
+  border-radius: 4mm;
+  padding: 7mm 7mm 7mm 7mm;
+  position: relative;
+}}
+.qcard-mark {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 36pt;
+  color: var(--gold);
+  line-height: 0.8;
+  margin-bottom: 2mm;
+}}
+.qcard-text {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1.35;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 4mm;
+}}
+.qcard-attr {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 9pt;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}}
+.qcard-role {{
+  font-family: Arial, sans-serif;
+  font-size: 8.5pt;
+  color: var(--muted);
+  margin-top: 0.5mm;
+}}
+.qcard.big {{
+  grid-column: 1 / -1;
+  background: var(--navy);
+  color: var(--paper);
+}}
+.qcard.big .qcard-text {{ color: var(--paper); font-size: 16pt; line-height: 1.3; }}
+.qcard.big .qcard-attr {{ color: var(--gold); }}
+.qcard.big .qcard-role {{ color: rgba(255,255,255,0.55); }}
+
+/* ===== Optimization grid (page 8) ===== */
+.opt-grid {{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+  margin-top: 5mm;
+}}
+.opt-row {{
+  display: flex;
+  gap: 4mm;
+  padding: 4mm 0;
+  border-top: 1.4pt solid var(--line);
+}}
+.opt-icon {{
+  width: 9mm; height: 9mm;
+  flex-shrink: 0;
+  background: #FDF1DA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}}
+.opt-icon svg {{ width: 5mm; height: 5mm; color: #C77A0A; }}
+.opt-body-label {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 11pt;
+  margin-bottom: 1mm;
+  letter-spacing: -0.005em;
+}}
+.opt-body-desc {{
+  font-family: Arial, sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.5;
+  color: var(--ink-2);
+}}
+
+/* ===== Reading grid (page 9) ===== */
+.read-grid {{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+  margin-top: 5mm;
+}}
+.book {{
+  display: flex;
+  gap: 4mm;
+  align-items: flex-start;
+  padding: 4mm 5mm;
+  background: #F4F1EA;
+  border-radius: 3mm;
+  border-left: 3pt solid var(--gold);
+}}
+.book-mark {{ flex-shrink: 0; }}
+.book-mark svg {{ width: 7mm; height: 7mm; color: var(--ink); }}
+.book-title {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 11pt;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5mm;
+}}
+.book-author {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 8.5pt;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2mm;
+}}
+.book-take {{
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: var(--ink-2);
+}}
 .callout-headline {{
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 900;
@@ -918,14 +1216,109 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 5 — CLOSE + CTA ============= -->
+<!-- ============= PAGE 5 — ANATOMY MAP ============= -->
+<div class="page">
+  {header('www.magdalenareith.com')}
+  <div class="body">
+    {kicker('05:', 'Anatomy')}
+    <h2>Where everything goes on the page</h2>
+    <p style="max-width:150mm;">Investors don't read a one-pager — they scan it in a Z-shape, top-left to bottom-right. The eight elements earn their spot only when they sit where eyes already land.</p>
+    <div class="anatomy">
+      <div class="anatomy-map">{anatomy_map_html}</div>
+      <div class="anatomy-list">{anatomy_list_html}</div>
+    </div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">05</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 6 — QUOTES SPREAD ============= -->
+<div class="page">
+  {header('www.pitchbird.de')}
+  <div class="body">
+    {kicker('06:', 'Wisdom')}
+    <h2>Five lines worth living by</h2>
+    <p style="max-width:150mm;">Hung on Pitchbird's studio wall. They're not pitch-deck tips — they're reminders for the weeks when the deal stalls and the founder forgets why the work is worth it.</p>
+    <div class="quote-grid">{qcards_html}</div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">06</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 7 — ANALYTICS ============= -->
+<div class="page">
+  {header('www.magdalenareith.com')}
+  <div class="body">
+    {kicker('07:', 'Measurement')}
+    <h2>Track what actually matters</h2>
+    <p style="max-width:150mm;">A one-pager that no-one measures is a guess in a folder. Five signals tell you whether the document is doing the job — and which line in it is doing the heavy lifting.</p>
+    <div class="callouts" style="grid-template-columns:1fr 1fr;">
+      {analytics_html}
+    </div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">07</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 8 — OPTIMIZATION ============= -->
+<div class="page">
+  {header('www.pitchbird.de')}
+  <div class="body">
+    {kicker('08:', 'Optimisation')}
+    <h2>Eight moves that compound</h2>
+    <p style="max-width:150mm;">No single tweak doubles your conversion. Eight small tweaks, run with discipline over six weeks, almost always do. These are the moves we run in the Pitchbird studio whenever a one-pager underperforms.</p>
+    <div class="opt-grid">{opt_html}</div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">08</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 9 — RECOMMENDED READING ============= -->
+<div class="page">
+  {header('www.magdalenareith.com')}
+  <div class="body">
+    {kicker('09:', 'Further reading')}
+    <h2>Six books that sharpen the page</h2>
+    <p style="max-width:150mm;">Pitchbird's recommended reading for founders writing — or rewriting — their one-pager. Brevity, story, and the discipline of leaving things out.</p>
+    <div class="read-grid">{read_html}</div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">09</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 10 — CLOSE + CTA ============= -->
 <div class="page close">
   <div class="cover-band">
     <img src="{LOGO}" alt="Pitchbird">
     <div class="hdr-url">www.pitchbird.de</div>
   </div>
   <div class="body" style="padding-top:34mm;">
-    {kicker('05:', 'Trade-offs')}
+    {kicker('10:', 'Trade-offs')}
     <h2>What it gives you<br>— and what it can't</h2>
     <div class="adv-lim">
       <div class="adv">
@@ -951,7 +1344,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">05</span>
+      <span class="page-num">10</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
@@ -984,8 +1377,9 @@ async def go():
         b = await p.chromium.launch()
         page = await b.new_page()
         await page.goto('file://{html_path.resolve()}', wait_until='networkidle')
-        await page.pdf(path='{pdf_path.resolve()}', format='A4',
-                       print_background=True,
+        await page.pdf(path='{pdf_path.resolve()}',
+                       width='210mm', height='297mm',
+                       print_background=True, prefer_css_page_size=True,
                        margin={{'top':'0','bottom':'0','left':'0','right':'0'}})
         await b.close()
 asyncio.run(go())

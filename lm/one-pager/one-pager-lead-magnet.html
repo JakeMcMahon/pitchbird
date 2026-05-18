@@ -37,7 +37,7 @@
 html, body {
   font-family: Arial, 'Mulish', sans-serif;
   color: var(--ink);
-  background: var(--paper);
+  background: var(--navy);
   font-size: 11pt;
   line-height: 1.45;
   letter-spacing: -0.01em;
@@ -185,15 +185,17 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   font-size: 11pt;
   line-height: 1.55;
   color: var(--ink);
-  padding-left: 8mm;
+  padding-left: 7mm;
   position: relative;
   margin-bottom: 1.5mm;
 }
 .cover-bullets li::before {
   content: "";
   position: absolute;
-  left: 0; top: 2.5mm;
-  width: 3.5mm; height: 3.5mm;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.1mm; height: 2.1mm;
   background: var(--gold);
   border-radius: 50%;
 }
@@ -484,6 +486,216 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 .callout-blue     .callout-icon svg { color: #1B6FA8; }
 .callout-green    .callout-icon svg { color: #1A7240; }
 .callout-lavender .callout-icon svg { color: #5B408C; }
+
+/* ===== Anatomy map (page 5) ===== */
+.anatomy {
+  margin-top: 4mm;
+  display: grid;
+  grid-template-columns: 0.8fr 1.05fr;
+  gap: 8mm;
+  align-items: start;
+}
+.anatomy-map {
+  background: #F4F1EA;
+  border-radius: 4mm;
+  padding: 5mm;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+  aspect-ratio: 0.78;
+  position: relative;
+}
+.az {
+  background: #fff;
+  border: 1.4pt solid var(--line);
+  border-radius: 2.5mm;
+  padding: 3mm 3.5mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 16mm;
+}
+.az-num {
+  position: absolute;
+  top: 2mm; right: 3mm;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 10pt;
+  color: var(--gold);
+}
+.az-label {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 9pt;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.az.top { grid-column: 1 / -1; }
+.az.foot-l { grid-column: 1; }
+.az.foot-r { grid-column: 2; }
+.anatomy-list { display: flex; flex-direction: column; gap: 3mm; }
+.anatomy-li {
+  display: flex;
+  gap: 4mm;
+  padding-top: 2.5mm;
+  border-top: 1pt solid var(--line);
+}
+.anatomy-li:first-child { border-top: none; padding-top: 0; }
+.anatomy-li-num {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 13pt;
+  color: var(--gold);
+  min-width: 7mm;
+  line-height: 1;
+}
+.anatomy-li-label {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 10.5pt;
+  margin-bottom: 0.5mm;
+  letter-spacing: -0.005em;
+}
+.anatomy-li-desc {
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+
+/* ===== Quotes spread (page 6) ===== */
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 4mm;
+  margin-top: 4mm;
+}
+.qcard {
+  background: #F4F1EA;
+  border-radius: 4mm;
+  padding: 7mm 7mm 7mm 7mm;
+  position: relative;
+}
+.qcard-mark {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 36pt;
+  color: var(--gold);
+  line-height: 0.8;
+  margin-bottom: 2mm;
+}
+.qcard-text {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1.35;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 4mm;
+}
+.qcard-attr {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 9pt;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.qcard-role {
+  font-family: Arial, sans-serif;
+  font-size: 8.5pt;
+  color: var(--muted);
+  margin-top: 0.5mm;
+}
+.qcard.big {
+  grid-column: 1 / -1;
+  background: var(--navy);
+  color: var(--paper);
+}
+.qcard.big .qcard-text { color: var(--paper); font-size: 16pt; line-height: 1.3; }
+.qcard.big .qcard-attr { color: var(--gold); }
+.qcard.big .qcard-role { color: rgba(255,255,255,0.55); }
+
+/* ===== Optimization grid (page 8) ===== */
+.opt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+  margin-top: 5mm;
+}
+.opt-row {
+  display: flex;
+  gap: 4mm;
+  padding: 4mm 0;
+  border-top: 1.4pt solid var(--line);
+}
+.opt-icon {
+  width: 9mm; height: 9mm;
+  flex-shrink: 0;
+  background: #FDF1DA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.opt-icon svg { width: 5mm; height: 5mm; color: #C77A0A; }
+.opt-body-label {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 11pt;
+  margin-bottom: 1mm;
+  letter-spacing: -0.005em;
+}
+.opt-body-desc {
+  font-family: Arial, sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* ===== Reading grid (page 9) ===== */
+.read-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+  margin-top: 5mm;
+}
+.book {
+  display: flex;
+  gap: 4mm;
+  align-items: flex-start;
+  padding: 4mm 5mm;
+  background: #F4F1EA;
+  border-radius: 3mm;
+  border-left: 3pt solid var(--gold);
+}
+.book-mark { flex-shrink: 0; }
+.book-mark svg { width: 7mm; height: 7mm; color: var(--ink); }
+.book-title {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 11pt;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5mm;
+}
+.book-author {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 8.5pt;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2mm;
+}
+.book-take {
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
 .callout-headline {
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 900;
@@ -858,14 +1070,169 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 5 — CLOSE + CTA ============= -->
+<!-- ============= PAGE 5 — ANATOMY MAP ============= -->
+<div class="page">
+  
+<div class="hdr">
+  <img class="hdr-logo" src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
+  <div class="hdr-url">www.magdalenareith.com</div>
+</div>
+  <div class="body">
+    <div class="kicker"><span class="kicker-num">05:</span><span class="kicker-label">Anatomy</span></div>
+    <h2>Where everything goes on the page</h2>
+    <p style="max-width:150mm;">Investors don't read a one-pager — they scan it in a Z-shape, top-left to bottom-right. The eight elements earn their spot only when they sit where eyes already land.</p>
+    <div class="anatomy">
+      <div class="anatomy-map"><div class="az top"><span class="az-num">1</span><span class="az-label">Header</span></div><div class="az top"><span class="az-num">2</span><span class="az-label">Headline + USP</span></div><div class="az mid-l"><span class="az-num">3</span><span class="az-label">Problem</span></div><div class="az mid-r"><span class="az-num">4</span><span class="az-label">Solution + visual</span></div><div class="az low-l"><span class="az-num">5</span><span class="az-label">Traction</span></div><div class="az low-r"><span class="az-num">6</span><span class="az-label">Market + roadmap</span></div><div class="az foot-l"><span class="az-num">7</span><span class="az-label">Investment ask</span></div><div class="az foot-r"><span class="az-num">8</span><span class="az-label">Contact</span></div></div>
+      <div class="anatomy-list"><div class="anatomy-li"><div class="anatomy-li-num">1</div><div><div class="anatomy-li-label">Header</div><div class="anatomy-li-desc">Logo + company name. Often the only thing the partner remembers ten minutes later — make it work.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">2</div><div><div class="anatomy-li-label">Headline + USP</div><div class="anatomy-li-desc">One sentence that earns the next 14 seconds of attention. Lead with the outcome, not the mechanism.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">3</div><div><div class="anatomy-li-label">Problem</div><div class="anatomy-li-desc">Pain in the customer's words. Numbers if you have them, story if you don't.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">4</div><div><div class="anatomy-li-label">Solution + visual</div><div class="anatomy-li-desc">How you remove the pain — paired with a mock-up, screenshot or icon. Visual carries weight here.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">5</div><div><div class="anatomy-li-label">Traction</div><div class="anatomy-li-desc">Proof. Revenue, signups, LOIs, pilots. One number beats a paragraph of optimism.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">6</div><div><div class="anatomy-li-label">Market + roadmap</div><div class="anatomy-li-desc">Beachhead first, then the trajectory. 6/12/24-month milestones in a single timeline.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">7</div><div><div class="anatomy-li-label">Investment ask</div><div class="anatomy-li-desc">The amount, the structure, the deadline. Specific. No 'flexible'.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">8</div><div><div class="anatomy-li-label">Contact</div><div class="anatomy-li-desc">Name, email, phone, LinkedIn. The most-skipped detail. Don't skip it.</div></div></div></div>
+    </div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">05</span>
+      <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 6 — QUOTES SPREAD ============= -->
+<div class="page">
+  
+<div class="hdr">
+  <img class="hdr-logo" src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
+  <div class="hdr-url">www.pitchbird.de</div>
+</div>
+  <div class="body">
+    <div class="kicker"><span class="kicker-num">06:</span><span class="kicker-label">Wisdom</span></div>
+    <h2>Five lines worth living by</h2>
+    <p style="max-width:150mm;">Hung on Pitchbird's studio wall. They're not pitch-deck tips — they're reminders for the weeks when the deal stalls and the founder forgets why the work is worth it.</p>
+    <div class="quote-grid"><div class="qcard big"><div class="qcard-mark">&ldquo;</div><div class="qcard-text">You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.</div><div class="qcard-attr">Steve Jobs</div><div class="qcard-role">Founder, Apple</div></div><div class="qcard small"><div class="qcard-mark">&ldquo;</div><div class="qcard-text">Chase the vision, not the money — the money will end up following you.</div><div class="qcard-attr">Tony Hsieh</div><div class="qcard-role">Founder, Zappos</div></div><div class="qcard small"><div class="qcard-mark">&ldquo;</div><div class="qcard-text">The best investment you can make is in your own knowledge.</div><div class="qcard-attr">Warren Buffett</div><div class="qcard-role">Berkshire Hathaway</div></div><div class="qcard small"><div class="qcard-mark">&ldquo;</div><div class="qcard-text">My biggest motivation? Just to keep challenging myself.</div><div class="qcard-attr">Richard Branson</div><div class="qcard-role">Founder, Virgin Group</div></div><div class="qcard small"><div class="qcard-mark">&ldquo;</div><div class="qcard-text">Success is the journey where you reach and exist in places you never thought of before.</div><div class="qcard-attr">Jayshree Chhajjer</div><div class="qcard-role">Founder, Maitree Utsav</div></div></div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">06</span>
+      <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 7 — ANALYTICS ============= -->
+<div class="page">
+  
+<div class="hdr">
+  <img class="hdr-logo" src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
+  <div class="hdr-url">www.magdalenareith.com</div>
+</div>
+  <div class="body">
+    <div class="kicker"><span class="kicker-num">07:</span><span class="kicker-label">Measurement</span></div>
+    <h2>Track what actually matters</h2>
+    <p style="max-width:150mm;">A one-pager that no-one measures is a guess in a folder. Five signals tell you whether the document is doing the job — and which line in it is doing the heavy lifting.</p>
+    <div class="callouts" style="grid-template-columns:1fr 1fr;">
+      
+<div class="callout callout-peach">
+  <div class="callout-head-row">
+    <div class="callout-pill"><span class="callout-pill-label">Click-through rate</span></div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,201,201,213.66a8,8,0,0,1-11.31,0L140,164a8,8,0,0,0-13,2.46l-19.46,44.77a8,8,0,0,1-14.85-.71L40.41,50.44a8,8,0,0,1,10-10L210.51,92.68a8,8,0,0,1,.71,14.85L166.45,127A8,8,0,0,0,164,140l49.67,49.67A8,8,0,0,1,213.66,201Z" opacity="0.2"/><path d="M169.64,134.33l44.77-19.46A16,16,0,0,0,213,85.07L52.92,32.8A16,16,0,0,0,32.8,52.92L85.07,213a15.83,15.83,0,0,0,14.41,11l.79,0a15.83,15.83,0,0,0,14.6-9.59h0l19.46-44.77L184,219.31a16,16,0,0,0,22.63,0l12.68-12.68a16,16,0,0,0,0-22.63Zm-69.48,73.76.06-.05Zm95.15-.09-49.66-49.67a16,16,0,0,0-26,4.94l-19.42,44.65L48,48l159.87,52.21-44.64,19.41a16,16,0,0,0-4.94,26L208,195.31ZM88,24V16a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0ZM8,96a8,8,0,0,1,8-8h8a8,8,0,0,1,0,16H16A8,8,0,0,1,8,96ZM120.85,28.42l8-16a8,8,0,0,1,14.31,7.16l-8,16a8,8,0,1,1-14.31-7.16Zm-81.69,96a8,8,0,0,1-3.58,10.74l-16,8a8,8,0,0,1-7.16-14.31l16-8A8,8,0,0,1,39.16,124.42Z"/></svg></div>
+  </div>
+  <div class="callout-headline">The percentage of recipients who clicked your CTA. The cleanest signal that the one-pager earned a next step.</div>
+  <div class="callout-body">Track per source — what works in DMs may flop in cold email.</div>
+</div>
+<div class="callout callout-blue">
+  <div class="callout-head-row">
+    <div class="callout-pill"><span class="callout-pill-label">Time on page</span></div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,136a88,88,0,1,1-88-88A88,88,0,0,1,216,136Z" opacity="0.2"/><path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/></svg></div>
+  </div>
+  <div class="callout-headline">How long readers actually spend with it. Under 20 seconds = re-write. Over 90 = lower the density.</div>
+  <div class="callout-body">Pair with scroll depth before drawing conclusions.</div>
+</div>
+<div class="callout callout-green">
+  <div class="callout-head-row">
+    <div class="callout-pill"><span class="callout-pill-label">Scroll depth</span></div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,112l-72,72L56,112Z" opacity="0.2"/><path d="M122.34,189.66a8,8,0,0,0,11.32,0l72-72A8,8,0,0,0,200,104H136V32a8,8,0,0,0-16,0v72H56a8,8,0,0,0-5.66,13.66ZM180.69,120,128,172.69,75.31,120ZM224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,216Z"/></svg></div>
+  </div>
+  <div class="callout-headline">How far down they read. Cliffs in the curve show where attention drops — fix that section first.</div>
+  <div class="callout-body">Bottom-third drop-off is normal. Top-third drop-off is a red flag.</div>
+</div>
+<div class="callout callout-lavender">
+  <div class="callout-head-row">
+    <div class="callout-pill"><span class="callout-pill-label">Conversion rate</span></div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></div>
+  </div>
+  <div class="callout-headline">The percentage who took the requested action — booked, replied, downloaded. The number you optimise everything else for.</div>
+  <div class="callout-body">If conv-rate is fine but absolute numbers are tiny, the gap is reach, not the page.</div>
+</div>
+<div class="callout callout-peach">
+  <div class="callout-head-row">
+    <div class="callout-pill"><span class="callout-pill-label">A/B testing</span></div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,216H48a8,8,0,0,1-6.86-12.12l30.48-50.8h0c13.23-2.48,32-1.41,56.37,10.92,32.25,16.33,54.75,12.91,67.5,7.65h0l19.34,32.23A8,8,0,0,1,208,216Z" opacity="0.2"/><path d="M221.69,199.77,160,96.92V40h8a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16h8V96.92L34.31,199.77A16,16,0,0,0,48,224H208a16,16,0,0,0,13.72-24.23ZM110.86,103.25A7.93,7.93,0,0,0,112,99.14V40h32V99.14a7.93,7.93,0,0,0,1.14,4.11L183.36,167c-12,2.37-29.07,1.37-51.75-10.11-15.91-8.05-31.05-12.32-45.22-12.81ZM48,208l28.54-47.58c14.25-1.73,30.31,1.85,47.82,10.72,19,9.61,35,12.88,48,12.88a69.89,69.89,0,0,0,19.55-2.7L208,208Z"/></svg></div>
+  </div>
+  <div class="callout-headline">Run two versions in parallel. One change per test (headline, hero image, CTA copy). Decide on ≥30 events per arm.</div>
+  <div class="callout-body">Smaller decks need ranking judgements, not statistical significance.</div>
+</div>
+    </div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">07</span>
+      <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 8 — OPTIMIZATION ============= -->
+<div class="page">
+  
+<div class="hdr">
+  <img class="hdr-logo" src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
+  <div class="hdr-url">www.pitchbird.de</div>
+</div>
+  <div class="body">
+    <div class="kicker"><span class="kicker-num">08:</span><span class="kicker-label">Optimisation</span></div>
+    <h2>Eight moves that compound</h2>
+    <p style="max-width:150mm;">No single tweak doubles your conversion. Eight small tweaks, run with discipline over six weeks, almost always do. These are the moves we run in the Pitchbird studio whenever a one-pager underperforms.</p>
+    <div class="opt-grid"><div class="opt-row"><div class="opt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M72,160l24,24s-8,32-56,32C40,168,72,160,72,160Zm64-88H74.35a8,8,0,0,0-5.65,2.34L34.35,108.69a8,8,0,0,0,4.53,13.57L80,128Zm-8,104,5.74,41.12a8,8,0,0,0,13.57,4.53l34.35-34.35a8,8,0,0,0,2.34-5.65V120Z" opacity="0.2"/><path d="M103.77,185.94C103.38,187.49,93.63,224,40,224a8,8,0,0,1-8-8c0-53.63,36.51-63.38,38.06-63.77a8,8,0,0,1,3.88,15.53c-.9.25-22.42,6.54-25.56,39.86C81.7,204.48,88,183,88.26,182a8,8,0,0,1,15.51,4Zm93-67.4L192,123.31v58.33A15.91,15.91,0,0,1,187.32,193L153,227.3A15.91,15.91,0,0,1,141.7,232a16.11,16.11,0,0,1-5.1-.83,15.94,15.94,0,0,1-10.78-12.92l-5.37-38.49L76.24,135.55l-38.47-5.37A16,16,0,0,1,28.7,103L63,68.68A15.91,15.91,0,0,1,74.36,64h58.33l4.77-4.77c26.68-26.67,58.83-27.82,71.41-27.07a16,16,0,0,1,15,15C224.6,59.71,223.45,91.86,196.78,118.54ZM40,114.34l37.15,5.18L116.69,80H74.36ZM91.32,128,128,164.68l57.45-57.45a76.46,76.46,0,0,0,22.42-59.16,76.64,76.64,0,0,0-59.11,22.47ZM176,139.31l-39.53,39.53L141.67,216,176,181.64Z"/></svg></div><div><div class="opt-body-label">Headline & hook</div><div class="opt-body-desc">Test 3–5 versions. The best one outperforms the average by 2–3x — and you won't pick it intuitively.</div></div></div><div class="opt-row"><div class="opt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,104v48H40V104Z" opacity="0.2"/><path d="M216,96H176V56a8,8,0,0,0-8-8H48V40a8,8,0,0,0-16,0V216a8,8,0,0,0,16,0v-8h88a8,8,0,0,0,8-8V160h72a8,8,0,0,0,8-8V104A8,8,0,0,0,216,96ZM160,64V96H48V64ZM128,192H48V160h80Zm80-48H48V112H208Z"/></svg></div><div><div class="opt-body-label">Visual hierarchy</div><div class="opt-body-desc">Move the most-skimmed elements to the top-left and bottom-right — that's where eyes actually land.</div></div></div><div class="opt-row"><div class="opt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,90.34,192,120,136,64l29.66-29.66a8,8,0,0,1,11.31,0L221.66,79A8,8,0,0,1,221.66,90.34Z" opacity="0.2"/><path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM48,163.31l88-88L180.69,120l-88,88H48Zm144-54.62L147.32,64l24-24L216,84.69Z"/></svg></div><div><div class="opt-body-label">Content priority</div><div class="opt-body-desc">Reorder by what the data says — not by what feels logical to the founder. Engagement signals beat outline-logic.</div></div></div><div class="opt-row"><div class="opt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,201,201,213.66a8,8,0,0,1-11.31,0L140,164a8,8,0,0,0-13,2.46l-19.46,44.77a8,8,0,0,1-14.85-.71L40.41,50.44a8,8,0,0,1,10-10L210.51,92.68a8,8,0,0,1,.71,14.85L166.45,127A8,8,0,0,0,164,140l49.67,49.67A8,8,0,0,1,213.66,201Z" opacity="0.2"/><path d="M169.64,134.33l44.77-19.46A16,16,0,0,0,213,85.07L52.92,32.8A16,16,0,0,0,32.8,52.92L85.07,213a15.83,15.83,0,0,0,14.41,11l.79,0a15.83,15.83,0,0,0,14.6-9.59h0l19.46-44.77L184,219.31a16,16,0,0,0,22.63,0l12.68-12.68a16,16,0,0,0,0-22.63Zm-69.48,73.76.06-.05Zm95.15-.09-49.66-49.67a16,16,0,0,0-26,4.94l-19.42,44.65L48,48l159.87,52.21-44.64,19.41a16,16,0,0,0-4.94,26L208,195.31ZM88,24V16a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0ZM8,96a8,8,0,0,1,8-8h8a8,8,0,0,1,0,16H16A8,8,0,0,1,8,96ZM120.85,28.42l8-16a8,8,0,0,1,14.31,7.16l-8,16a8,8,0,1,1-14.31-7.16Zm-81.69,96a8,8,0,0,1-3.58,10.74l-16,8a8,8,0,0,1-7.16-14.31l16-8A8,8,0,0,1,39.16,124.42Z"/></svg></div><div><div class="opt-body-label">CTA testing</div><div class="opt-body-desc">Position, colour, copy. 'Book a 15-min call' converts higher than 'Get in touch' on every cohort we've measured.</div></div></div><div class="opt-row"><div class="opt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M160,112a32,32,0,1,1-32-32A32,32,0,0,1,160,112Z" opacity="0.2"/><path d="M224,48V76a8,8,0,0,1-16,0V48H180a8,8,0,0,1,0-16h28A16,16,0,0,1,224,48Zm-8,124a8,8,0,0,0-8,8v28H180a8,8,0,0,0,0,16h28a16,16,0,0,0,16-16V180A8,8,0,0,0,216,172ZM76,208H48V180a8,8,0,0,0-16,0v28a16,16,0,0,0,16,16H76a8,8,0,0,0,0-16ZM40,84a8,8,0,0,0,8-8V48H76a8,8,0,0,0,0-16H48A16,16,0,0,0,32,48V76A8,8,0,0,0,40,84Zm136,92a8,8,0,0,1-6.41-3.19,52,52,0,0,0-83.2,0,8,8,0,1,1-12.8-9.62A67.94,67.94,0,0,1,101,141.51a40,40,0,1,1,53.94,0,67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,176,176Zm-48-40a24,24,0,1,0-24-24A24,24,0,0,0,128,136Z"/></svg></div><div><div class="opt-body-label">Personalisation</div><div class="opt-body-desc">Swap the lede paragraph per investor persona. The rest stays. Drives 30–60% lifts on warm sends.</div></div></div><div class="opt-row"><div class="opt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M192,56V200H64V56Z" opacity="0.2"/><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg></div><div><div class="opt-body-label">Mobile optimisation</div><div class="opt-body-desc">Most first reads happen on a phone. If the headline wraps to four lines on mobile, the document is broken.</div></div></div><div class="opt-row"><div class="opt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M136,69.09V170.91L42.24,199.67A8,8,0,0,1,32,192V48a8,8,0,0,1,10.24-7.67Z" opacity="0.2"/><path d="M220.54,86.66l-176.06-54A16,16,0,0,0,24,48V192a16,16,0,0,0,16,16,16,16,0,0,0,4.52-.65L128,181.73V192a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16v-29.9l28.54-8.75A16.09,16.09,0,0,0,232,138V102A16.09,16.09,0,0,0,220.54,86.66ZM128,165,40,192V48l88,27Zm48,27H144V176.82L176,167Zm40-54-.11,0L144,160.08V79.92l71.89,22,.11,0v36Z"/></svg></div><div><div class="opt-body-label">Channel integration</div><div class="opt-body-desc">The one-pager and the email + DM and the deck all use the same headline, the same numbers, the same proof points. Consistency compounds.</div></div></div><div class="opt-row"><div class="opt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V96H168ZM40,208l48-48H40Z" opacity="0.2"/><path d="M219.06,40.61a8,8,0,0,0-8.72,1.73L194.28,58.41C174.13,41.1,151.36,32,128,32,85.18,32,59.42,57.27,58.34,58.34A8,8,0,0,0,69.66,69.66C69.87,69.44,91.73,48,128,48c23.17,0,41.92,10.85,54.92,21.76L162.34,90.34A8,8,0,0,0,168,104h48a8,8,0,0,0,8-8V48A8,8,0,0,0,219.06,40.61ZM208,88H187.31L208,67.31Zm-21.66,98.34c-.21.22-22.07,21.66-58.34,21.66-23.17,0-41.92-10.85-54.92-21.76l20.58-20.58A8,8,0,0,0,88,152H40a8,8,0,0,0-8,8v48a8,8,0,0,0,13.66,5.66l16.06-16.07C81.87,214.9,104.64,224,128,224c42.82,0,68.58-25.27,69.66-26.34a8,8,0,0,0-11.32-11.32ZM48,168H68.69L48,188.69Z"/></svg></div><div><div class="opt-body-label">Feedback loop</div><div class="opt-body-desc">Ship, measure, edit, re-ship — weekly. The one-pager you send in month three should be unrecognisable from month one.</div></div></div></div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">08</span>
+      <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 9 — RECOMMENDED READING ============= -->
+<div class="page">
+  
+<div class="hdr">
+  <img class="hdr-logo" src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
+  <div class="hdr-url">www.magdalenareith.com</div>
+</div>
+  <div class="body">
+    <div class="kicker"><span class="kicker-num">09:</span><span class="kicker-label">Further reading</span></div>
+    <h2>Six books that sharpen the page</h2>
+    <p style="max-width:150mm;">Pitchbird's recommended reading for founders writing — or rewriting — their one-pager. Brevity, story, and the discipline of leaving things out.</p>
+    <div class="read-grid"><div class="book"><div class="book-mark"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V192a8,8,0,0,1-8,8H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32h64A8,8,0,0,1,232,64Z" opacity="0.2"/><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div><div><div class="book-title">The One Page Proposal</div><div class="book-author">Patrick G. Riley</div><div class="book-take">The original framework. Forces you to defend every line on the page.</div></div></div><div class="book"><div class="book-mark"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V192a8,8,0,0,1-8,8H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32h64A8,8,0,0,1,232,64Z" opacity="0.2"/><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div><div><div class="book-title">Made to Stick</div><div class="book-author">Chip & Dan Heath</div><div class="book-take">Why some ideas survive. Six principles — apply all of them to your one-pager.</div></div></div><div class="book"><div class="book-mark"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V192a8,8,0,0,1-8,8H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32h64A8,8,0,0,1,232,64Z" opacity="0.2"/><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div><div><div class="book-title">Business Model Generation</div><div class="book-author">Osterwalder & Pigneur</div><div class="book-take">The Business Model Canvas — a different one-pager that pairs well with the investor version.</div></div></div><div class="book"><div class="book-mark"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V192a8,8,0,0,1-8,8H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32h64A8,8,0,0,1,232,64Z" opacity="0.2"/><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div><div><div class="book-title">The Lean Startup</div><div class="book-author">Eric Ries</div><div class="book-take">Validate before you polish. Your one-pager evolves with the business — let it.</div></div></div><div class="book"><div class="book-mark"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V192a8,8,0,0,1-8,8H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32h64A8,8,0,0,1,232,64Z" opacity="0.2"/><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div><div><div class="book-title">The One Page Marketing Plan</div><div class="book-author">Allan Dib</div><div class="book-take">Marketing-focused, but the brevity discipline transfers directly to investor docs.</div></div></div><div class="book"><div class="book-mark"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V192a8,8,0,0,1-8,8H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32h64A8,8,0,0,1,232,64Z" opacity="0.2"/><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div><div><div class="book-title">Storyworthy</div><div class="book-author">Matthew Dicks</div><div class="book-take">The 'homework for life' principle — find the moment in your founder story that actually lands.</div></div></div></div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">09</span>
+      <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 10 — CLOSE + CTA ============= -->
 <div class="page close">
   <div class="cover-band">
     <img src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
     <div class="hdr-url">www.pitchbird.de</div>
   </div>
   <div class="body" style="padding-top:34mm;">
-    <div class="kicker"><span class="kicker-num">05:</span><span class="kicker-label">Trade-offs</span></div>
+    <div class="kicker"><span class="kicker-num">10:</span><span class="kicker-label">Trade-offs</span></div>
     <h2>What it gives you<br>— and what it can't</h2>
     <div class="adv-lim">
       <div class="adv">
@@ -891,7 +1258,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">05</span>
+      <span class="page-num">10</span>
       <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
     </div>
   </div>
