@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>The Power of the One Pager — Pitchbird</title>
+<title>The Power of the One Pager - Pitchbird</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -52,9 +52,18 @@ strong, b { font-weight: 700; color: var(--ink); }
   position: relative;
   overflow: hidden;
   page-break-after: always;
+  break-after: page;
   background: var(--paper);
 }
-.page:last-child { page-break-after: auto; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+/* Page-break safety: never split these atomic chunks across pages */
+.mh-row, .nice-card, .principle, .pr, .callout, .qcard, .opt-row,
+.dodont-row, .ex-card, .fail-row, .we-block, .t60-row, .pt-row,
+.findus-row, .stat-card, .pullquote, .cta-bar, .ex-framework,
+.opt-capstone, .pt-closing, .t60-rule {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
 
 /* ===== Header band ===== */
 .hdr {
@@ -712,22 +721,24 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   border-left: 1pt solid var(--line);
 }
 .dodont-row .c-dont::before {
-  content: "—";
+  content: "\00d7";
   position: absolute;
-  left: 2mm; top: 3.5mm;
+  left: 2.5mm; top: 3.6mm;
   font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   color: #C45641;
   font-size: 10pt;
+  line-height: 1;
 }
 .dodont-row .c-do::before {
-  content: "+";
+  content: "\2713";
   position: absolute;
-  left: 2mm; top: 3.5mm;
+  left: 2.5mm; top: 3.6mm;
   font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   color: #1A7240;
-  font-size: 11pt;
+  font-size: 10pt;
+  line-height: 1;
 }
 .dodont-row .c-dont,
 .dodont-row .c-do {
@@ -948,7 +959,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   font-weight: 800;
   font-size: 10pt;
   letter-spacing: 0.22em;
-  color: var(--gold);
+  color: var(--paper);
   text-transform: uppercase;
 }
 
@@ -1017,13 +1028,14 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   position: relative;
   overflow: hidden;
 }
-.findus-tri {
+.findus-tri { display: none; }
+.findus-accent {
   position: absolute;
-  bottom: 0; right: 0;
-  width: 0; height: 0;
-  border-style: solid;
-  border-width: 0 95mm 75mm 0;
-  border-color: transparent var(--gold) transparent transparent;
+  top: 22mm; right: 22mm;
+  width: 14mm; height: 14mm;
+  background: var(--gold);
+  border-radius: 50%;
+  z-index: 1;
 }
 .findus-band {
   position: absolute;
@@ -1045,7 +1057,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 }
 .findus-inner {
   position: relative;
-  padding: 60mm 22mm 32mm;
+  padding: 42mm 22mm 38mm;
   z-index: 2;
 }
 .findus-eyebrow {
@@ -1055,70 +1067,74 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 8mm;
+  margin-bottom: 6mm;
 }
 .findus-h1 {
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 900;
-  font-size: 56pt;
-  line-height: 1.02;
-  letter-spacing: -0.035em;
-  margin-bottom: 14mm;
+  font-size: 40pt;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 8mm;
+  max-width: 160mm;
 }
 .findus-h1 .gold { color: var(--gold); }
 .findus-lede {
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 700;
-  font-size: 14pt;
+  font-size: 12pt;
   line-height: 1.4;
-  color: rgba(255,255,255,0.8);
-  max-width: 130mm;
-  margin-bottom: 16mm;
+  color: rgba(255,255,255,0.78);
+  max-width: 140mm;
+  margin-bottom: 10mm;
   letter-spacing: -0.015em;
 }
-.findus-rows { display: flex; flex-direction: column; gap: 0; max-width: 145mm; }
+.findus-rows { display: flex; flex-direction: column; gap: 0; max-width: 160mm; }
 .findus-row {
   display: grid;
-  grid-template-columns: 38mm 1fr;
+  grid-template-columns: 32mm 1fr;
   gap: 6mm;
   align-items: center;
-  padding: 5mm 0;
+  padding: 4mm 0;
   border-top: 1pt solid rgba(255,255,255,0.18);
 }
+.findus-row:first-of-type { border-top: 1pt solid rgba(255,255,255,0.30); }
 .findus-row-label {
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 800;
-  font-size: 9pt;
+  font-size: 8.5pt;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
 }
-.findus-row-value {
+.findus-row-value, .findus-row-value a {
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 700;
-  font-size: 14pt;
+  font-size: 12.5pt;
   color: var(--paper);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
+  text-decoration: none;
 }
-.findus-cta {
-  margin-top: 14mm;
+.findus-cta, .findus-cta:link, .findus-cta:visited {
+  margin-top: 10mm;
   display: inline-block;
   background: var(--gold);
   color: var(--navy);
-  padding: 5mm 9mm;
+  padding: 4mm 8mm;
   border-radius: 2mm;
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 900;
-  font-size: 12pt;
+  font-size: 11pt;
   letter-spacing: -0.01em;
+  text-decoration: none;
 }
 
 /* ===== Word economy page ===== */
-.we-grid { display: flex; flex-direction: column; gap: 2mm; margin-top: 3mm; }
+.we-grid { display: flex; flex-direction: column; gap: 1.8mm; margin-top: 3mm; }
 .we-block {
   background: #F4F1EA;
   border-radius: 3mm;
-  padding: 3mm 5mm;
+  padding: 2.5mm 5mm;
   display: grid;
   grid-template-columns: 9mm 1fr;
   gap: 4mm;
@@ -1165,22 +1181,24 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 .we-example-bloated { background: #FBEFEB; color: #4A1E14; }
 .we-example-tight { background: #FDF6E6; color: var(--ink); }
 .we-example-bloated::before {
-  content: "—";
+  content: "\00d7";
   position: absolute;
   left: 2mm; top: 2mm;
   font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 10pt;
+  font-weight: 700;
+  font-size: 9pt;
   color: #C45641;
+  line-height: 1;
 }
 .we-example-tight::before {
-  content: "+";
+  content: "\2713";
   position: absolute;
   left: 2mm; top: 2mm;
   font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 11pt;
+  font-weight: 700;
+  font-size: 9pt;
   color: #1A7240;
+  line-height: 1;
 }
 .we-closing {
   margin-top: 5mm;
@@ -1578,9 +1596,8 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 </head>
 <body>
 
-<!-- ============= PAGE 0 — VISUAL COVER ============= -->
+<!-- ============= PAGE 0 - VISUAL COVER ============= -->
 <div class="page vcover">
-  <div class="vcover-tri-tl"></div>
   <div class="vcover-tri-br"></div>
   <div class="vcover-band">
     <img src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
@@ -1595,7 +1612,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 1 — COVER (type-led, Figma-matching) ============= -->
+<!-- ============= PAGE 1 - COVER (type-led, Figma-matching) ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1608,9 +1625,9 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
       <span class="g">The Power of</span> <span class="n">the One Pager</span>
     </h1>
     <p class="cover-lede">Investors decide whether to take your call in less than 15 seconds. The one-pager is the document that has to survive that test.</p>
-    <p class="cover-p">A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners — usually without you in the conversation.</p><p class="cover-p">Drawing on Pitchbird's work with thousands of founders, this guide distils the eight non-negotiables every one-pager needs, the four upgrades that turn competent into memorable, and the design principles that respect how investors actually read.</p><p class="cover-p">In the following pages, you'll learn:</p>
+    <p class="cover-p">A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners - usually without you in the conversation.</p><p class="cover-p">Drawing on Pitchbird's work with thousands of founders, this guide distils the eight non-negotiables every one-pager needs, the four upgrades that turn competent into memorable, and the design principles that respect how investors actually read.</p><p class="cover-p">In the following pages, you'll learn:</p>
     <ul class="cover-bullets">
-      <li>The 8 elements every one-pager must have</li><li>The 4 high-leverage additions to consider</li><li>How investors scan — and what to put where their eyes go</li><li>When the one-pager helps and when it limits you</li>
+      <li>The 8 elements every one-pager must have</li><li>The 4 high-leverage additions to consider</li><li>How investors scan - and what to put where their eyes go</li><li>When the one-pager helps and when it limits you</li>
     </ul>
     <p class="cover-sign">Magdalena Reith · Founder, Pitchbird</p>
   </div>
@@ -1623,7 +1640,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 2 — WHY IT MATTERS ============= -->
+<!-- ============= PAGE 2 - WHY IT MATTERS ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1633,10 +1650,10 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="body">
     <div class="kicker"><span class="kicker-num">01:</span><span class="kicker-label">Why it matters</span></div>
     <h2>One sheet of paper.<br>One decision.</h2>
-    <p class="lede">The one-pager is the door, not the room. Done well, it earns you the meeting. Done badly, it earns you silence — and you'll never know which line lost you the deal.</p>
+    <p class="lede">The one-pager is the door, not the room. Done well, it earns you the meeting. Done badly, it earns you silence - and you'll never know which line lost you the deal.</p>
     <div class="two-col">
       <div>
-        <p>A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners — usually without you in the conversation.</p><p>That means every element has to do double duty: <strong>introduce, intrigue, and stand on its own.</strong> VCs process pitch documents as self-contained assets. Partners share them with colleagues who may evaluate them without you present. (PitchGrade / DocSend, 2024)</p><p>Funding Blueprint (2026) found that a well-structured one-pager reduces decision friction by approximately <strong>47%</strong> compared to a full pitch deck — while maintaining narrative control. That's the edge in cold outreach.</p>
+        <p>A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners - usually without you in the conversation.</p><p>That means every element has to do double duty: <strong>introduce, intrigue, and stand on its own.</strong> VCs process pitch documents as self-contained assets. Partners share them with colleagues who may evaluate them without you present. (PitchGrade / DocSend, 2024)</p><p>Funding Blueprint (2026) found that a well-structured one-pager reduces decision friction by approximately <strong>47%</strong> compared to a full pitch deck - while maintaining narrative control. That's the edge in cold outreach.</p>
         <div class="stat-card">
           <div class="stat-num">32%</div>
           <div class="stat-text">of decision-makers drop off after 15 seconds of reading a one-pager. The first impression is the only impression.</div>
@@ -1645,7 +1662,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
       </div>
       <div>
         <div class="illus illus-navy"><img src="file:///root/pitchbird/lm-images/one-pager/page2-zscan.png" alt=""></div>
-        <div class="illus-cap">Investors don't read — they scan a Z. The page has to deliver on that path or it doesn't deliver at all.</div>
+        <div class="illus-cap">Investors don't read - they scan a Z. The page has to deliver on that path or it doesn't deliver at all.</div>
       </div>
     </div>
   </div>
@@ -1658,7 +1675,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 3 — THE 8 MUST-HAVES ============= -->
+<!-- ============= PAGE 3 - THE 8 MUST-HAVES ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1689,7 +1706,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
               <div class="mh-num">03</div>
               <div class="mh-body">
                 <div class="mh-title">Company profile</div>
-                <div class="mh-desc">A short, informative introduction — what you are, who you serve, why you exist.</div>
+                <div class="mh-desc">A short, informative introduction - what you are, who you serve, why you exist.</div>
               </div>
             </div><div class="mh-row">
               <div class="mh-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,104a79.86,79.86,0,0,1-30.59,62.92A24.29,24.29,0,0,0,168,186v6a8,8,0,0,1-8,8H96a8,8,0,0,1-8-8v-6a24.11,24.11,0,0,0-9.3-19A79.87,79.87,0,0,1,48,104.45C47.76,61.09,82.72,25,126.07,24A80,80,0,0,1,208,104Z" opacity="0.2"/><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"/></svg></div>
@@ -1738,7 +1755,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 4 — NICE TO HAVES + PRINCIPLES ============= -->
+<!-- ============= PAGE 4 - NICE TO HAVES + PRINCIPLES ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1765,14 +1782,14 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
     <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,104a79.86,79.86,0,0,1-30.59,62.92A24.29,24.29,0,0,0,168,186v6a8,8,0,0,1-8,8H96a8,8,0,0,1-8-8v-6a24.11,24.11,0,0,0-9.3-19A79.87,79.87,0,0,1,48,104.45C47.76,61.09,82.72,25,126.07,24A80,80,0,0,1,208,104Z" opacity="0.2"/><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.5C39.74,56.83,78.26,17.15,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.64,71.64,0,0,0,27.64,56.3h0A32,32,0,0,1,96,186v6h24V147.31L90.34,117.66a8,8,0,0,1,11.32-11.32L128,132.69l26.34-26.35a8,8,0,0,1,11.32,11.32L136,147.31V192h24v-6a32.12,32.12,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Z"/></svg></div>
   </div>
   <div class="callout-headline">Show how your business removes that pain. Two lines, max.</div>
-  <div class="callout-body">Lead with the outcome — not the mechanism. Save the how for the deck.</div>
+  <div class="callout-body">Lead with the outcome - not the mechanism. Save the how for the deck.</div>
 </div>
 <div class="callout callout-green">
   <div class="callout-head-row">
     <div class="callout-pill"><span class="callout-pill-label">Traction</span></div>
     <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,56v64L168,56Z" opacity="0.2"/><path d="M232,48H168a8,8,0,0,0-5.66,13.66L188.69,88,136,140.69l-34.34-34.35a8,8,0,0,0-11.32,0l-72,72a8,8,0,0,0,11.32,11.32L96,123.31l34.34,34.35a8,8,0,0,0,11.32,0L200,99.31l26.34,26.35A8,8,0,0,0,240,120V56A8,8,0,0,0,232,48Zm-8,52.69L187.31,64H224Z"/></svg></div>
   </div>
-  <div class="callout-headline">Prove customers want it. Revenue, signups, LOIs — whichever you have.</div>
+  <div class="callout-headline">Prove customers want it. Revenue, signups, LOIs - whichever you have.</div>
   <div class="callout-body">Proof beats promise. Companies leading with traction close 6.4 weeks faster. (Funding Blueprint, 2026)</div>
 </div>
 <div class="callout callout-lavender">
@@ -1791,7 +1808,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
               <div class="pr-dot"></div>
               <div>
                 <div class="pr-title">Content is king</div>
-                <div class="pr-desc">Clarity first. Strong narrative — problem, solution, impact. Hierarchy via headings, sub-heads, and bullets that guide the eye.</div>
+                <div class="pr-desc">Clarity first. Strong narrative - problem, solution, impact. Hierarchy via headings, sub-heads, and bullets that guide the eye.</div>
               </div>
             </div><div class="pr">
               <div class="pr-dot"></div>
@@ -1823,7 +1840,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 5 — ANATOMY MAP ============= -->
+<!-- ============= PAGE 5 - ANATOMY MAP ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1833,10 +1850,10 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="body">
     <div class="kicker"><span class="kicker-num">04:</span><span class="kicker-label">Anatomy</span></div>
     <h2>Where everything goes on the page</h2>
-    <p style="max-width:150mm;">Investors don't read a one-pager — they scan it in a Z-shape, top-left to bottom-right. The eight elements earn their spot only when they sit where eyes already land.</p>
+    <p style="max-width:150mm;">Investors don't read a one-pager - they scan it in a Z-shape, top-left to bottom-right. The eight elements earn their spot only when they sit where eyes already land.</p>
     <div class="anatomy">
       <div class="anatomy-map"><div class="az top"><span class="az-num">1</span><span class="az-label">Header</span></div><div class="az top"><span class="az-num">2</span><span class="az-label">Headline + USP</span></div><div class="az mid-l"><span class="az-num">3</span><span class="az-label">Problem</span></div><div class="az mid-r"><span class="az-num">4</span><span class="az-label">Solution + visual</span></div><div class="az low-l"><span class="az-num">5</span><span class="az-label">Traction</span></div><div class="az low-r"><span class="az-num">6</span><span class="az-label">Market + roadmap</span></div><div class="az foot-l"><span class="az-num">7</span><span class="az-label">Investment ask</span></div><div class="az foot-r"><span class="az-num">8</span><span class="az-label">Contact</span></div></div>
-      <div class="anatomy-list"><div class="anatomy-li"><div class="anatomy-li-num">1</div><div><div class="anatomy-li-label">Header</div><div class="anatomy-li-desc">Logo + company name. Often the only thing the partner remembers ten minutes later — make it work.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">2</div><div><div class="anatomy-li-label">Headline + USP</div><div class="anatomy-li-desc">One sentence that earns the next 14 seconds of attention. Lead with the outcome, not the mechanism.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">3</div><div><div class="anatomy-li-label">Problem</div><div class="anatomy-li-desc">Pain in the customer's words. Numbers if you have them, story if you don't.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">4</div><div><div class="anatomy-li-label">Solution + visual</div><div class="anatomy-li-desc">How you remove the pain — paired with a mock-up, screenshot or icon. Visual carries weight here.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">5</div><div><div class="anatomy-li-label">Traction</div><div class="anatomy-li-desc">Proof. Revenue, signups, LOIs, pilots. One number beats a paragraph of optimism.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">6</div><div><div class="anatomy-li-label">Market + roadmap</div><div class="anatomy-li-desc">Beachhead first, then the trajectory. 6/12/24-month milestones in a single timeline.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">7</div><div><div class="anatomy-li-label">Investment ask</div><div class="anatomy-li-desc">The amount, the structure, the deadline. Specific. No 'flexible'.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">8</div><div><div class="anatomy-li-label">Contact</div><div class="anatomy-li-desc">Name, email, phone, LinkedIn. The most-skipped detail. Don't skip it.</div></div></div></div>
+      <div class="anatomy-list"><div class="anatomy-li"><div class="anatomy-li-num">1</div><div><div class="anatomy-li-label">Header</div><div class="anatomy-li-desc">Logo + company name. Often the only thing the partner remembers ten minutes later - make it work.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">2</div><div><div class="anatomy-li-label">Headline + USP</div><div class="anatomy-li-desc">One sentence that earns the next 14 seconds of attention. Lead with the outcome, not the mechanism.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">3</div><div><div class="anatomy-li-label">Problem</div><div class="anatomy-li-desc">Pain in the customer's words. Numbers if you have them, story if you don't.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">4</div><div><div class="anatomy-li-label">Solution + visual</div><div class="anatomy-li-desc">How you remove the pain - paired with a mock-up, screenshot or icon. Visual carries weight here.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">5</div><div><div class="anatomy-li-label">Traction</div><div class="anatomy-li-desc">Proof. Revenue, signups, LOIs, pilots. One number beats a paragraph of optimism.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">6</div><div><div class="anatomy-li-label">Market + roadmap</div><div class="anatomy-li-desc">Beachhead first, then the trajectory. 6/12/24-month milestones in a single timeline.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">7</div><div><div class="anatomy-li-label">Investment ask</div><div class="anatomy-li-desc">The amount, the structure, the deadline. Specific. No 'flexible'.</div></div></div><div class="anatomy-li"><div class="anatomy-li-num">8</div><div><div class="anatomy-li-label">Contact</div><div class="anatomy-li-desc">Name, email, phone, LinkedIn. The most-skipped detail. Don't skip it.</div></div></div></div>
     </div>
   </div>
   <div class="foot">
@@ -1848,7 +1865,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 6 — DO / DON'T ============= -->
+<!-- ============= PAGE 6 - DO / DON'T ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1858,13 +1875,13 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="body">
     <div class="kicker"><span class="kicker-num">05:</span><span class="kicker-label">Design in practice</span></div>
     <h2>What separates a readable one-pager from a rejected one</h2>
-    <p style="max-width:155mm;">The difference is rarely the idea — it's the execution of the page itself. Eight calls investors make in the first scan.</p>
+    <p style="max-width:155mm;">The difference is rarely the idea - it's the execution of the page itself. Eight calls investors make in the first scan.</p>
     <div class="dodont">
       <div class="dodont-head">
         <div class="h-dont">Don't</div>
         <div class="h-do">Do</div>
       </div>
-      <div class="dodont-row"><div class="c-dont">Dense, unbroken paragraphs that force the investor to find the headline</div><div class="c-do">One dominant headline — 14pt or larger — visible without scrolling or rotating</div></div><div class="dodont-row"><div class="c-dont">Revenue model buried below line 8 — 71% of readers never reach it. (River Editor, 2026)</div><div class="c-do">Revenue model in the top-half of the page, on the natural Z-scan path</div></div><div class="dodont-row"><div class="c-dont">900+ words crammed onto a single page</div><div class="c-do">400–500 words with white space. (Storydoc, 2024)</div></div><div class="dodont-row"><div class="c-dont">No funding ask, or vague 'seeking strategic partners' language</div><div class="c-do">Specific ask: amount, instrument (SAFE / equity), and close date</div></div><div class="dodont-row"><div class="c-dont">Team section missing — or 'bios available on request'</div><div class="c-do">Founder names, roles, one credibility signal each</div></div><div class="dodont-row"><div class="c-dont">Three fonts, five brand colours, a stock-photo background</div><div class="c-do">One primary font, two colours, one well-chosen image</div></div><div class="dodont-row"><div class="c-dont">Contact info on a second page, or missing entirely</div><div class="c-do">Email, phone, LinkedIn in the bottom-right — every time</div></div><div class="dodont-row"><div class="c-dont">Runs to 1.5 or 2 pages — investor stops at the scroll</div><div class="c-do">Hard stop at one page. If it doesn't fit, cut — don't extend.</div></div>
+      <div class="dodont-row"><div class="c-dont">Dense, unbroken paragraphs that force the investor to find the headline</div><div class="c-do">One dominant headline - 14pt or larger - visible without scrolling or rotating</div></div><div class="dodont-row"><div class="c-dont">Revenue model buried below line 8 - 71% of readers never reach it. (River Editor, 2026)</div><div class="c-do">Revenue model in the top-half of the page, on the natural Z-scan path</div></div><div class="dodont-row"><div class="c-dont">900+ words crammed onto a single page</div><div class="c-do">400-500 words with white space. (Storydoc, 2024)</div></div><div class="dodont-row"><div class="c-dont">No funding ask, or vague 'seeking strategic partners' language</div><div class="c-do">Specific ask: amount, instrument (SAFE / equity), and close date</div></div><div class="dodont-row"><div class="c-dont">Team section missing - or 'bios available on request'</div><div class="c-do">Founder names, roles, one credibility signal each</div></div><div class="dodont-row"><div class="c-dont">Three fonts, five brand colours, a stock-photo background</div><div class="c-do">One primary font, two colours, one well-chosen image</div></div><div class="dodont-row"><div class="c-dont">Contact info on a second page, or missing entirely</div><div class="c-do">Email, phone, LinkedIn in the bottom-right - every time</div></div><div class="dodont-row"><div class="c-dont">Runs to 1.5 or 2 pages - investor stops at the scroll</div><div class="c-do">Hard stop at one page. If it doesn't fit, cut - don't extend.</div></div>
     </div>
     <p class="dodont-note">The one-pager must be designed for rapid comprehension without verbal explanation. Partners share it with colleagues who may evaluate it without you present. (PitchGrade / DocSend Data, 2024)</p>
   </div>
@@ -1877,7 +1894,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 7 — REAL-WORLD EXAMPLES ============= -->
+<!-- ============= PAGE 7A - EXAMPLES (1-2 of 3) ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1886,10 +1903,9 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 </div>
   <div class="body">
     <div class="kicker"><span class="kicker-num">06:</span><span class="kicker-label">Examples</span></div>
-    <h2>What strong one-pagers look like in practice</h2>
-    <p style="max-width:155mm;">Three patterns we see in the one-pagers that earn meetings — backed by published investor-engagement data.</p>
-    <div class="examples"><div class="ex-card ex-card-peach"><div><div class="ex-label">The original lean pitch</div><div class="ex-name">Airbnb (2008)</div><div class="ex-source">Free Startup Funding, 2024</div></div><div><div class="ex-body">Airbnb began as a simple one-pager built on WordPress before it raised a single dollar. It named the problem (no affordable short-term accommodation), the model (peer-to-peer room rental), and the founders. No deck. No presentation. One page.</div><div class="ex-take">The idea earned the meeting. The one-pager was the proof it could be communicated clearly.</div></div></div><div class="ex-card ex-card-blue"><div><div class="ex-label">Structure over luck</div><div class="ex-name">Warm-intro advantage</div><div class="ex-source">PitchGrade / DocSend, 2024</div></div><div><div class="ex-body">DocSend data shows warm introductions convert at <strong>40–50%</strong> versus <strong>3–5%</strong> for cold decks. A well-crafted one-pager sent to a mutual contact converts cold outreach into a warm intro — before the deck ever opens.</div><div class="ex-take">Use the one-pager as the ask for an introduction, not as a substitute for one.</div></div></div><div class="ex-card ex-card-green"><div><div class="ex-label">Faster closes by 6.4 weeks</div><div class="ex-name">Traction-first sequencing</div><div class="ex-source">Funding Blueprint, 2026</div></div><div><div class="ex-body">Funding Blueprint's analysis found that companies leading with traction metrics — not vision statements — close funding rounds <strong>6.4 weeks faster</strong>. The first thing the investor reads sets the frame for everything that follows.</div><div class="ex-take">Lead with your best proof point. Vision supports traction. Not the other way around.</div></div></div></div>
-    <div class="ex-framework">What all strong one-pagers share: the problem is named in one line, the ask is on the page, the team is visible, and it fits on a single sheet without shrinking the font below 10pt.</div>
+    <h2>What strong one-pagers look like</h2>
+    <p style="max-width:155mm;">Three patterns we see in the one-pagers that earn meetings - backed by published investor-engagement data.</p>
+    <div class="examples"><div class="ex-card ex-card-peach"><div><div class="ex-label">The original lean pitch</div><div class="ex-name">Airbnb (2008)</div><div class="ex-source">Free Startup Funding, 2024</div></div><div><div class="ex-body">Airbnb began as a simple one-pager built on WordPress before it raised a single dollar. It named the problem (no affordable short-term accommodation), the model (peer-to-peer room rental), and the founders. No deck. No presentation. One page.</div><div class="ex-take">The idea earned the meeting. The one-pager was the proof it could be communicated clearly.</div></div></div><div class="ex-card ex-card-blue"><div><div class="ex-label">Structure over luck</div><div class="ex-name">Warm-intro advantage</div><div class="ex-source">PitchGrade / DocSend, 2024</div></div><div><div class="ex-body">DocSend data shows warm introductions convert at <strong>40-50%</strong> versus <strong>3-5%</strong> for cold decks. A well-crafted one-pager sent to a mutual contact converts cold outreach into a warm intro - before the deck ever opens.</div><div class="ex-take">Use the one-pager as the ask for an introduction, not as a substitute for one.</div></div></div></div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -1900,7 +1916,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 9 — WORD ECONOMY ============= -->
+<!-- ============= PAGE 7B - EXAMPLES (3 of 3 + framework) ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1908,10 +1924,11 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="hdr-url">www.pitchbird.de</div>
 </div>
   <div class="body">
-    <div class="kicker"><span class="kicker-num">07:</span><span class="kicker-label">Word economy</span></div>
-    <h2>Cut to 500 words. Then cut again.</h2>
-    <p style="max-width:160mm;">The 400–500 word limit is the threshold above which investors stop reading. (Storydoc, 2024) The discipline of cutting is the work — and here is how to do it.</p>
-    <div class="we-grid"><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,90.34,192,120,136,64l29.66-29.66a8,8,0,0,1,11.31,0L221.66,79A8,8,0,0,1,221.66,90.34Z" opacity="0.2"/><path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM48,163.31l88-88L180.69,120l-88,88H48Zm144-54.62L147.32,64l24-24L216,84.69Z"/></svg></div><div><div class="we-label">Start with a word count</div><div class="we-rule">Paste your draft into any word processor. If it reads over 500 words, you are not done yet. Count before you edit — not after.</div><div class="we-example"><div class="we-example-bloated">Our proprietary, AI-powered platform leverages cutting-edge machine learning algorithms to deliver personalised, data-driven insights that help enterprise customers optimise their operational workflows and significantly reduce costs.</div><div class="we-example-tight">Our AI platform cuts enterprise operating costs by 30% in under 90 days.</div></div></div></div><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,91.55v72.9a8,8,0,0,1-2.34,5.66l-51.55,51.55a8,8,0,0,1-5.66,2.34H91.55a8,8,0,0,1-5.66-2.34L34.34,170.11A8,8,0,0,1,32,164.45V91.55a8,8,0,0,1,2.34-5.66L85.89,34.34A8,8,0,0,1,91.55,32h72.9a8,8,0,0,1,5.66,2.34l51.55,51.55A8,8,0,0,1,224,91.55Z" opacity="0.2"/><path d="M120,136V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0ZM232,91.55v72.9a15.86,15.86,0,0,1-4.69,11.31l-51.55,51.55A15.86,15.86,0,0,1,164.45,232H91.55a15.86,15.86,0,0,1-11.31-4.69L28.69,175.76A15.86,15.86,0,0,1,24,164.45V91.55a15.86,15.86,0,0,1,4.69-11.31L80.24,28.69A15.86,15.86,0,0,1,91.55,24h72.9a15.86,15.86,0,0,1,11.31,4.69l51.55,51.55A15.86,15.86,0,0,1,232,91.55Zm-16,0L164.45,40H91.55L40,91.55v72.9L91.55,216h72.9L216,164.45ZM128,160a12,12,0,1,0,12,12A12,12,0,0,0,128,160Z"/></svg></div><div><div class="we-label">Kill the adjectives first</div><div class="we-rule">Ask every adjective and adverb: does this add data, or does it add enthusiasm? Enthusiasm is free; data is not. Every 'innovative', 'revolutionary', 'world-class' costs you credibility, not goodwill.</div><div class="we-example"><div class="we-example-bloated">Our highly experienced, passionate team of world-class experts has developed a truly innovative solution.</div><div class="we-example-tight">Our team has built and exited two SaaS companies. The solution is in pilot with three enterprise clients.</div></div></div></div><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V192a8,8,0,0,1-8,8H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32h64A8,8,0,0,1,232,64Z" opacity="0.2"/><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div><div><div class="we-label">One sentence per idea</div><div class="we-rule">A sentence with three clauses is three sentences that haven't been separated yet. If a sentence runs past 20 words, break it. Read it aloud — if you run out of breath, it's too long.</div><div class="we-example"><div class="we-example-bloated">We are targeting the rapidly growing SME market segment in the DACH region, which represents an addressable market of over €4 billion annually and has historically been underserved by existing SaaS providers.</div><div class="we-example-tight">Target: SMEs in DACH. Addressable market: €4bn. Underserved by every existing SaaS provider.</div></div></div></div><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,104v48H40V104Z" opacity="0.2"/><path d="M216,96H176V56a8,8,0,0,0-8-8H48V40a8,8,0,0,0-16,0V216a8,8,0,0,0,16,0v-8h88a8,8,0,0,0,8-8V160h72a8,8,0,0,0,8-8V104A8,8,0,0,0,216,96ZM160,64V96H48V64ZM128,192H48V160h80Zm80-48H48V112H208Z"/></svg></div><div><div class="we-label">Replace paragraphs with bullets</div><div class="we-rule">Three consecutive sentences listing related things are a bullet list in disguise. Bullets scan faster, skip slower, and — critically — take up less vertical space on the page.</div><div class="we-example"><div class="we-example-bloated">The funding will be used to expand our sales team, accelerate product development, and build out our customer success function to support expected growth.</div><div class="we-example-tight">Use of funds: sales (40%) · product (35%) · customer success (25%)</div></div></div></div><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg></div><div><div class="we-label">The five-word test</div><div class="we-rule">Can you summarise the business in five words? If not, the headline is doing too much. The headline's job is to make the investor read the next line — not explain everything.</div><div class="we-example"><div class="we-example-bloated">Building the future of sustainable urban mobility for the next generation of city commuters.</div><div class="we-example-tight">EV scooter rentals for cities.</div></div></div></div></div>
+    <div class="kicker"><span class="kicker-num">06:</span><span class="kicker-label">Examples cont.</span></div>
+    <h2>And one more pattern</h2>
+    <p style="max-width:155mm;">The third - and most consequential - pattern: the order in which information lands.</p>
+    <div class="examples"><div class="ex-card ex-card-green"><div><div class="ex-label">Faster closes by 6.4 weeks</div><div class="ex-name">Traction-first sequencing</div><div class="ex-source">Funding Blueprint, 2026</div></div><div><div class="ex-body">Funding Blueprint's analysis found that companies leading with traction metrics - not vision statements - close funding rounds <strong>6.4 weeks faster</strong>. The first thing the investor reads sets the frame for everything that follows.</div><div class="ex-take">Lead with your best proof point. Vision supports traction. Not the other way around.</div></div></div></div>
+    <div class="ex-framework">What all strong one-pagers share: the problem is named in one line, the ask is on the page, the team is visible, and it fits on a single sheet without shrinking the font below 10pt.</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -1922,7 +1939,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 10 — FIRST 60 SECONDS ============= -->
+<!-- ============= PAGE 9 - WORD ECONOMY ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1930,11 +1947,10 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="hdr-url">www.pitchbird.de</div>
 </div>
   <div class="body">
-    <div class="kicker"><span class="kicker-num">08:</span><span class="kicker-label">First 60 seconds</span></div>
-    <h2>What they read,<br>in what order.</h2>
-    <p style="max-width:160mm;">Investors don't read a one-pager. They scan it — in a Z-shape, top-left to bottom-right — and decide in the first 15 seconds whether to keep going. 32% drop off before that window closes. (Storydoc, 2024) Understanding their path is the single most actionable thing you can do.</p>
-    <div class="t60-grid"><div class="t60-row"><div class="t60-window">0–5 sec</div><div><div class="t60-what-label">They look at</div><div class="t60-what">Header: logo, company name, tagline.</div><div class="t60-guidance">Identity and category signal. The tagline must name the category and the outcome — not a slogan. If the investor can't place the business in five seconds, the rest is irrelevant.</div></div><div><div class="t60-q-label">Their question</div><div class="t60-q">&ldquo;Do I recognise this space? Is this category interesting to me?&rdquo;</div></div></div><div class="t60-row"><div class="t60-window">5–15 sec</div><div><div class="t60-what-label">They look at</div><div class="t60-what">Headline + USP — the sentence that earns the next 45 seconds.</div><div class="t60-guidance">Lead with the outcome, not the mechanism. 'We help enterprise HR teams cut onboarding by half' beats 'We are an AI-powered HR automation platform.'</div></div><div><div class="t60-q-label">Their question</div><div class="t60-q">&ldquo;Is this a big enough problem? Is this approach credible?&rdquo;</div></div></div><div class="t60-row"><div class="t60-window">15–30 sec</div><div><div class="t60-what-label">They look at</div><div class="t60-what">Traction and team — the proof this is real.</div><div class="t60-guidance">Investors spend an average of 62 seconds on team in pitch decks. (PitchGrade / DocSend, 2024) In a one-pager that scrutiny compresses into a few lines. One credibility signal per founder. One traction proof with a number.</div></div><div><div class="t60-q-label">Their question</div><div class="t60-q">&ldquo;Is there evidence this works? Can I trust who is building it?&rdquo;</div></div></div><div class="t60-row"><div class="t60-window">30–60 sec</div><div><div class="t60-what-label">They look at</div><div class="t60-what">Investment ask and contact.</div><div class="t60-guidance">Companies leading with traction close 6.4 weeks faster than those leading with vision. (Funding Blueprint, 2026) Make the ask specific: amount, instrument, close date. Then make response trivial — email, phone, LinkedIn, bottom-right.</div></div><div><div class="t60-q-label">Their question</div><div class="t60-q">&ldquo;What exactly do they need? How do I respond?&rdquo;</div></div></div></div>
-    <div class="t60-rule"><strong>The 8-line rule.</strong> If your revenue model is not visible in the first eight lines of the document, 71% of readers never see it. (River Editor, 2026) That is not a layout preference — it is a structural requirement. Count the lines in your draft. The problem, the model, and the traction must all land above that threshold.</div>
+    <div class="kicker"><span class="kicker-num">07:</span><span class="kicker-label">Word economy</span></div>
+    <h2>Cut to 500 words. Then cut again.</h2>
+    <p style="max-width:160mm;">The 400-500 word limit is the threshold above which investors stop reading. (Storydoc, 2024) The discipline of cutting is the work - and here is how to do it.</p>
+    <div class="we-grid"><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,90.34,192,120,136,64l29.66-29.66a8,8,0,0,1,11.31,0L221.66,79A8,8,0,0,1,221.66,90.34Z" opacity="0.2"/><path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM48,163.31l88-88L180.69,120l-88,88H48Zm144-54.62L147.32,64l24-24L216,84.69Z"/></svg></div><div><div class="we-label">Start with a word count</div><div class="we-rule">Paste your draft into any word processor. If it reads over 500 words, you are not done yet. Count before you edit - not after.</div><div class="we-example"><div class="we-example-bloated">Our proprietary, AI-powered platform leverages cutting-edge machine learning algorithms to deliver personalised, data-driven insights that help enterprise customers optimise their operational workflows and significantly reduce costs.</div><div class="we-example-tight">Our AI platform cuts enterprise operating costs by 30% in under 90 days.</div></div></div></div><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,91.55v72.9a8,8,0,0,1-2.34,5.66l-51.55,51.55a8,8,0,0,1-5.66,2.34H91.55a8,8,0,0,1-5.66-2.34L34.34,170.11A8,8,0,0,1,32,164.45V91.55a8,8,0,0,1,2.34-5.66L85.89,34.34A8,8,0,0,1,91.55,32h72.9a8,8,0,0,1,5.66,2.34l51.55,51.55A8,8,0,0,1,224,91.55Z" opacity="0.2"/><path d="M120,136V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0ZM232,91.55v72.9a15.86,15.86,0,0,1-4.69,11.31l-51.55,51.55A15.86,15.86,0,0,1,164.45,232H91.55a15.86,15.86,0,0,1-11.31-4.69L28.69,175.76A15.86,15.86,0,0,1,24,164.45V91.55a15.86,15.86,0,0,1,4.69-11.31L80.24,28.69A15.86,15.86,0,0,1,91.55,24h72.9a15.86,15.86,0,0,1,11.31,4.69l51.55,51.55A15.86,15.86,0,0,1,232,91.55Zm-16,0L164.45,40H91.55L40,91.55v72.9L91.55,216h72.9L216,164.45ZM128,160a12,12,0,1,0,12,12A12,12,0,0,0,128,160Z"/></svg></div><div><div class="we-label">Kill the adjectives first</div><div class="we-rule">Ask every adjective and adverb: does this add data, or does it add enthusiasm? Enthusiasm is free; data is not. Every 'innovative', 'revolutionary', 'world-class' costs you credibility, not goodwill.</div><div class="we-example"><div class="we-example-bloated">Our highly experienced, passionate team of world-class experts has developed a truly innovative solution.</div><div class="we-example-tight">Our team has built and exited two SaaS companies. The solution is in pilot with three enterprise clients.</div></div></div></div><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64V192a8,8,0,0,1-8,8H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32h64A8,8,0,0,1,232,64Z" opacity="0.2"/><path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div><div><div class="we-label">One sentence per idea</div><div class="we-rule">A sentence with three clauses is three sentences that haven't been separated yet. If a sentence runs past 20 words, break it. Read it aloud - if you run out of breath, it's too long.</div><div class="we-example"><div class="we-example-bloated">We are targeting the rapidly growing SME market segment in the DACH region, which represents an addressable market of over €4 billion annually and has historically been underserved by existing SaaS providers.</div><div class="we-example-tight">Target: SMEs in DACH. Addressable market: €4bn. Underserved by every existing SaaS provider.</div></div></div></div><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,104v48H40V104Z" opacity="0.2"/><path d="M216,96H176V56a8,8,0,0,0-8-8H48V40a8,8,0,0,0-16,0V216a8,8,0,0,0,16,0v-8h88a8,8,0,0,0,8-8V160h72a8,8,0,0,0,8-8V104A8,8,0,0,0,216,96ZM160,64V96H48V64ZM128,192H48V160h80Zm80-48H48V112H208Z"/></svg></div><div><div class="we-label">Replace paragraphs with bullets</div><div class="we-rule">Three consecutive sentences listing related things are a bullet list in disguise. Bullets scan faster, skip slower, and - critically - take up less vertical space on the page.</div><div class="we-example"><div class="we-example-bloated">The funding will be used to expand our sales team, accelerate product development, and build out our customer success function to support expected growth.</div><div class="we-example-tight">Use of funds: sales (40%) · product (35%) · customer success (25%)</div></div></div></div><div class="we-block"><div class="we-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg></div><div><div class="we-label">The five-word test</div><div class="we-rule">Can you summarise the business in five words? If not, the headline is doing too much. The headline's job is to make the investor read the next line - not explain everything.</div><div class="we-example"><div class="we-example-bloated">Building the future of sustainable urban mobility for the next generation of city commuters.</div><div class="we-example-tight">EV scooter rentals for cities.</div></div></div></div></div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -1945,7 +1961,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 11 — PRESSURE-TEST ============= -->
+<!-- ============= PAGE 10A - FIRST 60 SECONDS (0-15) ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1953,11 +1969,10 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="hdr-url">www.pitchbird.de</div>
 </div>
   <div class="body">
-    <div class="kicker"><span class="kicker-num">09:</span><span class="kicker-label">Pressure-test</span></div>
-    <h2>Five tests before<br>you hit send.</h2>
-    <p style="max-width:160mm;">You do not need analytics software to know whether a one-pager works. You need five disciplined tests — each surfaces a different failure mode. They take less than a week. They will save you from sending something that quietly fails and never tells you why.</p>
-    <div class="pt-grid"><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M136,69.09V170.91L42.24,199.67A8,8,0,0,1,32,192V48a8,8,0,0,1,10.24-7.67Z" opacity="0.2"/><path d="M220.54,86.66l-176.06-54A16,16,0,0,0,24,48V192a16,16,0,0,0,16,16,16,16,0,0,0,4.52-.65L128,181.73V192a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16v-29.9l28.54-8.75A16.09,16.09,0,0,0,232,138V102A16.09,16.09,0,0,0,220.54,86.66ZM128,165,40,192V48l88,27Zm48,27H144V176.82L176,167Zm40-54-.11,0L144,160.08V79.92l71.89,22,.11,0v36Z"/></svg></div><div><div class="pt-name">Read it aloud</div><div class="pt-how">Print the document or open it on a screen, and read every word out loud at normal speaking pace — without pausing to correct yourself mid-sentence.</div></div><div class="pt-signals"><div class="pt-pass">Read straight through without hesitation. Pace feels like a confident conversation.</div><div class="pt-fail">You stumble, slow down, or have to re-read a sentence. Every stumble is a sentence that is too dense or too long.</div></div></div><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M160,112a32,32,0,1,1-32-32A32,32,0,0,1,160,112Z" opacity="0.2"/><path d="M224,48V76a8,8,0,0,1-16,0V48H180a8,8,0,0,1,0-16h28A16,16,0,0,1,224,48Zm-8,124a8,8,0,0,0-8,8v28H180a8,8,0,0,0,0,16h28a16,16,0,0,0,16-16V180A8,8,0,0,0,216,172ZM76,208H48V180a8,8,0,0,0-16,0v28a16,16,0,0,0,16,16H76a8,8,0,0,0,0-16ZM40,84a8,8,0,0,0,8-8V48H76a8,8,0,0,0,0-16H48A16,16,0,0,0,32,48V76A8,8,0,0,0,40,84Zm136,92a8,8,0,0,1-6.41-3.19,52,52,0,0,0-83.2,0,8,8,0,1,1-12.8-9.62A67.94,67.94,0,0,1,101,141.51a40,40,0,1,1,53.94,0,67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,176,176Zm-48-40a24,24,0,1,0-24-24A24,24,0,0,0,128,136Z"/></svg></div><div><div class="pt-name">Three advisors, separately</div><div class="pt-how">Send to three people who understand your space but are not inside your company. Same brief: 'Read this cold. Tell me what's unclear, what's missing.' Never as a group.</div></div><div class="pt-signals"><div class="pt-pass">Each person flags something different — minor, specific, fixable.</div><div class="pt-fail">Two or more flag the same thing. That is not preference. It's a broken element. Fix it.</div></div></div><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,136a88,88,0,1,1-88-88A88,88,0,0,1,216,136Z" opacity="0.2"/><path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/></svg></div><div><div class="pt-name">The 5-second test, with 5 founders</div><div class="pt-how">Send to five founders — peers who do not know your pitch. Ask: 'After five seconds, what does this company do?' Collect their exact words.</div></div><div class="pt-signals"><div class="pt-pass">Four of five describe the business accurately in one sentence.</div><div class="pt-fail">Fewer than three get it right, or descriptions vary wildly. The headline isn't doing its job.</div></div></div><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M192,56V200H64V56Z" opacity="0.2"/><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg></div><div><div class="pt-name">Print it</div><div class="pt-how">Print the one-pager at 100% scale on A4 or letter. Look at it from arm's length before reading a word.</div></div><div class="pt-signals"><div class="pt-pass">Hierarchy is visible. Headline stands out. Clear white space. Looks like a professional document.</div><div class="pt-fail">Looks grey, dense, or cramped. Font below 10pt. No clear visual anchor. Fails on paper = fails on screen.</div></div></div><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></div><div><div class="pt-name">The 8-must-haves checklist</div><div class="pt-how">Open page 03 of this guide. Walk through all eight must-haves — name, contact, profile, business idea, USP, roadmap, ask, highlights. Mark each on your draft.</div></div><div class="pt-signals"><div class="pt-pass">All eight are present. Each is visible without hunting for it.</div><div class="pt-fail">One or more missing, vague, or buried. An incomplete one-pager is a disqualifier — not a work in progress.</div></div></div></div>
-    <div class="pt-closing">The one-pager doesn't fail at the send. It fails at the desk, before the investor ever sees it. These five tests catch what founder-proximity blinds you to.</div>
+    <div class="kicker"><span class="kicker-num">08:</span><span class="kicker-label">First 60 seconds</span></div>
+    <h2>What they read,<br>in what order.</h2>
+    <p style="max-width:160mm;">Investors don't read a one-pager. They scan it - in a Z-shape, top-left to bottom-right - and decide in the first 15 seconds whether to keep going. 32% drop off before that window closes. (Storydoc, 2024) Understanding their path is the single most actionable thing you can do.</p>
+    <div class="t60-grid"><div class="t60-row"><div class="t60-window">0-5 sec</div><div><div class="t60-what-label">They look at</div><div class="t60-what">Header: logo, company name, tagline.</div><div class="t60-guidance">Identity and category signal. The tagline must name the category and the outcome - not a slogan. If the investor can't place the business in five seconds, the rest is irrelevant.</div></div><div><div class="t60-q-label">Their question</div><div class="t60-q">&ldquo;Do I recognise this space? Is this category interesting to me?&rdquo;</div></div></div><div class="t60-row"><div class="t60-window">5-15 sec</div><div><div class="t60-what-label">They look at</div><div class="t60-what">Headline + USP - the sentence that earns the next 45 seconds.</div><div class="t60-guidance">Lead with the outcome, not the mechanism. 'We help enterprise HR teams cut onboarding by half' beats 'We are an AI-powered HR automation platform.'</div></div><div><div class="t60-q-label">Their question</div><div class="t60-q">&ldquo;Is this a big enough problem? Is this approach credible?&rdquo;</div></div></div></div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -1968,7 +1983,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 12 — FAILURE MODES ============= -->
+<!-- ============= PAGE 10B - FIRST 60 SECONDS (15-60) + 8-LINE RULE ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -1976,10 +1991,11 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="hdr-url">www.pitchbird.de</div>
 </div>
   <div class="body">
-    <div class="kicker"><span class="kicker-num">10:</span><span class="kicker-label">Failure modes</span></div>
-    <h2>Why investors stop reading — and where</h2>
-    <p style="max-width:155mm;">Each failure below maps to a specific drop-off point in investor attention. Know them before you send.</p>
-    <div class="failures"><div class="fail-row"><div class="fail-mode">Runs to more than one page</div><div class="fail-detail">The investor stops at the scroll. Immediate disqualifier.<span class="fail-source">Storydoc, 2024</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Hard-cut at one page. If it doesn't fit, the message isn't tight enough yet.</div></div><div class="fail-row"><div class="fail-mode">Revenue model buried below line 8</div><div class="fail-detail">71% of readers never reach it. They assume you're pre-revenue or hiding something.<span class="fail-source">River Editor, 2026</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Place the revenue model in the top half of the page, on the Z-scan path.</div></div><div class="fail-row"><div class="fail-mode">No funding ask — or a vague one</div><div class="fail-detail">'Seeking strategic investment' is not an ask. Missing status is an immediate disqualifier.<span class="fail-source">Storydoc, 2024</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>State the amount, instrument (SAFE / equity), and close date. Specific numbers signal preparation.</div></div><div class="fail-row"><div class="fail-mode">Team section missing or deferred</div><div class="fail-detail">Investors spend more time on team than any other section — 1 minute 2 seconds on average. No team = no trust.<span class="fail-source">PitchGrade / DocSend, 2024</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Name the founders, their roles, one credibility signal each. It belongs on the page.</div></div><div class="fail-row"><div class="fail-mode">Too many words, too little white space</div><div class="fail-detail">The ideal is 400–500 words. Above that, the document looks unedited and the reader skips to the exit.<span class="fail-source">Storydoc, 2024</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Cut to 500 words. Use white space as structure, not decoration.</div></div><div class="fail-row"><div class="fail-mode">Contact information missing or buried</div><div class="fail-detail">Founders spend weeks on design and forget to include a working email address. Without it, the document did nothing.<span class="fail-source">Chapter 7</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Email, phone, LinkedIn. Bottom-right. Every time, without exception.</div></div></div>
+    <div class="kicker"><span class="kicker-num">08:</span><span class="kicker-label">First 60 seconds cont.</span></div>
+    <h2>The decision window</h2>
+    <p style="max-width:160mm;">By second 15, the partner has decided whether to keep reading. The next 45 seconds decide whether to reply.</p>
+    <div class="t60-grid"><div class="t60-row"><div class="t60-window">15-30 sec</div><div><div class="t60-what-label">They look at</div><div class="t60-what">Traction and team - the proof this is real.</div><div class="t60-guidance">Investors spend an average of 62 seconds on team in pitch decks. (PitchGrade / DocSend, 2024) In a one-pager that scrutiny compresses into a few lines. One credibility signal per founder. One traction proof with a number.</div></div><div><div class="t60-q-label">Their question</div><div class="t60-q">&ldquo;Is there evidence this works? Can I trust who is building it?&rdquo;</div></div></div><div class="t60-row"><div class="t60-window">30-60 sec</div><div><div class="t60-what-label">They look at</div><div class="t60-what">Investment ask and contact.</div><div class="t60-guidance">Companies leading with traction close 6.4 weeks faster than those leading with vision. (Funding Blueprint, 2026) Make the ask specific: amount, instrument, close date. Then make response trivial - email, phone, LinkedIn, bottom-right.</div></div><div><div class="t60-q-label">Their question</div><div class="t60-q">&ldquo;What exactly do they need? How do I respond?&rdquo;</div></div></div></div>
+    <div class="t60-rule"><strong>The 8-line rule.</strong> If your revenue model is not visible in the first eight lines of the document, 71% of readers never see it. (River Editor, 2026) That is not a layout preference - it is a structural requirement. Count the lines in your draft. The problem, the model, and the traction must all land above that threshold.</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -1990,7 +2006,52 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
 </div>
 
-<!-- ============= PAGE 10 — CLOSE + CTA ============= -->
+<!-- ============= PAGE 11 - PRESSURE-TEST ============= -->
+<div class="page">
+  
+<div class="hdr">
+  <img class="hdr-logo" src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
+  <div class="hdr-url">www.pitchbird.de</div>
+</div>
+  <div class="body">
+    <div class="kicker"><span class="kicker-num">09:</span><span class="kicker-label">Pressure-test</span></div>
+    <h2>Five tests before<br>you hit send.</h2>
+    <p style="max-width:160mm;">You do not need analytics software to know whether a one-pager works. You need five disciplined tests - each surfaces a different failure mode. They take less than a week. They will save you from sending something that quietly fails and never tells you why.</p>
+    <div class="pt-grid"><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M136,69.09V170.91L42.24,199.67A8,8,0,0,1,32,192V48a8,8,0,0,1,10.24-7.67Z" opacity="0.2"/><path d="M220.54,86.66l-176.06-54A16,16,0,0,0,24,48V192a16,16,0,0,0,16,16,16,16,0,0,0,4.52-.65L128,181.73V192a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16v-29.9l28.54-8.75A16.09,16.09,0,0,0,232,138V102A16.09,16.09,0,0,0,220.54,86.66ZM128,165,40,192V48l88,27Zm48,27H144V176.82L176,167Zm40-54-.11,0L144,160.08V79.92l71.89,22,.11,0v36Z"/></svg></div><div><div class="pt-name">Read it aloud</div><div class="pt-how">Print the document or open it on a screen, and read every word out loud at normal speaking pace - without pausing to correct yourself mid-sentence.</div></div><div class="pt-signals"><div class="pt-pass">Read straight through without hesitation. Pace feels like a confident conversation.</div><div class="pt-fail">You stumble, slow down, or have to re-read a sentence. Every stumble is a sentence that is too dense or too long.</div></div></div><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M160,112a32,32,0,1,1-32-32A32,32,0,0,1,160,112Z" opacity="0.2"/><path d="M224,48V76a8,8,0,0,1-16,0V48H180a8,8,0,0,1,0-16h28A16,16,0,0,1,224,48Zm-8,124a8,8,0,0,0-8,8v28H180a8,8,0,0,0,0,16h28a16,16,0,0,0,16-16V180A8,8,0,0,0,216,172ZM76,208H48V180a8,8,0,0,0-16,0v28a16,16,0,0,0,16,16H76a8,8,0,0,0,0-16ZM40,84a8,8,0,0,0,8-8V48H76a8,8,0,0,0,0-16H48A16,16,0,0,0,32,48V76A8,8,0,0,0,40,84Zm136,92a8,8,0,0,1-6.41-3.19,52,52,0,0,0-83.2,0,8,8,0,1,1-12.8-9.62A67.94,67.94,0,0,1,101,141.51a40,40,0,1,1,53.94,0,67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,176,176Zm-48-40a24,24,0,1,0-24-24A24,24,0,0,0,128,136Z"/></svg></div><div><div class="pt-name">Three advisors, separately</div><div class="pt-how">Send to three people who understand your space but are not inside your company. Same brief: 'Read this cold. Tell me what's unclear, what's missing.' Never as a group.</div></div><div class="pt-signals"><div class="pt-pass">Each person flags something different - minor, specific, fixable.</div><div class="pt-fail">Two or more flag the same thing. That is not preference. It's a broken element. Fix it.</div></div></div><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,136a88,88,0,1,1-88-88A88,88,0,0,1,216,136Z" opacity="0.2"/><path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/></svg></div><div><div class="pt-name">The 5-second test, with 5 founders</div><div class="pt-how">Send to five founders - peers who do not know your pitch. Ask: 'After five seconds, what does this company do?' Collect their exact words.</div></div><div class="pt-signals"><div class="pt-pass">Four of five describe the business accurately in one sentence.</div><div class="pt-fail">Fewer than three get it right, or descriptions vary wildly. The headline isn't doing its job.</div></div></div><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M192,56V200H64V56Z" opacity="0.2"/><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg></div><div><div class="pt-name">Print it</div><div class="pt-how">Print the one-pager at 100% scale on A4 or letter. Look at it from arm's length before reading a word.</div></div><div class="pt-signals"><div class="pt-pass">Hierarchy is visible. Headline stands out. Clear white space. Looks like a professional document.</div><div class="pt-fail">Looks grey, dense, or cramped. Font below 10pt. No clear visual anchor. Fails on paper = fails on screen.</div></div></div><div class="pt-row"><div class="pt-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></div><div><div class="pt-name">The 8-must-haves checklist</div><div class="pt-how">Open page 03 of this guide. Walk through all eight must-haves - name, contact, profile, business idea, USP, roadmap, ask, highlights. Mark each on your draft.</div></div><div class="pt-signals"><div class="pt-pass">All eight are present. Each is visible without hunting for it.</div><div class="pt-fail">One or more missing, vague, or buried. An incomplete one-pager is a disqualifier - not a work in progress.</div></div></div></div>
+    <div class="pt-closing">The one-pager doesn't fail at the send. It fails at the desk, before the investor ever sees it. These five tests catch what founder-proximity blinds you to.</div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">12</span>
+      <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 12 - FAILURE MODES ============= -->
+<div class="page">
+  
+<div class="hdr">
+  <img class="hdr-logo" src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
+  <div class="hdr-url">www.pitchbird.de</div>
+</div>
+  <div class="body">
+    <div class="kicker"><span class="kicker-num">10:</span><span class="kicker-label">Failure modes</span></div>
+    <h2>Why investors stop reading - and where</h2>
+    <p style="max-width:155mm;">Each failure below maps to a specific drop-off point in investor attention. Know them before you send.</p>
+    <div class="failures"><div class="fail-row"><div class="fail-mode">Runs to more than one page</div><div class="fail-detail">The investor stops at the scroll. Immediate disqualifier.<span class="fail-source">Storydoc, 2024</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Hard-cut at one page. If it doesn't fit, the message isn't tight enough yet.</div></div><div class="fail-row"><div class="fail-mode">Revenue model buried below line 8</div><div class="fail-detail">71% of readers never reach it. They assume you're pre-revenue or hiding something.<span class="fail-source">River Editor, 2026</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Place the revenue model in the top half of the page, on the Z-scan path.</div></div><div class="fail-row"><div class="fail-mode">No funding ask - or a vague one</div><div class="fail-detail">'Seeking strategic investment' is not an ask. Missing status is an immediate disqualifier.<span class="fail-source">Storydoc, 2024</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>State the amount, instrument (SAFE / equity), and close date. Specific numbers signal preparation.</div></div><div class="fail-row"><div class="fail-mode">Team section missing or deferred</div><div class="fail-detail">Investors spend more time on team than any other section - 1 minute 2 seconds on average. No team = no trust.<span class="fail-source">PitchGrade / DocSend, 2024</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Name the founders, their roles, one credibility signal each. It belongs on the page.</div></div><div class="fail-row"><div class="fail-mode">Too many words, too little white space</div><div class="fail-detail">The ideal is 400-500 words. Above that, the document looks unedited and the reader skips to the exit.<span class="fail-source">Storydoc, 2024</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Cut to 500 words. Use white space as structure, not decoration.</div></div><div class="fail-row"><div class="fail-mode">Contact information missing or buried</div><div class="fail-detail">Founders spend weeks on design and forget to include a working email address. Without it, the document did nothing.<span class="fail-source">Chapter 7</span></div><div class="fail-fix"><span class="fail-fix-label">Fix</span>Email, phone, LinkedIn. Bottom-right. Every time, without exception.</div></div></div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">13</span>
+      <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 10 - CLOSE + CTA ============= -->
 <div class="page close">
   <div class="cover-band">
     <img src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
@@ -1998,15 +2059,15 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   </div>
   <div class="body" style="padding-top:34mm;">
     <div class="kicker"><span class="kicker-num">11:</span><span class="kicker-label">Trade-offs</span></div>
-    <h2>What it gives you<br>— and what it can't</h2>
+    <h2>What it gives you<br>- and what it can't</h2>
     <div class="adv-lim">
       <div class="adv">
         <h3>Strengths</h3>
-        <ul><li>Respects the investor's time — and signals you respect it too.</li><li>Forces sharper thinking. If it doesn't fit on a page, the idea isn't focused yet.</li><li>Travels well — easy to forward, print, remember.</li></ul>
+        <ul><li>Respects the investor's time - and signals you respect it too.</li><li>Forces sharper thinking. If it doesn't fit on a page, the idea isn't focused yet.</li><li>Travels well - easy to forward, print, remember.</li></ul>
       </div>
       <div class="lim">
         <h3>Limitations</h3>
-        <ul><li>Brevity is unforgiving. Every missing detail is a potential rejection.</li><li>Hard to write alone — outside eyes catch what founder-bias hides.</li><li>Not a substitute for the full deck. It is the door, not the room.</li></ul>
+        <ul><li>Brevity is unforgiving. Every missing detail is a potential rejection.</li><li>Hard to write alone - outside eyes catch what founder-bias hides.</li><li>Not a substitute for the full deck. It is the door, not the room.</li></ul>
       </div>
     </div>
     <div class="pullquote">
@@ -2015,21 +2076,21 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
     <div class="cta-bar">
       <h3>Want a Pitchbird review of your one-pager?</h3>
       <div>
-        <div class="cta-meta-action">office@pitchbird.de</div>
-        <div class="cta-meta-sub">+49 (0) 160 97026216 · pitchbird.de</div>
+        <a class="cta-meta-action" href="mailto:office@pitchbird.de" style="color:var(--navy);text-decoration:none;">office@pitchbird.de</a>
+        <div class="cta-meta-sub"><a href="tel:+4916097026216" style="color:rgba(3,17,42,0.7);text-decoration:none;">+49 (0) 160 97026216</a> · <a href="https://pitchbird.de" style="color:rgba(3,17,42,0.7);text-decoration:none;">pitchbird.de</a></div>
       </div>
     </div>
   </div>
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">12</span>
+      <span class="page-num">14</span>
       <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
     </div>
   </div>
 </div>
 
-<!-- ============= PAGE 14 — ABOUT THE AUTHOR ============= -->
+<!-- ============= PAGE 14 - ABOUT THE AUTHOR ============= -->
 <div class="page">
   
 <div class="hdr">
@@ -2052,47 +2113,47 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   <div class="foot">
     <span>The Power of the One Pager</span>
     <div class="foot-right">
-      <span class="page-num">13</span>
+      <span class="page-num">15</span>
       <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
     </div>
   </div>
 </div>
 
-<!-- ============= PAGE 15 — FIND US ============= -->
+<!-- ============= PAGE 15 - FIND US ============= -->
 <div class="page findus">
-  <div class="findus-tri"></div>
+  <div class="findus-accent"></div>
   <div class="findus-band">
     <img src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
-    <div class="url">www.pitchbird.de</div>
+    <a class="url" href="https://pitchbird.de">www.pitchbird.de</a>
   </div>
   <div class="findus-inner">
     <div class="findus-eyebrow">Find us</div>
-    <div class="findus-h1">Let's make<br>your one-pager <span class="gold">land.</span></div>
-    <div class="findus-lede">Pitchbird helps founders craft pitch documents that earn the meeting. From a single one-pager review to a full investor-document overhaul — we're a message away.</div>
+    <div class="findus-h1">Let's make your one-pager <span class="gold">land.</span></div>
+    <div class="findus-lede">Pitchbird helps founders craft pitch documents that earn the meeting. From a single one-pager review to a full investor-document overhaul - we're a message away.</div>
     <div class="findus-rows">
       <div class="findus-row">
         <div class="findus-row-label">Website</div>
-        <div class="findus-row-value">pitchbird.de</div>
+        <div class="findus-row-value"><a href="https://pitchbird.de">pitchbird.de</a></div>
       </div>
       <div class="findus-row">
         <div class="findus-row-label">Email</div>
-        <div class="findus-row-value">office@pitchbird.de</div>
+        <div class="findus-row-value"><a href="mailto:office@pitchbird.de">office@pitchbird.de</a></div>
       </div>
       <div class="findus-row">
         <div class="findus-row-label">Phone</div>
-        <div class="findus-row-value">+49 (0) 160 97026216</div>
+        <div class="findus-row-value"><a href="tel:+4916097026216">+49 (0) 160 97026216</a></div>
       </div>
       <div class="findus-row">
         <div class="findus-row-label">LinkedIn</div>
-        <div class="findus-row-value">linkedin.com/in/magdalena-reith-370108a1</div>
+        <div class="findus-row-value"><a href="https://www.linkedin.com/in/magdalena-reith-370108a1/">linkedin.com/in/magdalena-reith-370108a1</a></div>
       </div>
     </div>
-    <div class="findus-cta">Book a one-pager review →</div>
+    <a class="findus-cta" href="mailto:office@pitchbird.de?subject=One-pager review request">Book a one-pager review &rarr;</a>
   </div>
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">14</span>
+      <span class="page-num">16</span>
       <span class="foot-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></span>
     </div>
   </div>

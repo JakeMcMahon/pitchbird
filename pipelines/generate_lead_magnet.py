@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pitchbird lead-magnet PDF generator — v2, brand-corrected.
+"""Pitchbird lead-magnet PDF generator - v2, brand-corrected.
 
 Brand spec (from Figma file APBB7O5bxfboLWeg2FbXgY):
   - Navy #03112A, Gold #FBB03B
@@ -32,14 +32,14 @@ META = {
         "author": "Magdalena Reith · Founder, Pitchbird",
         "cover_lede": "Investors decide whether to take your call in less than 15 seconds. The one-pager is the document that has to survive that test.",
         "cover_body": [
-            "A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners — usually without you in the conversation.",
+            "A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners - usually without you in the conversation.",
             "Drawing on Pitchbird's work with thousands of founders, this guide distils the eight non-negotiables every one-pager needs, the four upgrades that turn competent into memorable, and the design principles that respect how investors actually read.",
             "In the following pages, you'll learn:",
         ],
         "cover_bullets": [
             "The 8 elements every one-pager must have",
             "The 4 high-leverage additions to consider",
-            "How investors scan — and what to put where their eyes go",
+            "How investors scan - and what to put where their eyes go",
             "When the one-pager helps and when it limits you",
         ],
         "cover_quote": "Well-designed one-pagers turn cold inboxes into conversations that change everything.",
@@ -49,7 +49,7 @@ META = {
         "must_haves": [
             ("Company name & logo", "Identity is the anchor. Investors know who they're dealing with before they read a single word.", "identification-card"),
             ("Contact information", "The most-skipped basic. If they can't reach you in one click, the document did nothing.", "phone"),
-            ("Company profile", "A short, informative introduction — what you are, who you serve, why you exist.", "info"),
+            ("Company profile", "A short, informative introduction - what you are, who you serve, why you exist.", "info"),
             ("Business idea", "Describe the core concept in one tight sentence. No jargon, no hedging.", "lightbulb"),
             ("Unique selling proposition", "What makes this venture distinct from the next ten emails in the inbox.", "medal"),
             ("Roadmap & timeline", "Graphically show where the business is going and when. Visual beats prose here.", "chart-line-up"),
@@ -57,51 +57,51 @@ META = {
             ("Investment highlights", "The three or four reasons this allocation pays back. Punchy, not vague.", "sparkle"),
         ],
         "page2_body": [
-            "A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners — usually without you in the conversation.",
+            "A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners - usually without you in the conversation.",
             "That means every element has to do double duty: <strong>introduce, intrigue, and stand on its own.</strong> VCs process pitch documents as self-contained assets. Partners share them with colleagues who may evaluate them without you present. (PitchGrade / DocSend, 2024)",
-            "Funding Blueprint (2026) found that a well-structured one-pager reduces decision friction by approximately <strong>47%</strong> compared to a full pitch deck — while maintaining narrative control. That's the edge in cold outreach.",
+            "Funding Blueprint (2026) found that a well-structured one-pager reduces decision friction by approximately <strong>47%</strong> compared to a full pitch deck - while maintaining narrative control. That's the edge in cold outreach.",
         ],
         "do_dont_pairs": [
-            ("Dense, unbroken paragraphs that force the investor to find the headline", "One dominant headline — 14pt or larger — visible without scrolling or rotating"),
-            ("Revenue model buried below line 8 — 71% of readers never reach it. (River Editor, 2026)", "Revenue model in the top-half of the page, on the natural Z-scan path"),
-            ("900+ words crammed onto a single page", "400–500 words with white space. (Storydoc, 2024)"),
+            ("Dense, unbroken paragraphs that force the investor to find the headline", "One dominant headline - 14pt or larger - visible without scrolling or rotating"),
+            ("Revenue model buried below line 8 - 71% of readers never reach it. (River Editor, 2026)", "Revenue model in the top-half of the page, on the natural Z-scan path"),
+            ("900+ words crammed onto a single page", "400-500 words with white space. (Storydoc, 2024)"),
             ("No funding ask, or vague 'seeking strategic partners' language", "Specific ask: amount, instrument (SAFE / equity), and close date"),
-            ("Team section missing — or 'bios available on request'", "Founder names, roles, one credibility signal each"),
+            ("Team section missing - or 'bios available on request'", "Founder names, roles, one credibility signal each"),
             ("Three fonts, five brand colours, a stock-photo background", "One primary font, two colours, one well-chosen image"),
-            ("Contact info on a second page, or missing entirely", "Email, phone, LinkedIn in the bottom-right — every time"),
-            ("Runs to 1.5 or 2 pages — investor stops at the scroll", "Hard stop at one page. If it doesn't fit, cut — don't extend."),
+            ("Contact info on a second page, or missing entirely", "Email, phone, LinkedIn in the bottom-right - every time"),
+            ("Runs to 1.5 or 2 pages - investor stops at the scroll", "Hard stop at one page. If it doesn't fit, cut - don't extend."),
         ],
         "do_dont_note": "The one-pager must be designed for rapid comprehension without verbal explanation. Partners share it with colleagues who may evaluate it without you present. (PitchGrade / DocSend Data, 2024)",
         "examples": [
             ("Airbnb (2008)", "The original lean pitch", "peach", "Airbnb began as a simple one-pager built on WordPress before it raised a single dollar. It named the problem (no affordable short-term accommodation), the model (peer-to-peer room rental), and the founders. No deck. No presentation. One page.", "The idea earned the meeting. The one-pager was the proof it could be communicated clearly.", "Free Startup Funding, 2024"),
-            ("Warm-intro advantage", "Structure over luck", "blue", "DocSend data shows warm introductions convert at <strong>40–50%</strong> versus <strong>3–5%</strong> for cold decks. A well-crafted one-pager sent to a mutual contact converts cold outreach into a warm intro — before the deck ever opens.", "Use the one-pager as the ask for an introduction, not as a substitute for one.", "PitchGrade / DocSend, 2024"),
-            ("Traction-first sequencing", "Faster closes by 6.4 weeks", "green", "Funding Blueprint's analysis found that companies leading with traction metrics — not vision statements — close funding rounds <strong>6.4 weeks faster</strong>. The first thing the investor reads sets the frame for everything that follows.", "Lead with your best proof point. Vision supports traction. Not the other way around.", "Funding Blueprint, 2026"),
+            ("Warm-intro advantage", "Structure over luck", "blue", "DocSend data shows warm introductions convert at <strong>40-50%</strong> versus <strong>3-5%</strong> for cold decks. A well-crafted one-pager sent to a mutual contact converts cold outreach into a warm intro - before the deck ever opens.", "Use the one-pager as the ask for an introduction, not as a substitute for one.", "PitchGrade / DocSend, 2024"),
+            ("Traction-first sequencing", "Faster closes by 6.4 weeks", "green", "Funding Blueprint's analysis found that companies leading with traction metrics - not vision statements - close funding rounds <strong>6.4 weeks faster</strong>. The first thing the investor reads sets the frame for everything that follows.", "Lead with your best proof point. Vision supports traction. Not the other way around.", "Funding Blueprint, 2026"),
         ],
         "examples_framework": "What all strong one-pagers share: the problem is named in one line, the ask is on the page, the team is visible, and it fits on a single sheet without shrinking the font below 10pt.",
-        "word_economy_intro": "The 400–500 word limit is not a stylistic preference. It is the threshold above which investors stop reading. Storydoc's benchmark across thousands of one-pagers is unambiguous: above 500 words, the document looks unedited — and the reader skips to the exit. The discipline of cutting is the work.",
+        "word_economy_intro": "The 400-500 word limit is not a stylistic preference. It is the threshold above which investors stop reading. Storydoc's benchmark across thousands of one-pagers is unambiguous: above 500 words, the document looks unedited - and the reader skips to the exit. The discipline of cutting is the work.",
         "word_economy": [
-            ("Start with a word count", "pencil-simple-line", "Paste your draft into any word processor. If it reads over 500 words, you are not done yet. Count before you edit — not after.", "Our proprietary, AI-powered platform leverages cutting-edge machine learning algorithms to deliver personalised, data-driven insights that help enterprise customers optimise their operational workflows and significantly reduce costs.", "Our AI platform cuts enterprise operating costs by 30% in under 90 days."),
+            ("Start with a word count", "pencil-simple-line", "Paste your draft into any word processor. If it reads over 500 words, you are not done yet. Count before you edit - not after.", "Our proprietary, AI-powered platform leverages cutting-edge machine learning algorithms to deliver personalised, data-driven insights that help enterprise customers optimise their operational workflows and significantly reduce costs.", "Our AI platform cuts enterprise operating costs by 30% in under 90 days."),
             ("Kill the adjectives first", "warning-octagon", "Ask every adjective and adverb: does this add data, or does it add enthusiasm? Enthusiasm is free; data is not. Every 'innovative', 'revolutionary', 'world-class' costs you credibility, not goodwill.", "Our highly experienced, passionate team of world-class experts has developed a truly innovative solution.", "Our team has built and exited two SaaS companies. The solution is in pilot with three enterprise clients."),
-            ("One sentence per idea", "book-open-text", "A sentence with three clauses is three sentences that haven't been separated yet. If a sentence runs past 20 words, break it. Read it aloud — if you run out of breath, it's too long.", "We are targeting the rapidly growing SME market segment in the DACH region, which represents an addressable market of over €4 billion annually and has historically been underserved by existing SaaS providers.", "Target: SMEs in DACH. Addressable market: €4bn. Underserved by every existing SaaS provider."),
-            ("Replace paragraphs with bullets", "chart-bar-horizontal", "Three consecutive sentences listing related things are a bullet list in disguise. Bullets scan faster, skip slower, and — critically — take up less vertical space on the page.", "The funding will be used to expand our sales team, accelerate product development, and build out our customer success function to support expected growth.", "Use of funds: sales (40%) · product (35%) · customer success (25%)"),
-            ("The five-word test", "lightning", "Can you summarise the business in five words? If not, the headline is doing too much. The headline's job is to make the investor read the next line — not explain everything.", "Building the future of sustainable urban mobility for the next generation of city commuters.", "EV scooter rentals for cities."),
+            ("One sentence per idea", "book-open-text", "A sentence with three clauses is three sentences that haven't been separated yet. If a sentence runs past 20 words, break it. Read it aloud - if you run out of breath, it's too long.", "We are targeting the rapidly growing SME market segment in the DACH region, which represents an addressable market of over €4 billion annually and has historically been underserved by existing SaaS providers.", "Target: SMEs in DACH. Addressable market: €4bn. Underserved by every existing SaaS provider."),
+            ("Replace paragraphs with bullets", "chart-bar-horizontal", "Three consecutive sentences listing related things are a bullet list in disguise. Bullets scan faster, skip slower, and - critically - take up less vertical space on the page.", "The funding will be used to expand our sales team, accelerate product development, and build out our customer success function to support expected growth.", "Use of funds: sales (40%) · product (35%) · customer success (25%)"),
+            ("The five-word test", "lightning", "Can you summarise the business in five words? If not, the headline is doing too much. The headline's job is to make the investor read the next line - not explain everything.", "Building the future of sustainable urban mobility for the next generation of city commuters.", "EV scooter rentals for cities."),
         ],
         "word_economy_closing": "Cutting is not about losing content. It is about finding the 50 words that carry the other 450. When you have cut everything that doesn't earn its place, what remains is the argument.",
-        "first_60_intro": "Investors don't read a one-pager. They scan it — in a Z-shape, top-left to bottom-right — and decide in the first 15 seconds whether to keep going. 32% drop off before that window closes. (Storydoc, 2024) Understanding their path is the single most actionable thing you can do.",
+        "first_60_intro": "Investors don't read a one-pager. They scan it - in a Z-shape, top-left to bottom-right - and decide in the first 15 seconds whether to keep going. 32% drop off before that window closes. (Storydoc, 2024) Understanding their path is the single most actionable thing you can do.",
         "first_60_sequence": [
-            ("0–5 sec", "Header: logo, company name, tagline.", "Do I recognise this space? Is this category interesting to me?", "Identity and category signal. The tagline must name the category and the outcome — not a slogan. If the investor can't place the business in five seconds, the rest is irrelevant."),
-            ("5–15 sec", "Headline + USP — the sentence that earns the next 45 seconds.", "Is this a big enough problem? Is this approach credible?", "Lead with the outcome, not the mechanism. 'We help enterprise HR teams cut onboarding by half' beats 'We are an AI-powered HR automation platform.'"),
-            ("15–30 sec", "Traction and team — the proof this is real.", "Is there evidence this works? Can I trust who is building it?", "Investors spend an average of 62 seconds on team in pitch decks. (PitchGrade / DocSend, 2024) In a one-pager that scrutiny compresses into a few lines. One credibility signal per founder. One traction proof with a number."),
-            ("30–60 sec", "Investment ask and contact.", "What exactly do they need? How do I respond?", "Companies leading with traction close 6.4 weeks faster than those leading with vision. (Funding Blueprint, 2026) Make the ask specific: amount, instrument, close date. Then make response trivial — email, phone, LinkedIn, bottom-right."),
+            ("0-5 sec", "Header: logo, company name, tagline.", "Do I recognise this space? Is this category interesting to me?", "Identity and category signal. The tagline must name the category and the outcome - not a slogan. If the investor can't place the business in five seconds, the rest is irrelevant."),
+            ("5-15 sec", "Headline + USP - the sentence that earns the next 45 seconds.", "Is this a big enough problem? Is this approach credible?", "Lead with the outcome, not the mechanism. 'We help enterprise HR teams cut onboarding by half' beats 'We are an AI-powered HR automation platform.'"),
+            ("15-30 sec", "Traction and team - the proof this is real.", "Is there evidence this works? Can I trust who is building it?", "Investors spend an average of 62 seconds on team in pitch decks. (PitchGrade / DocSend, 2024) In a one-pager that scrutiny compresses into a few lines. One credibility signal per founder. One traction proof with a number."),
+            ("30-60 sec", "Investment ask and contact.", "What exactly do they need? How do I respond?", "Companies leading with traction close 6.4 weeks faster than those leading with vision. (Funding Blueprint, 2026) Make the ask specific: amount, instrument, close date. Then make response trivial - email, phone, LinkedIn, bottom-right."),
         ],
-        "first_60_rule": "<strong>The 8-line rule.</strong> If your revenue model is not visible in the first eight lines of the document, 71% of readers never see it. (River Editor, 2026) That is not a layout preference — it is a structural requirement. Count the lines in your draft. The problem, the model, and the traction must all land above that threshold.",
-        "pressure_test_intro": "You do not need analytics software to know whether a one-pager works. You need five disciplined tests — each surfaces a different failure mode. They take less than a week. They will save you from sending something that quietly fails and never tells you why.",
+        "first_60_rule": "<strong>The 8-line rule.</strong> If your revenue model is not visible in the first eight lines of the document, 71% of readers never see it. (River Editor, 2026) That is not a layout preference - it is a structural requirement. Count the lines in your draft. The problem, the model, and the traction must all land above that threshold.",
+        "pressure_test_intro": "You do not need analytics software to know whether a one-pager works. You need five disciplined tests - each surfaces a different failure mode. They take less than a week. They will save you from sending something that quietly fails and never tells you why.",
         "pressure_tests": [
-            ("Read it aloud", "megaphone-simple", "Print the document or open it on a screen, and read every word out loud at normal speaking pace — without pausing to correct yourself mid-sentence.", "Read straight through without hesitation. Pace feels like a confident conversation.", "You stumble, slow down, or have to re-read a sentence. Every stumble is a sentence that is too dense or too long."),
-            ("Three advisors, separately", "user-focus", "Send to three people who understand your space but are not inside your company. Same brief: 'Read this cold. Tell me what's unclear, what's missing.' Never as a group.", "Each person flags something different — minor, specific, fixable.", "Two or more flag the same thing. That is not preference. It's a broken element. Fix it."),
-            ("The 5-second test, with 5 founders", "timer", "Send to five founders — peers who do not know your pitch. Ask: 'After five seconds, what does this company do?' Collect their exact words.", "Four of five describe the business accurately in one sentence.", "Fewer than three get it right, or descriptions vary wildly. The headline isn't doing its job."),
+            ("Read it aloud", "megaphone-simple", "Print the document or open it on a screen, and read every word out loud at normal speaking pace - without pausing to correct yourself mid-sentence.", "Read straight through without hesitation. Pace feels like a confident conversation.", "You stumble, slow down, or have to re-read a sentence. Every stumble is a sentence that is too dense or too long."),
+            ("Three advisors, separately", "user-focus", "Send to three people who understand your space but are not inside your company. Same brief: 'Read this cold. Tell me what's unclear, what's missing.' Never as a group.", "Each person flags something different - minor, specific, fixable.", "Two or more flag the same thing. That is not preference. It's a broken element. Fix it."),
+            ("The 5-second test, with 5 founders", "timer", "Send to five founders - peers who do not know your pitch. Ask: 'After five seconds, what does this company do?' Collect their exact words.", "Four of five describe the business accurately in one sentence.", "Fewer than three get it right, or descriptions vary wildly. The headline isn't doing its job."),
             ("Print it", "device-mobile", "Print the one-pager at 100% scale on A4 or letter. Look at it from arm's length before reading a word.", "Hierarchy is visible. Headline stands out. Clear white space. Looks like a professional document.", "Looks grey, dense, or cramped. Font below 10pt. No clear visual anchor. Fails on paper = fails on screen."),
-            ("The 8-must-haves checklist", "check-circle", "Open page 03 of this guide. Walk through all eight must-haves — name, contact, profile, business idea, USP, roadmap, ask, highlights. Mark each on your draft.", "All eight are present. Each is visible without hunting for it.", "One or more missing, vague, or buried. An incomplete one-pager is a disqualifier — not a work in progress."),
+            ("The 8-must-haves checklist", "check-circle", "Open page 03 of this guide. Walk through all eight must-haves - name, contact, profile, business idea, USP, roadmap, ask, highlights. Mark each on your draft.", "All eight are present. Each is visible without hunting for it.", "One or more missing, vague, or buried. An incomplete one-pager is a disqualifier - not a work in progress."),
         ],
         "pressure_test_closing": "The one-pager doesn't fail at the send. It fails at the desk, before the investor ever sees it. These five tests catch what founder-proximity blinds you to.",
         "about_paragraphs": [
@@ -114,28 +114,28 @@ META = {
         "failures": [
             ("Runs to more than one page", "The investor stops at the scroll. Immediate disqualifier.", "Hard-cut at one page. If it doesn't fit, the message isn't tight enough yet.", "Storydoc, 2024"),
             ("Revenue model buried below line 8", "71% of readers never reach it. They assume you're pre-revenue or hiding something.", "Place the revenue model in the top half of the page, on the Z-scan path.", "River Editor, 2026"),
-            ("No funding ask — or a vague one", "'Seeking strategic investment' is not an ask. Missing status is an immediate disqualifier.", "State the amount, instrument (SAFE / equity), and close date. Specific numbers signal preparation.", "Storydoc, 2024"),
-            ("Team section missing or deferred", "Investors spend more time on team than any other section — 1 minute 2 seconds on average. No team = no trust.", "Name the founders, their roles, one credibility signal each. It belongs on the page.", "PitchGrade / DocSend, 2024"),
-            ("Too many words, too little white space", "The ideal is 400–500 words. Above that, the document looks unedited and the reader skips to the exit.", "Cut to 500 words. Use white space as structure, not decoration.", "Storydoc, 2024"),
+            ("No funding ask - or a vague one", "'Seeking strategic investment' is not an ask. Missing status is an immediate disqualifier.", "State the amount, instrument (SAFE / equity), and close date. Specific numbers signal preparation.", "Storydoc, 2024"),
+            ("Team section missing or deferred", "Investors spend more time on team than any other section - 1 minute 2 seconds on average. No team = no trust.", "Name the founders, their roles, one credibility signal each. It belongs on the page.", "PitchGrade / DocSend, 2024"),
+            ("Too many words, too little white space", "The ideal is 400-500 words. Above that, the document looks unedited and the reader skips to the exit.", "Cut to 500 words. Use white space as structure, not decoration.", "Storydoc, 2024"),
             ("Contact information missing or buried", "Founders spend weeks on design and forget to include a working email address. Without it, the document did nothing.", "Email, phone, LinkedIn. Bottom-right. Every time, without exception.", "Chapter 7"),
         ],
         "nice_callouts": [
             ("Problem", "peach", "target", "Frame the pain in market terms before you frame yourself.", "Investors connect with the problem first. Make them feel it before you sell the cure."),
-            ("Solution", "blue", "lightbulb-filament", "Show how your business removes that pain. Two lines, max.", "Lead with the outcome — not the mechanism. Save the how for the deck."),
-            ("Traction", "green", "trend-up", "Prove customers want it. Revenue, signups, LOIs — whichever you have.", "Proof beats promise. Companies leading with traction close 6.4 weeks faster. (Funding Blueprint, 2026)"),
+            ("Solution", "blue", "lightbulb-filament", "Show how your business removes that pain. Two lines, max.", "Lead with the outcome - not the mechanism. Save the how for the deck."),
+            ("Traction", "green", "trend-up", "Prove customers want it. Revenue, signups, LOIs - whichever you have.", "Proof beats promise. Companies leading with traction close 6.4 weeks faster. (Funding Blueprint, 2026)"),
             ("Market", "lavender", "globe-hemisphere-east", "Who you sell to, and the competitive landscape they live in.", "Investors want a beachhead, not 'everyone'. Show the wedge first."),
         ],
         "design_principles": [
-            ("Content is king", "Clarity first. Strong narrative — problem, solution, impact. Hierarchy via headings, sub-heads, and bullets that guide the eye."),
+            ("Content is king", "Clarity first. Strong narrative - problem, solution, impact. Hierarchy via headings, sub-heads, and bullets that guide the eye."),
             ("Visually appealing", "Clean composition, generous white space, strategic visuals over walls of text. Colour evokes brand, not chaos."),
             ("Remember your audience", "Investors scan, not read. Lead with what helps their decision. Professional, confident tone throughout."),
             ("Call to action", "End with one specific ask. 'Schedule a 20-minute call.' Not 'we'd love to chat sometime.'"),
         ],
         "anatomy_zones": [
-            ("Header", "top", "Logo + company name. Often the only thing the partner remembers ten minutes later — make it work.", "1"),
+            ("Header", "top", "Logo + company name. Often the only thing the partner remembers ten minutes later - make it work.", "1"),
             ("Headline + USP", "top", "One sentence that earns the next 14 seconds of attention. Lead with the outcome, not the mechanism.", "2"),
             ("Problem", "mid-l", "Pain in the customer's words. Numbers if you have them, story if you don't.", "3"),
-            ("Solution + visual", "mid-r", "How you remove the pain — paired with a mock-up, screenshot or icon. Visual carries weight here.", "4"),
+            ("Solution + visual", "mid-r", "How you remove the pain - paired with a mock-up, screenshot or icon. Visual carries weight here.", "4"),
             ("Traction", "low-l", "Proof. Revenue, signups, LOIs, pilots. One number beats a paragraph of optimism.", "5"),
             ("Market + roadmap", "low-r", "Beachhead first, then the trajectory. 6/12/24-month milestones in a single timeline.", "6"),
             ("Investment ask", "foot-l", "The amount, the structure, the deadline. Specific. No 'flexible'.", "7"),
@@ -143,44 +143,44 @@ META = {
         ],
         "quotes": [
             ("You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.", "Steve Jobs", "Founder, Apple", "big"),
-            ("Chase the vision, not the money — the money will end up following you.", "Tony Hsieh", "Founder, Zappos", "small"),
+            ("Chase the vision, not the money - the money will end up following you.", "Tony Hsieh", "Founder, Zappos", "small"),
             ("The best investment you can make is in your own knowledge.", "Warren Buffett", "Berkshire Hathaway", "small"),
             ("My biggest motivation? Just to keep challenging myself.", "Richard Branson", "Founder, Virgin Group", "small"),
             ("Success is the journey where you reach and exist in places you never thought of before.", "Jayshree Chhajjer", "Founder, Maitree Utsav", "small"),
         ],
         "analytics": [
-            ("Click-through rate", "peach", "cursor-click", "The percentage of recipients who clicked your CTA. The cleanest signal that the one-pager earned a next step.", "Track per source — what works in DMs may flop in cold email."),
+            ("Click-through rate", "peach", "cursor-click", "The percentage of recipients who clicked your CTA. The cleanest signal that the one-pager earned a next step.", "Track per source - what works in DMs may flop in cold email."),
             ("Time on page", "blue", "timer", "How long readers actually spend with it. Under 20 seconds = re-write. Over 90 = lower the density.", "Pair with scroll depth before drawing conclusions."),
-            ("Scroll depth", "green", "arrow-line-down", "How far down they read. Cliffs in the curve show where attention drops — fix that section first.", "Bottom-third drop-off is normal. Top-third drop-off is a red flag."),
-            ("Conversion rate", "lavender", "check-circle", "The percentage who took the requested action — booked, replied, downloaded. The number you optimise everything else for.", "If conv-rate is fine but absolute numbers are tiny, the gap is reach, not the page."),
+            ("Scroll depth", "green", "arrow-line-down", "How far down they read. Cliffs in the curve show where attention drops - fix that section first.", "Bottom-third drop-off is normal. Top-third drop-off is a red flag."),
+            ("Conversion rate", "lavender", "check-circle", "The percentage who took the requested action - booked, replied, downloaded. The number you optimise everything else for.", "If conv-rate is fine but absolute numbers are tiny, the gap is reach, not the page."),
             ("A/B testing", "peach", "flask", "Run two versions in parallel. One change per test (headline, hero image, CTA copy). Decide on ≥30 events per arm.", "Smaller decks need ranking judgements, not statistical significance."),
         ],
         "optimization": [
-            ("Headline & hook", "rocket-launch", "Test 3–5 versions. The best one outperforms the average by 2–3x — and you won't pick it intuitively."),
-            ("Visual hierarchy", "chart-bar-horizontal", "Move the most-skimmed elements to the top-left and bottom-right — that's where eyes actually land."),
-            ("Content priority", "pencil-simple-line", "Reorder by what the data says — not by what feels logical to the founder. Engagement signals beat outline-logic."),
+            ("Headline & hook", "rocket-launch", "Test 3-5 versions. The best one outperforms the average by 2-3x - and you won't pick it intuitively."),
+            ("Visual hierarchy", "chart-bar-horizontal", "Move the most-skimmed elements to the top-left and bottom-right - that's where eyes actually land."),
+            ("Content priority", "pencil-simple-line", "Reorder by what the data says - not by what feels logical to the founder. Engagement signals beat outline-logic."),
             ("CTA testing", "cursor-click", "Position, colour, copy. 'Book a 15-min call' converts higher than 'Get in touch' on every cohort we've measured."),
-            ("Personalisation", "user-focus", "Swap the lede paragraph per investor persona. The rest stays. Drives 30–60% lifts on warm sends."),
+            ("Personalisation", "user-focus", "Swap the lede paragraph per investor persona. The rest stays. Drives 30-60% lifts on warm sends."),
             ("Mobile optimisation", "device-mobile", "Most first reads happen on a phone. If the headline wraps to four lines on mobile, the document is broken."),
             ("Channel integration", "megaphone-simple", "The one-pager and the email + DM and the deck all use the same headline, the same numbers, the same proof points. Consistency compounds."),
-            ("Feedback loop", "arrows-clockwise", "Ship, measure, edit, re-ship — weekly. The one-pager you send in month three should be unrecognisable from month one."),
+            ("Feedback loop", "arrows-clockwise", "Ship, measure, edit, re-ship - weekly. The one-pager you send in month three should be unrecognisable from month one."),
         ],
         "reading": [
             ("The One Page Proposal", "Patrick G. Riley", "The original framework. Forces you to defend every line on the page."),
-            ("Made to Stick", "Chip & Dan Heath", "Why some ideas survive. Six principles — apply all of them to your one-pager."),
-            ("Business Model Generation", "Osterwalder & Pigneur", "The Business Model Canvas — a different one-pager that pairs well with the investor version."),
-            ("The Lean Startup", "Eric Ries", "Validate before you polish. Your one-pager evolves with the business — let it."),
+            ("Made to Stick", "Chip & Dan Heath", "Why some ideas survive. Six principles - apply all of them to your one-pager."),
+            ("Business Model Generation", "Osterwalder & Pigneur", "The Business Model Canvas - a different one-pager that pairs well with the investor version."),
+            ("The Lean Startup", "Eric Ries", "Validate before you polish. Your one-pager evolves with the business - let it."),
             ("The One Page Marketing Plan", "Allan Dib", "Marketing-focused, but the brevity discipline transfers directly to investor docs."),
-            ("Storyworthy", "Matthew Dicks", "The 'homework for life' principle — find the moment in your founder story that actually lands."),
+            ("Storyworthy", "Matthew Dicks", "The 'homework for life' principle - find the moment in your founder story that actually lands."),
         ],
         "advantages": [
-            "Respects the investor's time — and signals you respect it too.",
+            "Respects the investor's time - and signals you respect it too.",
             "Forces sharper thinking. If it doesn't fit on a page, the idea isn't focused yet.",
-            "Travels well — easy to forward, print, remember.",
+            "Travels well - easy to forward, print, remember.",
         ],
         "limitations": [
             "Brevity is unforgiving. Every missing detail is a potential rejection.",
-            "Hard to write alone — outside eyes catch what founder-bias hides.",
+            "Hard to write alone - outside eyes catch what founder-bias hides.",
             "Not a substitute for the full deck. It is the door, not the room.",
         ],
     },
@@ -303,19 +303,21 @@ def html(meta):
         for dont, do in meta["do_dont_pairs"]
     )
 
-    # Examples (page 7)
-    examples_html = "".join(
-        f'<div class="ex-card ex-card-{theme}">'
-        f'<div><div class="ex-label">{label}</div>'
-        f'<div class="ex-name">{name}</div>'
-        f'<div class="ex-source">{source}</div></div>'
-        f'<div><div class="ex-body">{body}</div>'
-        f'<div class="ex-take">{take}</div></div>'
-        f'</div>'
-        for name, label, theme, body, take, source in meta["examples"]
-    )
+    # Examples — split across two pages: first 2 on page A, last 1 + framework on page B
+    def _ex_card(name, label, theme, body, take, source):
+        return (
+            f'<div class="ex-card ex-card-{theme}">'
+            f'<div><div class="ex-label">{label}</div>'
+            f'<div class="ex-name">{name}</div>'
+            f'<div class="ex-source">{source}</div></div>'
+            f'<div><div class="ex-body">{body}</div>'
+            f'<div class="ex-take">{take}</div></div>'
+            f'</div>'
+        )
+    examples_a_html = "".join(_ex_card(*e) for e in meta["examples"][:2])
+    examples_b_html = "".join(_ex_card(*e) for e in meta["examples"][2:])
 
-    # Analytics callouts (page 8) — reuse callout_card with extra icons
+    # Analytics callouts (page 8) - reuse callout_card with extra icons
     analytics_html = "".join(
         callout_card(theme, label, icon, headline, body)
         for label, theme, icon, headline, body in meta["analytics"]
@@ -341,18 +343,20 @@ def html(meta):
         for label, icon, rule, bloated, tight in meta["word_economy"]
     )
 
-    # First 60 seconds
-    t60_html = "".join(
-        f'<div class="t60-row">'
-        f'<div class="t60-window">{window}</div>'
-        f'<div><div class="t60-what-label">They look at</div>'
-        f'<div class="t60-what">{what}</div>'
-        f'<div class="t60-guidance">{guidance}</div></div>'
-        f'<div><div class="t60-q-label">Their question</div>'
-        f'<div class="t60-q">&ldquo;{q}&rdquo;</div></div>'
-        f'</div>'
-        for window, what, q, guidance in meta["first_60_sequence"]
-    )
+    # First 60 seconds — split rows 1-2 on page A, rows 3-4 + 8-line-rule on page B
+    def _t60_row(window, what, q, guidance):
+        return (
+            f'<div class="t60-row">'
+            f'<div class="t60-window">{window}</div>'
+            f'<div><div class="t60-what-label">They look at</div>'
+            f'<div class="t60-what">{what}</div>'
+            f'<div class="t60-guidance">{guidance}</div></div>'
+            f'<div><div class="t60-q-label">Their question</div>'
+            f'<div class="t60-q">&ldquo;{q}&rdquo;</div></div>'
+            f'</div>'
+        )
+    t60_a_html = "".join(_t60_row(*r) for r in meta["first_60_sequence"][:2])
+    t60_b_html = "".join(_t60_row(*r) for r in meta["first_60_sequence"][2:])
 
     # Pressure test
     pt_html = "".join(
@@ -386,7 +390,7 @@ def html(meta):
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>{meta['title']} — Pitchbird</title>
+<title>{meta['title']} - Pitchbird</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -436,9 +440,18 @@ strong, b {{ font-weight: 700; color: var(--ink); }}
   position: relative;
   overflow: hidden;
   page-break-after: always;
+  break-after: page;
   background: var(--paper);
 }}
-.page:last-child {{ page-break-after: auto; }}
+.page:last-child {{ page-break-after: auto; break-after: auto; }}
+/* Page-break safety: never split these atomic chunks across pages */
+.mh-row, .nice-card, .principle, .pr, .callout, .qcard, .opt-row,
+.dodont-row, .ex-card, .fail-row, .we-block, .t60-row, .pt-row,
+.findus-row, .stat-card, .pullquote, .cta-bar, .ex-framework,
+.opt-capstone, .pt-closing, .t60-rule {{
+  page-break-inside: avoid;
+  break-inside: avoid;
+}}
 
 /* ===== Header band ===== */
 .hdr {{
@@ -1096,22 +1109,24 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   border-left: 1pt solid var(--line);
 }}
 .dodont-row .c-dont::before {{
-  content: "—";
+  content: "\\00d7";
   position: absolute;
-  left: 2mm; top: 3.5mm;
+  left: 2.5mm; top: 3.6mm;
   font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   color: #C45641;
   font-size: 10pt;
+  line-height: 1;
 }}
 .dodont-row .c-do::before {{
-  content: "+";
+  content: "\\2713";
   position: absolute;
-  left: 2mm; top: 3.5mm;
+  left: 2.5mm; top: 3.6mm;
   font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   color: #1A7240;
-  font-size: 11pt;
+  font-size: 10pt;
+  line-height: 1;
 }}
 .dodont-row .c-dont,
 .dodont-row .c-do {{
@@ -1332,7 +1347,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   font-weight: 800;
   font-size: 10pt;
   letter-spacing: 0.22em;
-  color: var(--gold);
+  color: var(--paper);
   text-transform: uppercase;
 }}
 
@@ -1401,13 +1416,14 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   position: relative;
   overflow: hidden;
 }}
-.findus-tri {{
+.findus-tri {{ display: none; }}
+.findus-accent {{
   position: absolute;
-  bottom: 0; right: 0;
-  width: 0; height: 0;
-  border-style: solid;
-  border-width: 0 95mm 75mm 0;
-  border-color: transparent var(--gold) transparent transparent;
+  top: 22mm; right: 22mm;
+  width: 14mm; height: 14mm;
+  background: var(--gold);
+  border-radius: 50%;
+  z-index: 1;
 }}
 .findus-band {{
   position: absolute;
@@ -1429,7 +1445,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 }}
 .findus-inner {{
   position: relative;
-  padding: 60mm 22mm 32mm;
+  padding: 42mm 22mm 38mm;
   z-index: 2;
 }}
 .findus-eyebrow {{
@@ -1439,70 +1455,74 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 8mm;
+  margin-bottom: 6mm;
 }}
 .findus-h1 {{
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 900;
-  font-size: 56pt;
-  line-height: 1.02;
-  letter-spacing: -0.035em;
-  margin-bottom: 14mm;
+  font-size: 40pt;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 8mm;
+  max-width: 160mm;
 }}
 .findus-h1 .gold {{ color: var(--gold); }}
 .findus-lede {{
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 700;
-  font-size: 14pt;
+  font-size: 12pt;
   line-height: 1.4;
-  color: rgba(255,255,255,0.8);
-  max-width: 130mm;
-  margin-bottom: 16mm;
+  color: rgba(255,255,255,0.78);
+  max-width: 140mm;
+  margin-bottom: 10mm;
   letter-spacing: -0.015em;
 }}
-.findus-rows {{ display: flex; flex-direction: column; gap: 0; max-width: 145mm; }}
+.findus-rows {{ display: flex; flex-direction: column; gap: 0; max-width: 160mm; }}
 .findus-row {{
   display: grid;
-  grid-template-columns: 38mm 1fr;
+  grid-template-columns: 32mm 1fr;
   gap: 6mm;
   align-items: center;
-  padding: 5mm 0;
+  padding: 4mm 0;
   border-top: 1pt solid rgba(255,255,255,0.18);
 }}
+.findus-row:first-of-type {{ border-top: 1pt solid rgba(255,255,255,0.30); }}
 .findus-row-label {{
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 800;
-  font-size: 9pt;
+  font-size: 8.5pt;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
 }}
-.findus-row-value {{
+.findus-row-value, .findus-row-value a {{
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 700;
-  font-size: 14pt;
+  font-size: 12.5pt;
   color: var(--paper);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
+  text-decoration: none;
 }}
-.findus-cta {{
-  margin-top: 14mm;
+.findus-cta, .findus-cta:link, .findus-cta:visited {{
+  margin-top: 10mm;
   display: inline-block;
   background: var(--gold);
   color: var(--navy);
-  padding: 5mm 9mm;
+  padding: 4mm 8mm;
   border-radius: 2mm;
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 900;
-  font-size: 12pt;
+  font-size: 11pt;
   letter-spacing: -0.01em;
+  text-decoration: none;
 }}
 
 /* ===== Word economy page ===== */
-.we-grid {{ display: flex; flex-direction: column; gap: 2mm; margin-top: 3mm; }}
+.we-grid {{ display: flex; flex-direction: column; gap: 1.8mm; margin-top: 3mm; }}
 .we-block {{
   background: #F4F1EA;
   border-radius: 3mm;
-  padding: 3mm 5mm;
+  padding: 2.5mm 5mm;
   display: grid;
   grid-template-columns: 9mm 1fr;
   gap: 4mm;
@@ -1549,22 +1569,24 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 .we-example-bloated {{ background: #FBEFEB; color: #4A1E14; }}
 .we-example-tight {{ background: #FDF6E6; color: var(--ink); }}
 .we-example-bloated::before {{
-  content: "—";
+  content: "\\00d7";
   position: absolute;
   left: 2mm; top: 2mm;
   font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 10pt;
+  font-weight: 700;
+  font-size: 9pt;
   color: #C45641;
+  line-height: 1;
 }}
 .we-example-tight::before {{
-  content: "+";
+  content: "\\2713";
   position: absolute;
   left: 2mm; top: 2mm;
   font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 11pt;
+  font-weight: 700;
+  font-size: 9pt;
   color: #1A7240;
+  line-height: 1;
 }}
 .we-closing {{
   margin-top: 5mm;
@@ -1962,9 +1984,8 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 </head>
 <body>
 
-<!-- ============= PAGE 0 — VISUAL COVER ============= -->
+<!-- ============= PAGE 0 - VISUAL COVER ============= -->
 <div class="page vcover">
-  <div class="vcover-tri-tl"></div>
   <div class="vcover-tri-br"></div>
   <div class="vcover-band">
     <img src="{LOGO}" alt="Pitchbird">
@@ -1979,7 +2000,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 1 — COVER (type-led, Figma-matching) ============= -->
+<!-- ============= PAGE 1 - COVER (type-led, Figma-matching) ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body cover-v2-body">
@@ -2003,13 +2024,13 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 2 — WHY IT MATTERS ============= -->
+<!-- ============= PAGE 2 - WHY IT MATTERS ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
     {kicker('01:', 'Why it matters')}
     <h2>One sheet of paper.<br>One decision.</h2>
-    <p class="lede">The one-pager is the door, not the room. Done well, it earns you the meeting. Done badly, it earns you silence — and you'll never know which line lost you the deal.</p>
+    <p class="lede">The one-pager is the door, not the room. Done well, it earns you the meeting. Done badly, it earns you silence - and you'll never know which line lost you the deal.</p>
     <div class="two-col">
       <div>
         {page2_body_html}
@@ -2021,7 +2042,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
       </div>
       <div>
         <div class="illus illus-navy"><img src="{img_path('page2-zscan')}" alt=""></div>
-        <div class="illus-cap">Investors don't read — they scan a Z. The page has to deliver on that path or it doesn't deliver at all.</div>
+        <div class="illus-cap">Investors don't read - they scan a Z. The page has to deliver on that path or it doesn't deliver at all.</div>
       </div>
     </div>
   </div>
@@ -2034,7 +2055,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 3 — THE 8 MUST-HAVES ============= -->
+<!-- ============= PAGE 3 - THE 8 MUST-HAVES ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
@@ -2054,7 +2075,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 4 — NICE TO HAVES + PRINCIPLES ============= -->
+<!-- ============= PAGE 4 - NICE TO HAVES + PRINCIPLES ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
@@ -2079,13 +2100,13 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 5 — ANATOMY MAP ============= -->
+<!-- ============= PAGE 5 - ANATOMY MAP ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
     {kicker('04:', 'Anatomy')}
     <h2>Where everything goes on the page</h2>
-    <p style="max-width:150mm;">Investors don't read a one-pager — they scan it in a Z-shape, top-left to bottom-right. The eight elements earn their spot only when they sit where eyes already land.</p>
+    <p style="max-width:150mm;">Investors don't read a one-pager - they scan it in a Z-shape, top-left to bottom-right. The eight elements earn their spot only when they sit where eyes already land.</p>
     <div class="anatomy">
       <div class="anatomy-map">{anatomy_map_html}</div>
       <div class="anatomy-list">{anatomy_list_html}</div>
@@ -2100,13 +2121,13 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 6 — DO / DON'T ============= -->
+<!-- ============= PAGE 6 - DO / DON'T ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
     {kicker('05:', 'Design in practice')}
     <h2>What separates a readable one-pager from a rejected one</h2>
-    <p style="max-width:155mm;">The difference is rarely the idea — it's the execution of the page itself. Eight calls investors make in the first scan.</p>
+    <p style="max-width:155mm;">The difference is rarely the idea - it's the execution of the page itself. Eight calls investors make in the first scan.</p>
     <div class="dodont">
       <div class="dodont-head">
         <div class="h-dont">Don't</div>
@@ -2125,15 +2146,14 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 7 — REAL-WORLD EXAMPLES ============= -->
+<!-- ============= PAGE 7A - EXAMPLES (1-2 of 3) ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
     {kicker('06:', 'Examples')}
-    <h2>What strong one-pagers look like in practice</h2>
-    <p style="max-width:155mm;">Three patterns we see in the one-pagers that earn meetings — backed by published investor-engagement data.</p>
-    <div class="examples">{examples_html}</div>
-    <div class="ex-framework">{meta['examples_framework']}</div>
+    <h2>What strong one-pagers look like</h2>
+    <p style="max-width:155mm;">Three patterns we see in the one-pagers that earn meetings - backed by published investor-engagement data.</p>
+    <div class="examples">{examples_a_html}</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -2144,14 +2164,15 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 9 — WORD ECONOMY ============= -->
+<!-- ============= PAGE 7B - EXAMPLES (3 of 3 + framework) ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
-    {kicker('07:', 'Word economy')}
-    <h2>Cut to 500 words. Then cut again.</h2>
-    <p style="max-width:160mm;">The 400–500 word limit is the threshold above which investors stop reading. (Storydoc, 2024) The discipline of cutting is the work — and here is how to do it.</p>
-    <div class="we-grid">{we_html}</div>
+    {kicker('06:', 'Examples cont.')}
+    <h2>And one more pattern</h2>
+    <p style="max-width:155mm;">The third - and most consequential - pattern: the order in which information lands.</p>
+    <div class="examples">{examples_b_html}</div>
+    <div class="ex-framework">{meta['examples_framework']}</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -2162,15 +2183,14 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 10 — FIRST 60 SECONDS ============= -->
+<!-- ============= PAGE 9 - WORD ECONOMY ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
-    {kicker('08:', 'First 60 seconds')}
-    <h2>What they read,<br>in what order.</h2>
-    <p style="max-width:160mm;">{meta['first_60_intro']}</p>
-    <div class="t60-grid">{t60_html}</div>
-    <div class="t60-rule">{meta['first_60_rule']}</div>
+    {kicker('07:', 'Word economy')}
+    <h2>Cut to 500 words. Then cut again.</h2>
+    <p style="max-width:160mm;">The 400-500 word limit is the threshold above which investors stop reading. (Storydoc, 2024) The discipline of cutting is the work - and here is how to do it.</p>
+    <div class="we-grid">{we_html}</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -2181,7 +2201,44 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 11 — PRESSURE-TEST ============= -->
+<!-- ============= PAGE 10A - FIRST 60 SECONDS (0-15) ============= -->
+<div class="page">
+  {header('www.pitchbird.de')}
+  <div class="body">
+    {kicker('08:', 'First 60 seconds')}
+    <h2>What they read,<br>in what order.</h2>
+    <p style="max-width:160mm;">{meta['first_60_intro']}</p>
+    <div class="t60-grid">{t60_a_html}</div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">10</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 10B - FIRST 60 SECONDS (15-60) + 8-LINE RULE ============= -->
+<div class="page">
+  {header('www.pitchbird.de')}
+  <div class="body">
+    {kicker('08:', 'First 60 seconds cont.')}
+    <h2>The decision window</h2>
+    <p style="max-width:160mm;">By second 15, the partner has decided whether to keep reading. The next 45 seconds decide whether to reply.</p>
+    <div class="t60-grid">{t60_b_html}</div>
+    <div class="t60-rule">{meta['first_60_rule']}</div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">11</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 11 - PRESSURE-TEST ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
@@ -2194,31 +2251,31 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot">
     <span>The Power of the One Pager</span>
     <div class="foot-right">
-      <span class="page-num">10</span>
+      <span class="page-num">12</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
 </div>
 
-<!-- ============= PAGE 12 — FAILURE MODES ============= -->
+<!-- ============= PAGE 12 - FAILURE MODES ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
     {kicker('10:', 'Failure modes')}
-    <h2>Why investors stop reading — and where</h2>
+    <h2>Why investors stop reading - and where</h2>
     <p style="max-width:155mm;">Each failure below maps to a specific drop-off point in investor attention. Know them before you send.</p>
     <div class="failures">{failures_html}</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
     <div class="foot-right">
-      <span class="page-num">11</span>
+      <span class="page-num">13</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
 </div>
 
-<!-- ============= PAGE 10 — CLOSE + CTA ============= -->
+<!-- ============= PAGE 10 - CLOSE + CTA ============= -->
 <div class="page close">
   <div class="cover-band">
     <img src="{LOGO}" alt="Pitchbird">
@@ -2226,7 +2283,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
   <div class="body" style="padding-top:34mm;">
     {kicker('11:', 'Trade-offs')}
-    <h2>What it gives you<br>— and what it can't</h2>
+    <h2>What it gives you<br>- and what it can't</h2>
     <div class="adv-lim">
       <div class="adv">
         <h3>Strengths</h3>
@@ -2243,21 +2300,21 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
     <div class="cta-bar">
       <h3>Want a Pitchbird review of your one-pager?</h3>
       <div>
-        <div class="cta-meta-action">office@pitchbird.de</div>
-        <div class="cta-meta-sub">+49 (0) 160 97026216 · pitchbird.de</div>
+        <a class="cta-meta-action" href="mailto:office@pitchbird.de" style="color:var(--navy);text-decoration:none;">office@pitchbird.de</a>
+        <div class="cta-meta-sub"><a href="tel:+4916097026216" style="color:rgba(3,17,42,0.7);text-decoration:none;">+49 (0) 160 97026216</a> · <a href="https://pitchbird.de" style="color:rgba(3,17,42,0.7);text-decoration:none;">pitchbird.de</a></div>
       </div>
     </div>
   </div>
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">12</span>
+      <span class="page-num">14</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
 </div>
 
-<!-- ============= PAGE 14 — ABOUT THE AUTHOR ============= -->
+<!-- ============= PAGE 14 - ABOUT THE AUTHOR ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
@@ -2276,47 +2333,47 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot">
     <span>The Power of the One Pager</span>
     <div class="foot-right">
-      <span class="page-num">13</span>
+      <span class="page-num">15</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
 </div>
 
-<!-- ============= PAGE 15 — FIND US ============= -->
+<!-- ============= PAGE 15 - FIND US ============= -->
 <div class="page findus">
-  <div class="findus-tri"></div>
+  <div class="findus-accent"></div>
   <div class="findus-band">
     <img src="{LOGO}" alt="Pitchbird">
-    <div class="url">www.pitchbird.de</div>
+    <a class="url" href="https://pitchbird.de">www.pitchbird.de</a>
   </div>
   <div class="findus-inner">
     <div class="findus-eyebrow">Find us</div>
-    <div class="findus-h1">Let's make<br>your one-pager <span class="gold">land.</span></div>
-    <div class="findus-lede">Pitchbird helps founders craft pitch documents that earn the meeting. From a single one-pager review to a full investor-document overhaul — we're a message away.</div>
+    <div class="findus-h1">Let's make your one-pager <span class="gold">land.</span></div>
+    <div class="findus-lede">Pitchbird helps founders craft pitch documents that earn the meeting. From a single one-pager review to a full investor-document overhaul - we're a message away.</div>
     <div class="findus-rows">
       <div class="findus-row">
         <div class="findus-row-label">Website</div>
-        <div class="findus-row-value">pitchbird.de</div>
+        <div class="findus-row-value"><a href="https://pitchbird.de">pitchbird.de</a></div>
       </div>
       <div class="findus-row">
         <div class="findus-row-label">Email</div>
-        <div class="findus-row-value">office@pitchbird.de</div>
+        <div class="findus-row-value"><a href="mailto:office@pitchbird.de">office@pitchbird.de</a></div>
       </div>
       <div class="findus-row">
         <div class="findus-row-label">Phone</div>
-        <div class="findus-row-value">+49 (0) 160 97026216</div>
+        <div class="findus-row-value"><a href="tel:+4916097026216">+49 (0) 160 97026216</a></div>
       </div>
       <div class="findus-row">
         <div class="findus-row-label">LinkedIn</div>
-        <div class="findus-row-value">linkedin.com/in/magdalena-reith-370108a1</div>
+        <div class="findus-row-value"><a href="https://www.linkedin.com/in/magdalena-reith-370108a1/">linkedin.com/in/magdalena-reith-370108a1</a></div>
       </div>
     </div>
-    <div class="findus-cta">Book a one-pager review →</div>
+    <a class="findus-cta" href="mailto:office@pitchbird.de?subject=One-pager review request">Book a one-pager review &rarr;</a>
   </div>
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">14</span>
+      <span class="page-num">16</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
