@@ -23,6 +23,29 @@ def icon_svg(name):
     return txt.replace("<svg ", '<svg class="phx" ', 1)
 
 
+# Max items per page, derived from CSS measurements — see research/PAGE_LIMITS.md
+PAGE_SPLIT_RULES = {
+    "we_block": 5,
+    "pt_row": 3,
+    "ex_card": 2,
+    "t60_row": 4,        # 4 fits if no 8-line-rule band; with band, use 2 on page A + 2 on B
+    "dodont_row": 8,
+    "fail_row": 6,
+    "mh_row": 8,
+    "callout": 4,
+    "principle": 4,
+}
+
+def auto_split(items, template_type):
+    """Yield chunks of items sized to fit one page per chunk.
+    Use this whenever a template's item list might grow beyond the per-page max.
+    Example:  for chunk in auto_split(meta["pressure_tests"], "pt_row"): render_page(chunk)
+    """
+    max_n = PAGE_SPLIT_RULES.get(template_type, 4)
+    for i in range(0, len(items), max_n):
+        yield items[i:i + max_n]
+
+
 META = {
     "one-pager": {
         "slug": "one-pager",
@@ -117,7 +140,7 @@ META = {
             ("No funding ask - or a vague one", "'Seeking strategic investment' is not an ask. Missing status is an immediate disqualifier.", "State the amount, instrument (SAFE / equity), and close date. Specific numbers signal preparation.", "Storydoc, 2024"),
             ("Team section missing or deferred", "Investors spend more time on team than any other section - 1 minute 2 seconds on average. No team = no trust.", "Name the founders, their roles, one credibility signal each. It belongs on the page.", "PitchGrade / DocSend, 2024"),
             ("Too many words, too little white space", "The ideal is 400-500 words. Above that, the document looks unedited and the reader skips to the exit.", "Cut to 500 words. Use white space as structure, not decoration.", "Storydoc, 2024"),
-            ("Contact information missing or buried", "Founders spend weeks on design and forget to include a working email address. Without it, the document did nothing.", "Email, phone, LinkedIn. Bottom-right. Every time, without exception.", "Chapter 7"),
+            ("Contact information missing or buried", "Founders spend weeks on design and forget to include a working email address. Without it, the document did nothing.", "Email, phone, LinkedIn. Bottom-right. Every time, without exception.", "Pitchbird Lead Magnet"),
         ],
         "nice_callouts": [
             ("Problem", "peach", "target", "Frame the pain in market terms before you frame yourself.", "Investors connect with the problem first. Make them feel it before you sell the cure."),
@@ -2006,7 +2029,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body cover-v2-body">
-    <div class="cover-eyebrow">Pitchbird · Founder Guide · Chapter 7</div>
+    <div class="cover-eyebrow">Pitchbird · Founder Guide</div>
     <h1 class="cover-h1">
       <span class="g">{meta['title_split'][0]}</span> <span class="n">{meta['title_split'][1]}</span>
     </h1>
