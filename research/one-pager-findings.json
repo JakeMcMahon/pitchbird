@@ -1,0 +1,74 @@
+[
+  {
+    "claim": "VCs spend an average of 3 minutes 44 seconds reading a first-time pitch deck, with the critical first three slides determining whether they continue reading.",
+    "value_for_lead_magnet": "Establishes the brutal time constraint that justifies one-pager discipline; shows that investors filter in the first 90 seconds.",
+    "source_url": "https://pitchgrade.com/blog/what-investors-read-pitch-deck-docsend-data",
+    "source_name": "PitchGrade / DocSend Data",
+    "year": 2024,
+    "verbatim_quote": "The problem statement should be grasped in 20 seconds, and the solution in 30 seconds."
+  },
+  {
+    "claim": "The team slide receives the most investor attention (1 minute 2 seconds) in pitch decks, significantly more than product (21 seconds), indicating founders are more important than initial product market fit.",
+    "value_for_lead_magnet": "Justifies why one-pagers must lead with founder credibility and market fit; explains what investors actually weight.",
+    "source_url": "https://pitchgrade.com/blog/what-investors-read-pitch-deck-docsend-data",
+    "source_name": "PitchGrade / DocSend Data",
+    "year": 2024,
+    "verbatim_quote": "Team — 1 minute 2 seconds [most-viewed slide by duration]"
+  },
+  {
+    "claim": "Warm introductions achieve 40-50% meeting conversion rates while cold decks achieve 3-5%, a 10-15x difference in response rates.",
+    "value_for_lead_magnet": "Frames the one-pager as a tool to convert cold→warm relationships; shows one-pagers are the bridge document for cold outreach sequencing.",
+    "source_url": "https://pitchgrade.com/blog/what-investors-read-pitch-deck-docsend-data",
+    "source_name": "PitchGrade / DocSend Data",
+    "year": 2024,
+    "verbatim_quote": "Warm decks: 4+ minutes average reading time, 40-50% meeting conversion. Cold decks: 2.5 minutes average reading time, 3-5% conversion rate."
+  },
+  {
+    "claim": "If revenue model is not visible in the first eight lines of a one-pager, 71% of readers never see it; if key metrics are buried, they eliminate themselves from consideration.",
+    "value_for_lead_magnet": "Provides hard data on information architecture and visual hierarchy; shows the cost of poor structural choices in one-pagers.",
+    "source_url": "https://rivereditor.com/blogs/write-investor-one-pager-fundraising",
+    "source_name": "River Editor",
+    "year": 2026,
+    "verbatim_quote": "If your revenue model isn't visible in the first eight lines, 71% of readers never see it."
+  },
+  {
+    "claim": "One-pagers reduce cognitive load by approximately 47% compared to full pitch decks while maintaining narrative control, making them strategically superior for cold outreach.",
+    "value_for_lead_magnet": "Quantifies the one-pager advantage in lead magnets; shows one-pagers as a tested friction-reduction tool.",
+    "source_url": "https://fundingblueprint.io/one-pager-vs-pitch-deck-strategy",
+    "source_name": "Funding Blueprint",
+    "year": 2026,
+    "verbatim_quote": "By contrast, a one-pager reduces decision friction by approximately 47% while maintaining narrative control."
+  },
+  {
+    "claim": "Companies leading with traction metrics in one-pager summaries close funding rounds 6.4 weeks faster than those leading with vision statements.",
+    "value_for_lead_magnet": "Demonstrates one-pager content sequencing impact on deal speed; shows measurable outcome from structure choices.",
+    "source_url": "https://fundingblueprint.io/investor-summary-one-page-pitch-deck-template-structure",
+    "source_name": "Funding Blueprint",
+    "year": 2026,
+    "verbatim_quote": "Companies that lead with traction metrics in their summaries close rounds 6.4 weeks faster than those that lead with vision statements."
+  },
+  {
+    "claim": "Ideal one-pager length is 400-500 words with white space; exceeding one page, lacking team information, or missing funding ask status are immediate disqualifiers.",
+    "value_for_lead_magnet": "Sets concrete technical specifications for one-pager format; identifies the three most common failure modes.",
+    "source_url": "https://www.storydoc.com/blog/how-to-create-a-startup-one-pager",
+    "source_name": "Storydoc",
+    "year": 2024,
+    "verbatim_quote": "Ideally 400-500 words with white space... having too many buzzwords, exceeding one page, lacking important information such as team or fundraising status, or missing a clear solution can lose investor interest."
+  },
+  {
+    "claim": "VCs process pitch documents as self-contained assets that may be shared with colleagues independently; one-pagers must be designed for standalone comprehension without presenter explanation.",
+    "value_for_lead_magnet": "Explains why visual clarity and completeness matter in one-pagers; shows they function as proxy for founder communication ability.",
+    "source_url": "https://pitchgrade.com/blog/what-investors-read-pitch-deck-docsend-data",
+    "source_name": "PitchGrade / DocSend Data",
+    "year": 2024,
+    "verbatim_quote": "Design your deck for rapid comprehension without verbal explanation, since investors often share decks with colleagues independently and may evaluate them without you present."
+  },
+  {
+    "claim": "Airbnb began as a simple WordPress one-pager in 2008 before scaling into a unicorn; demonstrates the one-pager as a proven early-stage VC communication standard.",
+    "value_for_lead_magnet": "Provides credible, recognizable example of one-pager as launch vehicle for billion-dollar company; anchors one-pagers in VC folklore.",
+    "source_url": "https://freestartupfunding.com/case-studies",
+    "source_name": "Free Startup Funding Case Studies",
+    "year": 2024,
+    "verbatim_quote": "Airbnb was just a simple one-pager built on WordPress when it started more than ten years ago."
+  }
+]

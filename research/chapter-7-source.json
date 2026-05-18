@@ -1,0 +1,96 @@
+{
+  "chapter_title": "The Power of the One Pager: Capturing Your Business in a Snapshot",
+  "chapter_thesis_verbatim": "Imagine condensing everything you need to know about your business, its promise, and potential into a single page that piques curiosity, generates genuine interest, and compels investors to reach out.",
+
+  "framing_verbatim": [
+    "A One Pager serves as a testament to your business's existence. It is the first impression you make, so it needs to be strong, distinctive, and memorable.",
+    "Your One Pager needs to deliver a professional, compelling narrative that inspires action.",
+    "It's unfortunate but all too common that many entrepreneurs overlook the basics. Too often, they devote significant time and effort to design and distill their business idea into a compelling narrative, only to forget to include contact information.",
+    "Your One Pager should be compact, concise, and clear, delivering a powerful punch rather than a wearying word-fest."
+  ],
+
+  "must_haves_verbatim": [
+    {"label": "Company name & logo", "desc": "Identity is key. Ensure your investors know who they're dealing with."},
+    {"label": "Contact information", "desc": "Make it as easy as possible for potential business partners to reach out."},
+    {"label": "Company profile", "desc": "A brief yet informative introduction of your company."},
+    {"label": "Business Idea", "desc": "Succinctly describe your business's core concept."},
+    {"label": "USP", "desc": "Highlight your Unique Selling Proposition to underscore your idea's distinctiveness."},
+    {"label": "Roadmap & Timeline", "desc": "Graphically depict your business's future trajectory and timelines."},
+    {"label": "Investment", "desc": "Specify the investment amount needed, its form (one-time or instalments), and deadline."},
+    {"label": "Investment Highlights", "desc": "Succinctly convey the benefits an investment in your idea will yield."}
+  ],
+
+  "nice_to_haves_verbatim": [
+    {"label": "Problem", "desc": "Describe the existing market problem or situation."},
+    {"label": "Solution", "desc": "Briefly explain how your business addresses the problem."},
+    {"label": "Traction", "desc": "Demonstrate the customer need for your product or service, and how this translates into potential sales."},
+    {"label": "Target group & market", "desc": "Provide a snapshot of your potential customers and competitive landscape."}
+  ],
+
+  "design_principles_verbatim": {
+    "content_is_king": [
+      "Focus on Clarity and Concision: Strive for a clear and concise message. Prioritize the most crucial information about your business and value proposition.",
+      "Strong Narrative: Craft a captivating story around your business idea. Highlight the problem you solve, your unique solution, and the potential impact.",
+      "Structure and Hierarchy: Organize content logically. Use headings, subheadings, and bullet points to guide the reader's eye and create a clear hierarchy of information."
+    ],
+    "visually_appealing": [
+      "Clean and Simple Design: Avoid clutter and maintain a clean, professional aesthetic.",
+      "White Space is Your Friend: Whitespace helps information breathe and prevents your One Pager from feeling overwhelming.",
+      "Strategic Use of Visuals: Incorporate high-quality images, icons, or infographics to break up text and enhance understanding.",
+      "Color Psychology: Utilize color strategically to evoke emotions and brand identity."
+    ],
+    "remember_your_audience": [
+      "Tailor to Investors: Design your One Pager with investors in mind. Highlight aspects most relevant to their decision-making process.",
+      "Professional Tone: Maintain a professional and confident tone throughout the document."
+    ],
+    "call_to_action": [
+      "Clear and Compelling: Include a clear and compelling call to action at the end. Tell investors what you want them to do next (e.g., schedule a meeting)."
+    ]
+  },
+
+  "advantages_verbatim": "A well-designed One Pager is your golden ticket to capturing an investor's fleeting attention. The rapid pace of the business world means time is always in short supply, and your One Pager should cater to these constraints. It needs to be crisp, compact, and offer a clear overview, impressing not just with its content but with your business acumen as well.",
+
+  "limitations_verbatim": "But a One Pager is not without its limitations. Its brevity, a strength in the business world, can sometimes pose a challenge, forcing you to condense your business idea to its core essence without sacrificing its uniqueness. This task is often where external feedback proves invaluable.",
+
+  "closing_verbatim": "Creating a compelling One Pager is both an art and a science, a balancing act of providing just enough detail to spark interest, without overwhelming your reader with excess information. A well-crafted One Pager can set you apart from the competition and inspire potential investors to reach out.",
+
+  "analytics_verbatim": [
+    {"label": "Click-through rates (CTRs)", "desc": "Track the percentage of recipients who click on a link or call-to-action within the one-pager to gauge interest and engagement."},
+    {"label": "Time on page", "desc": "Measure how long potential investors spend viewing the one-pager to understand if it's capturing their attention effectively."},
+    {"label": "Scroll depth", "desc": "Analyze how far users scroll through the one-pager to identify the most engaging sections or areas for improvement."},
+    {"label": "Conversion rates", "desc": "Track the percentage of one-pager recipients who take a desired action, such as requesting more information or scheduling a meeting."},
+    {"label": "A/B testing", "desc": "Conduct experiments by creating variations of the one-pager and comparing their performance to identify the most effective design, content, or layout."}
+  ],
+
+  "optimization_verbatim": [
+    {"label": "Headline and hook optimization", "desc": "Test different headlines and opening statements to capture attention and encourage further reading."},
+    {"label": "Visual hierarchy and layout", "desc": "Experiment with the placement and sizing of different elements (text, images, graphics) to guide the viewer's eye and highlight key information."},
+    {"label": "Content prioritization", "desc": "Refine the order and emphasis of different sections based on user engagement data to prioritize the most compelling information."},
+    {"label": "Call-to-action (CTA) testing", "desc": "Try different CTA placements, designs, and messaging to improve conversion rates and desired actions."},
+    {"label": "Personalization", "desc": "Explore opportunities to tailor the one-pager's content or design to specific investor personas or industries for increased relevance and impact."},
+    {"label": "Mobile optimization", "desc": "Ensure the one-pager is optimized for mobile devices, as many investors may initially view it on their smartphones or tablets."},
+    {"label": "Integration with other marketing channels", "desc": "Coordinate the one-pager's messaging and branding with other marketing materials or channels for consistency and reinforcement."},
+    {"label": "Feedback and iteration", "desc": "Continuously gather feedback from investors, stakeholders, and analytics data to refine and optimize the one-pager over time."}
+  ],
+
+  "research_in_chapter": {
+    "storydoc_stat": "According to Storydoc, 32% of decision-makers drop off after 15 seconds of reading one-pagers, which makes them such an effective tool.",
+    "first_three_slides": "The first three slides are key: 80% of readers who go through them, read the deck in full"
+  },
+
+  "books_in_chapter_on_topic": [
+    {"title": "The One Page Proposal", "author": "Patrick G. Riley", "chapter_take": "This book focuses on creating a one-page proposal or business plan that effectively communicates your business idea."},
+    {"title": "The One Page Marketing Plan", "author": "Allan Dib", "chapter_take": "This book provides a framework for creating a simple, one-page marketing plan for your business."},
+    {"title": "Business Model Generation", "author": "Alexander Osterwalder and Yves Pigneur", "chapter_take": "Introduces the Business Model Canvas, a one-page visual tool for describing a business model."},
+    {"title": "Made to Stick", "author": "Chip Heath and Dan Heath", "chapter_take": "Teaches you how to create ideas that are sticky and memorable. Important for a one-pager, as you will want to make sure that your message sticks with potential investors long after they have read it."},
+    {"title": "The Lean Startup", "author": "Eric Ries", "chapter_take": "Teaches you how to validate your business idea through a process of rapid experimentation — useful for a one-pager, as you will need to concisely explain your business idea and its value proposition."}
+  ],
+
+  "off_topic_to_drop": [
+    "Tony Hsieh Zappos quote (motivation, not one-pager)",
+    "Warren Buffett quote (motivation, not one-pager)",
+    "Jayshree Chhajjer quote (motivation, not one-pager)",
+    "Richard Branson quote (motivation, not one-pager)",
+    "Steve Jobs quote (motivation, not one-pager)"
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "page_1_cover": {
+    "eyebrow": "Pitchbird · Founder Guide · Chapter 7",
+    "title_split": ["The Power of", "the One Pager"],
+    "lede": "Investors decide whether to take your call in less than 15 seconds. The one-pager is the document that has to survive that test.",
+    "body_paragraphs": [
+      "A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners — usually without you in the conversation.",
+      "Drawing on Pitchbird's work with thousands of founders, this guide distils the eight non-negotiables every one-pager needs, the four upgrades that turn competent into memorable, and the design principles that respect how investors actually read.",
+      "In the following pages, you'll learn:"
+    ],
+    "learn_bullets": [
+      "The 8 elements every one-pager must have",
+      "The 4 high-leverage additions to consider",
+      "How investors scan — and what to put where their eyes go",
+      "When the one-pager helps and when it limits you"
+    ],
+    "signature": "Magdalena Reith · Founder, Pitchbird",
+    "quote": "Well-designed one-pagers turn cold inboxes into conversations that change everything."
+  },
+
+  "page_2_why": {
+    "kicker_num": "01:",
+    "kicker_label": "Why it matters",
+    "h2": "One sheet of paper.\nOne decision.",
+    "lede": "The one-pager is the door, not the room. Done well, it earns you the meeting. Done badly, it earns you silence — and you'll never know which line lost you the deal.",
+    "body_paragraphs": [
+      "A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners — usually without you in the conversation.",
+      "That means every element has to do double duty: introduce, intrigue, and stand on its own. VCs process pitch documents as self-contained assets. Partners share them with colleagues who may evaluate them without you present. Your one-pager is a proxy for your communication ability. (PitchGrade / DocSend Data, 2024)",
+      "Funding Blueprint (2026) found that a well-structured one-pager reduces decision friction by approximately 47% compared to a full pitch deck — while maintaining narrative control. That's the edge in cold outreach."
+    ],
+    "stat_card": {
+      "big": "32%",
+      "text": "of decision-makers drop off after 15 seconds of reading a one-pager. The first impression is the only impression.",
+      "source": "Storydoc, 2024"
+    },
+    "illus_caption": "Treat the one-pager as the most-circulated document you will ever make. Because it is."
+  },
+
+  "page_3_must_haves": {
+    "kicker_num": "02:",
+    "kicker_label": "The framework",
+    "h2": "The eight non-negotiables",
+    "intro": "If a one-pager misses any of these, it is incomplete. Treat this as the checklist before you send anything.",
+    "items": [
+      {
+        "label": "Company name & logo",
+        "desc": "Identity is the anchor. Investors know who they're dealing with before they read a single word.",
+        "icon": "identification-card"
+      },
+      {
+        "label": "Contact information",
+        "desc": "The most-skipped basic. If they can't reach you in one click, the document did nothing.",
+        "icon": "phone"
+      },
+      {
+        "label": "Company profile",
+        "desc": "A short, informative introduction — what you are, who you serve, why you exist.",
+        "icon": "info"
+      },
+      {
+        "label": "Business idea",
+        "desc": "Describe the core concept in one tight sentence. No jargon, no hedging.",
+        "icon": "lightbulb"
+      },
+      {
+        "label": "Unique selling proposition",
+        "desc": "What makes this venture distinct from the next ten emails in the inbox.",
+        "icon": "medal"
+      },
+      {
+        "label": "Roadmap & timeline",
+        "desc": "Graphically show where the business is going and when. Visual beats prose here.",
+        "icon": "chart-line-up"
+      },
+      {
+        "label": "Investment ask",
+        "desc": "The amount needed, the structure (one-time or tranches), and the deadline. Specific.",
+        "icon": "currency-circle-dollar"
+      },
+      {
+        "label": "Investment highlights",
+        "desc": "The three or four reasons this allocation pays back. Punchy, not vague.",
+        "icon": "sparkle"
+      }
+    ]
+  },
+
+  "page_4_nice_to_haves": {
+    "kicker_num": "03:",
+    "kicker_label": "Beyond the basics",
+    "h2": "Add these if you have the space",
+    "intro": "The four below are the most common upgrades. Together, they turn a competent one-pager into a memorable one.",
+    "callouts": [
+      {
+        "label": "Problem",
+        "theme": "peach",
+        "icon": "target",
+        "headline": "Frame the pain in market terms before you frame yourself.",
+        "body": "Investors connect with the problem first. Make them feel it before you sell the cure."
+      },
+      {
+        "label": "Solution",
+        "theme": "blue",
+        "icon": "lightbulb-filament",
+        "headline": "Show how your business removes that pain. Two lines, max.",
+        "body": "Lead with the outcome — not the mechanism. Save the how for the deck."
+      },
+      {
+        "label": "Traction",
+        "theme": "green",
+        "icon": "trend-up",
+        "headline": "Prove customers want it. Revenue, signups, LOIs — whichever you have.",
+        "body": "Proof beats promise. One data point trumps a paragraph of optimism. Companies leading with traction metrics close funding rounds 6.4 weeks faster. (Funding Blueprint, 2026)"
+      },
+      {
+        "label": "Market",
+        "theme": "lavender",
+        "icon": "globe-hemisphere-east",
+        "headline": "Who you sell to, and the competitive landscape they live in.",
+        "body": "Investors want a beachhead, not 'everyone'. Show the wedge first."
+      }
+    ]
+  },
+
+  "page_5_anatomy": {
+    "kicker_num": "05:",
+    "kicker_label": "Anatomy",
+    "h2": "Where everything goes on the page",
+    "intro": "Investors don't read a one-pager — they scan it in a Z-shape, top-left to bottom-right. The eight elements earn their spot only when they sit where eyes already land.",
+    "zones": [
+      {
+        "label": "Header",
+        "zone": "top",
+        "desc": "Logo + company name. Often the only thing the partner remembers ten minutes later — make it work.",
+        "num": "1"
+      },
+      {
+        "label": "Headline + USP",
+        "zone": "top",
+        "desc": "One sentence that earns the next 14 seconds of attention. Lead with the outcome, not the mechanism.",
+        "num": "2"
+      },
+      {
+        "label": "Problem",
+        "zone": "mid-l",
+        "desc": "Pain in the customer's words. Numbers if you have them, story if you don't.",
+        "num": "3"
+      },
+      {
+        "label": "Solution + visual",
+        "zone": "mid-r",
+        "desc": "How you remove the pain — paired with a mock-up, screenshot or icon. Visual carries weight here.",
+        "num": "4"
+      },
+      {
+        "label": "Traction",
+        "zone": "low-l",
+        "desc": "Proof. Revenue, signups, LOIs, pilots. One number beats a paragraph of optimism.",
+        "num": "5"
+      },
+      {
+        "label": "Market + roadmap",
+        "zone": "low-r",
+        "desc": "Beachhead first, then the trajectory. 6/12/24-month milestones in a single timeline.",
+        "num": "6"
+      },
+      {
+        "label": "Investment ask",
+        "zone": "foot-l",
+        "desc": "The amount, the structure, the deadline. Specific. No 'flexible'.",
+        "num": "7"
+      },
+      {
+        "label": "Contact",
+        "zone": "foot-r",
+        "desc": "Name, email, phone, LinkedIn. The most-skipped detail. Don't skip it.",
+        "num": "8"
+      }
+    ],
+    "zscan_note": "The Z-path lands at: (1) top-left header → (2) top-right USP → (3) diagonal through the middle → (4) bottom-left ask → (5) bottom-right contact. Every critical element belongs on that path."
+  },
+
+  "page_6_do_dont": {
+    "kicker_num": "06:",
+    "kicker_label": "Design in practice",
+    "h2": "What separates a readable one-pager from a rejected one",
+    "intro": "The difference is rarely the idea. It's the execution of the page itself. These are the exact calls investors make in the first scan.",
+    "dont_heading": "Don't",
+    "do_heading": "Do",
+    "pairs": [
+      {
+        "dont": "Dense, unbroken paragraphs that force the investor to find the headline",
+        "do": "One dominant headline — 14pt or larger — visible without scrolling or rotating"
+      },
+      {
+        "dont": "Revenue model buried below line 8. 71% of readers never reach it. (River Editor, 2026)",
+        "do": "Revenue model in the top-half of the page, in the natural Z-scan path"
+      },
+      {
+        "dont": "900+ words crammed onto a single page. Storydoc's benchmark: 400–500 words with white space.",
+        "do": "400–500 words. White space is structure — it tells the eye where to stop."
+      },
+      {
+        "dont": "No funding ask, or vague language like 'seeking strategic partners'",
+        "do": "Specific ask: amount, instrument (SAFE / equity), and timeline"
+      },
+      {
+        "dont": "Team section missing, or listed as 'team bios available on request'",
+        "do": "Founder names, roles, and one credibility signal each — top-right or mid-section"
+      },
+      {
+        "dont": "Three different fonts, five brand colours, and a stock photo background",
+        "do": "One primary font, two colours (brand + accent), one high-quality image or icon set"
+      },
+      {
+        "dont": "Contact info on a second page, or missing entirely",
+        "do": "Email, phone, and LinkedIn in the bottom-right — every time, without exception"
+      },
+      {
+        "dont": "Page runs to 1.5 or 2 pages. Investor stops reading at the scroll.",
+        "do": "Hard stop at one page. If it doesn't fit, cut — don't extend."
+      }
+    ],
+    "closing_note": "The one-pager must be designed for rapid comprehension without verbal explanation. Partners share it with colleagues who may evaluate it without you present. (PitchGrade / DocSend Data, 2024)"
+  },
+
+  "page_7_examples": {
+    "kicker_num": "07:",
+    "kicker_label": "Real-world examples",
+    "h2": "What strong one-pagers look like in practice",
+    "intro": "The best one-pagers share three traits: they name the problem in one line, they put the ask on the page, and they fit — actually fit — on a single sheet.",
+    "examples": [
+      {
+        "name": "Airbnb (2008)",
+        "label": "The original lean pitch",
+        "theme": "peach",
+        "body": "Airbnb began as a simple one-pager built on WordPress before it raised a single dollar. It named the problem (no affordable short-term accommodation), the model (peer-to-peer room rental), and the founders. No deck. No investor presentation. One page. (Free Startup Funding Case Studies, 2024)",
+        "takeaway": "The idea earned the meeting. The one-pager was the proof it could be communicated clearly."
+      },
+      {
+        "name": "The warm-introduction edge",
+        "label": "Structure over luck",
+        "theme": "blue",
+        "body": "DocSend data shows warm introductions convert at 40–50% versus 3–5% for cold decks. The one-pager is the tool that bridges the gap. A well-crafted one-pager sent to a mutual contact converts a cold outreach into a warm introduction — before the deck ever opens. (PitchGrade / DocSend Data, 2024)",
+        "takeaway": "Use the one-pager as the ask for an introduction, not as a substitute for one."
+      },
+      {
+        "name": "Traction-first sequencing",
+        "label": "Structure that closes faster",
+        "theme": "green",
+        "body": "Funding Blueprint's analysis of investor summary performance found that companies leading with traction metrics — not vision statements — closed funding rounds 6.4 weeks faster. The one-pager is where that sequencing starts: the first thing the investor reads sets the frame for everything that follows.",
+        "takeaway": "Lead with your best proof point. Vision supports traction. Not the other way around."
+      }
+    ],
+    "framework_note": "What all strong one-pagers share: the problem is named in one line, the ask is on the page, the team is visible, and it fits on a single sheet without shrinking the font below 10pt."
+  },
+
+  "page_8_measure": {
+    "kicker_num": "08:",
+    "kicker_label": "Measurement",
+    "h2": "Track what actually matters",
+    "intro": "A one-pager that no-one measures is a guess in a folder. Five signals tell you whether the document is doing the job — and which line is doing the heavy lifting.",
+    "analytics": [
+      {
+        "label": "Click-through rate",
+        "theme": "peach",
+        "icon": "cursor-click",
+        "headline": "The percentage of recipients who clicked your CTA.",
+        "body": "The cleanest signal that the one-pager earned a next step. Track per source — what works in DMs may flop in cold email."
+      },
+      {
+        "label": "Time on page",
+        "theme": "blue",
+        "icon": "timer",
+        "headline": "How long readers actually spend with it.",
+        "body": "Under 20 seconds means rewrite. Over 90 seconds means lower the density. Pair with scroll depth before drawing conclusions."
+      },
+      {
+        "label": "Scroll depth",
+        "theme": "green",
+        "icon": "arrow-line-down",
+        "headline": "How far down they read.",
+        "body": "Cliffs in the curve show where attention drops — fix that section first. Bottom-third drop-off is normal. Top-third drop-off is a red flag."
+      },
+      {
+        "label": "Conversion rate",
+        "theme": "lavender",
+        "icon": "check-circle",
+        "headline": "The percentage who took the requested action.",
+        "body": "Booked, replied, downloaded. The number you optimise everything else for. If conversion is fine but absolute numbers are tiny, the gap is reach — not the page."
+      },
+      {
+        "label": "A/B testing",
+        "theme": "peach",
+        "icon": "flask",
+        "headline": "Run two versions in parallel.",
+        "body": "One change per test — headline, hero image, or CTA copy. Decide on ≥30 events per arm. Smaller sends need ranking judgements, not statistical significance."
+      }
+    ],
+    "optimisation_heading": "Four moves that compound",
+    "optimisation_intro": "No single tweak doubles your conversion. Four disciplined moves, run over six weeks, almost always do.",
+    "optimisation_moves": [
+      {
+        "label": "Headline & hook",
+        "icon": "rocket-launch",
+        "desc": "Test 3–5 versions. The best one outperforms the average by 2–3x — and you won't pick it intuitively."
+      },
+      {
+        "label": "Visual hierarchy",
+        "icon": "chart-bar-horizontal",
+        "desc": "Move the most-skimmed elements to the top-left and bottom-right — that's where eyes actually land in the Z-scan."
+      },
+      {
+        "label": "Content priority",
+        "icon": "pencil-simple-line",
+        "desc": "Reorder by what the data says — not by what feels logical to the founder. Engagement signals beat outline-logic."
+      },
+      {
+        "label": "CTA testing",
+        "icon": "cursor-click",
+        "desc": "'Book a 15-min call' converts higher than 'Get in touch' on every cohort we've measured. Position, colour, copy — all three matter."
+      }
+    ]
+  },
+
+  "page_9_failures": {
+    "kicker_num": "09:",
+    "kicker_label": "Failure modes",
+    "h2": "Why investors stop reading — and where",
+    "intro": "These are not hypothetical. Each failure mode below maps to a specific drop-off point in investor attention. Know them before you send.",
+    "failures": [
+      {
+        "mode": "Runs to more than one page",
+        "detail": "The investor stops at the scroll. Immediate disqualifier. (Storydoc, 2024)",
+        "fix": "Hard-cut at one page. If it doesn't fit, the message isn't tight enough yet."
+      },
+      {
+        "mode": "Revenue model buried below line 8",
+        "detail": "71% of readers never reach it. They assume you're pre-revenue or hiding something. (River Editor, 2026)",
+        "fix": "Place the revenue model in the top half of the page, on the Z-scan path."
+      },
+      {
+        "mode": "No funding ask — or a vague one",
+        "detail": "'Seeking strategic investment' is not an ask. Missing status is an immediate disqualifier. (Storydoc, 2024)",
+        "fix": "State the amount, instrument (SAFE / equity), and close date. Specific numbers signal preparation."
+      },
+      {
+        "mode": "Team section missing or deferred",
+        "detail": "Investors spend more time on team than any other section — 1 minute 2 seconds on average. (PitchGrade / DocSend Data, 2024). No team = no trust.",
+        "fix": "Name the founders, their roles, and one credibility signal each. It belongs on the page."
+      },
+      {
+        "mode": "Too many words, too little white space",
+        "detail": "The ideal is 400–500 words. Above that, the document looks unedited and the reader skips to the exit. (Storydoc, 2024)",
+        "fix": "Cut to 500 words. Use white space as structure, not decoration."
+      },
+      {
+        "mode": "Contact information missing or buried",
+        "detail": "All too common. Founders spend weeks on design and forget to include a working email address. Without it, the document did nothing.",
+        "fix": "Email, phone, and LinkedIn. Bottom-right of the page. Every time, without exception."
+      }
+    ],
+    "closing_note": "A one-pager designed for standalone comprehension — no verbal explanation, no follow-up email required — is the standard. Anything less is an opportunity handed back."
+  },
+
+  "page_10_close": {
+    "kicker_num": "10:",
+    "kicker_label": "Trade-offs",
+    "h2": "What it gives you\n— and what it can't",
+    "strengths_heading": "Strengths",
+    "strengths": [
+      "Respects the investor's time — and signals you respect it too.",
+      "Forces sharper thinking. If it doesn't fit on a page, the idea isn't focused yet.",
+      "Travels well — easy to forward, print, remember."
+    ],
+    "limitations_heading": "Limitations",
+    "limitations": [
+      "Brevity is unforgiving. Every missing detail is a potential rejection.",
+      "Hard to write alone — outside eyes catch what founder-bias hides.",
+      "Not a substitute for the full deck. It is the door, not the room."
+    ],
+    "pullquote": "The one-pager is brutal in the right way. If your business doesn't fit on the page, the business isn't sharp yet.",
+    "cta_heading": "Want a Pitchbird review of your one-pager?",
+    "cta_action": "office@pitchbird.de",
+    "cta_sub": "+49 (0) 160 97026216 · pitchbird.de"
+  }
+}

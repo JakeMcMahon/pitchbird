@@ -23,24 +23,34 @@ STYLE_ANCHOR = (
 )
 
 IMAGES = {
-    "page2-concept": (
+    "page2-zscan": (
         "Bold flat illustration on solid deep navy #03112A background. "
         "Centered: a single off-white #F5F2EC rectangular sheet of paper "
-        "tilted at 8 degrees, divided into 6 labeled blocks suggesting a "
-        "one-page business summary — block outlines visible but no real "
-        "text. A bright gold #FBB03B circle (representing focus / a stamp) "
-        "overlaps the top-right corner of the paper. A small bright blue "
-        "#2A98D9 square sits on the lower-left corner of the paper as a "
-        "highlighted section. Generous navy negative space around the "
-        "paper. " + STYLE_ANCHOR
+        "tilted at 6 degrees with 6 labeled content blocks suggesting a "
+        "one-page business summary. A bold mustard gold #FBB03B Z-shaped "
+        "arrow path is overlaid on the sheet, tracing top-left to "
+        "top-right, then diagonal to bottom-left, then bottom-right — "
+        "representing the F/Z scan pattern. The arrow has a small filled "
+        "gold circle at each turn point. Generous navy negative space. "
+        + STYLE_ANCHOR
     ),
-    "page2-funnel": (
+    "page7-airbnb": (
         "Bold flat illustration on solid deep navy #03112A background. "
-        "An inverted funnel made of three stacked horizontal bars in "
-        "off-white, narrowing toward the bottom — top bar widest, bottom "
-        "bar narrowest. The bottom bar is bright gold #FBB03B. Suggests "
-        "qualification / filtering of investors. A tiny bright blue circle "
-        "sits inside the gold bar. Centered square composition. " + STYLE_ANCHOR
+        "Three stacked off-white rectangular paper sheets fanned out at "
+        "slight angles, suggesting one-pagers being shared between hands. "
+        "The top sheet shows a stylised house silhouette icon in gold (a "
+        "subtle Airbnb reference) and 4 horizontal lines. Small navy "
+        "circles in the corners. Generous negative space. "
+        + STYLE_ANCHOR
+    ),
+    "page9-failure": (
+        "Bold flat illustration on solid deep navy #03112A background. "
+        "A single off-white rectangular sheet of paper, slightly crumpled "
+        "at the top-right corner, falling diagonally into the lower-right "
+        "of the frame. A bright salmon #F5896A X mark overlays the paper. "
+        "Around it, three smaller faded grey paper silhouettes drift "
+        "away, suggesting one-pagers lost in an investor's inbox. "
+        + STYLE_ANCHOR
     ),
 }
 
