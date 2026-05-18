@@ -356,21 +356,22 @@ def html(meta):
             f'</div>'
         )
     t60_a_html = "".join(_t60_row(*r) for r in meta["first_60_sequence"][:2])
-    t60_b_html = _t60_row(*meta["first_60_sequence"][2])  # 15-30 sec only
-    t60_c_html = _t60_row(*meta["first_60_sequence"][3])  # 30-60 sec only
+    t60_b_html = "".join(_t60_row(*r) for r in meta["first_60_sequence"][2:])
 
-    # Pressure test
-    pt_html = "".join(
-        f'<div class="pt-row">'
-        f'<div class="pt-icon">{icon_svg(icon)}</div>'
-        f'<div><div class="pt-name">{name}</div>'
-        f'<div class="pt-how">{how}</div></div>'
-        f'<div class="pt-signals">'
-        f'<div class="pt-pass">{pass_signal}</div>'
-        f'<div class="pt-fail">{fail_signal}</div>'
-        f'</div></div>'
-        for name, icon, how, pass_signal, fail_signal in meta["pressure_tests"]
-    )
+    # Pressure test — split: tests 1-3 on page A, tests 4-5 + closing on page B
+    def _pt_row(name, icon, how, pass_signal, fail_signal):
+        return (
+            f'<div class="pt-row">'
+            f'<div class="pt-icon">{icon_svg(icon)}</div>'
+            f'<div><div class="pt-name">{name}</div>'
+            f'<div class="pt-how">{how}</div></div>'
+            f'<div class="pt-signals">'
+            f'<div class="pt-pass">{pass_signal}</div>'
+            f'<div class="pt-fail">{fail_signal}</div>'
+            f'</div></div>'
+        )
+    pt_a_html = "".join(_pt_row(*t) for t in meta["pressure_tests"][:3])
+    pt_b_html = "".join(_pt_row(*t) for t in meta["pressure_tests"][3:])
 
     # About paragraphs
     about_html = "".join(f"<p>{p}</p>" for p in meta["about_paragraphs"])
@@ -2220,13 +2221,13 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 10B - FIRST 60 SECONDS (15-30) ============= -->
+<!-- ============= PAGE 10B - FIRST 60 SECONDS (15-60) + 8-LINE RULE ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
     {kicker('08:', 'First 60 seconds cont.')}
     <h2>The decision window</h2>
-    <p style="max-width:160mm;">By second 15, the partner has decided whether to keep reading. The next 15 seconds decide whether the proof is real.</p>
+    <p style="max-width:160mm;">By second 15, the partner has decided whether to keep reading. The next 45 seconds decide whether to reply.</p>
     <div class="t60-grid">{t60_b_html}</div>
     <div class="t60-rule">{meta['first_60_rule']}</div>
   </div>
@@ -2239,17 +2240,14 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 10C - FIRST 60 SECONDS (30-60) ============= -->
+<!-- ============= PAGE 11A - PRESSURE-TEST (tests 1-3) ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
-    {kicker('08:', 'First 60 seconds cont.')}
-    <h2>The reply window</h2>
-    <p style="max-width:160mm;">Past second 30, the partner has decided whether to read the deck. The last 30 seconds decide whether to reply tonight, tomorrow, or never.</p>
-    <div class="t60-grid">{t60_c_html}</div>
-    <div class="t60-rule" style="background:#1A2952;">
-      <strong style="color:var(--gold);">Make the reply trivial.</strong> Email, phone, LinkedIn - bottom-right of the page, every time. A reply that requires looking up a contact is a reply that doesn't happen.
-    </div>
+    {kicker('09:', 'Pressure-test')}
+    <h2>Five tests before<br>you hit send.</h2>
+    <p style="max-width:160mm;">{meta['pressure_test_intro']}</p>
+    <div class="pt-grid">{pt_a_html}</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -2260,14 +2258,14 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 11 - PRESSURE-TEST ============= -->
+<!-- ============= PAGE 11B - PRESSURE-TEST (tests 4-5 + closing) ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
-    {kicker('09:', 'Pressure-test')}
-    <h2>Five tests before<br>you hit send.</h2>
-    <p style="max-width:160mm;">{meta['pressure_test_intro']}</p>
-    <div class="pt-grid">{pt_html}</div>
+    {kicker('09:', 'Pressure-test cont.')}
+    <h2>The final two</h2>
+    <p style="max-width:160mm;">The first three tests catch craft. These last two catch design and structure - the bits founders most often skip.</p>
+    <div class="pt-grid">{pt_b_html}</div>
     <div class="pt-closing">{meta['pressure_test_closing']}</div>
   </div>
   <div class="foot">
