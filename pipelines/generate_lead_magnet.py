@@ -356,7 +356,8 @@ def html(meta):
             f'</div>'
         )
     t60_a_html = "".join(_t60_row(*r) for r in meta["first_60_sequence"][:2])
-    t60_b_html = "".join(_t60_row(*r) for r in meta["first_60_sequence"][2:])
+    t60_b_html = _t60_row(*meta["first_60_sequence"][2])  # 15-30 sec only
+    t60_c_html = _t60_row(*meta["first_60_sequence"][3])  # 30-60 sec only
 
     # Pressure test
     pt_html = "".join(
@@ -2219,13 +2220,13 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 10B - FIRST 60 SECONDS (15-60) + 8-LINE RULE ============= -->
+<!-- ============= PAGE 10B - FIRST 60 SECONDS (15-30) ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
     {kicker('08:', 'First 60 seconds cont.')}
     <h2>The decision window</h2>
-    <p style="max-width:160mm;">By second 15, the partner has decided whether to keep reading. The next 45 seconds decide whether to reply.</p>
+    <p style="max-width:160mm;">By second 15, the partner has decided whether to keep reading. The next 15 seconds decide whether the proof is real.</p>
     <div class="t60-grid">{t60_b_html}</div>
     <div class="t60-rule">{meta['first_60_rule']}</div>
   </div>
@@ -2233,6 +2234,27 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
     <span>The Power of the One Pager</span>
     <div class="foot-right">
       <span class="page-num">11</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 10C - FIRST 60 SECONDS (30-60) ============= -->
+<div class="page">
+  {header('www.pitchbird.de')}
+  <div class="body">
+    {kicker('08:', 'First 60 seconds cont.')}
+    <h2>The reply window</h2>
+    <p style="max-width:160mm;">Past second 30, the partner has decided whether to read the deck. The last 30 seconds decide whether to reply tonight, tomorrow, or never.</p>
+    <div class="t60-grid">{t60_c_html}</div>
+    <div class="t60-rule" style="background:#1A2952;">
+      <strong style="color:var(--gold);">Make the reply trivial.</strong> Email, phone, LinkedIn - bottom-right of the page, every time. A reply that requires looking up a contact is a reply that doesn't happen.
+    </div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">12</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
@@ -2251,7 +2273,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot">
     <span>The Power of the One Pager</span>
     <div class="foot-right">
-      <span class="page-num">12</span>
+      <span class="page-num">13</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
@@ -2269,7 +2291,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot">
     <span>The Power of the One Pager</span>
     <div class="foot-right">
-      <span class="page-num">13</span>
+      <span class="page-num">14</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
@@ -2308,7 +2330,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">14</span>
+      <span class="page-num">15</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
@@ -2333,7 +2355,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot">
     <span>The Power of the One Pager</span>
     <div class="foot-right">
-      <span class="page-num">15</span>
+      <span class="page-num">16</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
@@ -2341,7 +2363,6 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 
 <!-- ============= PAGE 15 - FIND US ============= -->
 <div class="page findus">
-  <div class="findus-accent"></div>
   <div class="findus-band">
     <img src="{LOGO}" alt="Pitchbird">
     <a class="url" href="https://pitchbird.de">www.pitchbird.de</a>
@@ -2373,8 +2394,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">16</span>
-      <span class="foot-arrow">{arrow}</span>
+      <span class="page-num">17</span>
     </div>
   </div>
 </div>
