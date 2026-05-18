@@ -43,6 +43,16 @@ IMAGES = {
         "circles in the corners. Generous negative space. "
         + STYLE_ANCHOR
     ),
+    "visual-cover-hero": (
+        "Bold flat illustration on solid deep navy #03112A background. "
+        "Two business people sitting at a small table reviewing a single "
+        "off-white sheet of paper laid flat between them — one wearing a "
+        "mustard gold #FBB03B blazer, one in a bright blue #2A98D9 shirt. "
+        "Their hands rest near the paper. A small gold cup of coffee sits "
+        "on the table beside the paper. Composition centered, vertical "
+        "portrait orientation. No faces, only stylised heads suggested. "
+        + STYLE_ANCHOR
+    ),
     "page9-failure": (
         "Bold flat illustration on solid deep navy #03112A background. "
         "A single off-white rectangular sheet of paper, slightly crumpled "

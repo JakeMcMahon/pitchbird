@@ -1,0 +1,29 @@
+{
+  "id": "gen-1779097974-flKq2kLEACggKVUu3qxO",
+  "object": "chat.completion",
+  "created": 1779097974,
+  "model": "openai/gpt-5-image",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+    {
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "stop",
+      "native_finish_reason": "completed",
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": "**Designing vector editorial layout**\n\nI\u2019m thinking of adding 8 rectangular sections with thin lines in salmon and gold for separation. The sections will be cream off-white with subtle shadows. I want dotted connection lines linking a magnifying glass to the other sections, possibly in gold or salmon. There should be a triangular accent in mustard gold at the upper-right corner. I\u2019ll ensure there's ample lower margin space for the headline overlay and incorporate geometric paper-cut shapes in navy tones. Finally, I\u2019ll aim for clean lines and minimalism.",
+        "reasoning_details": [
+          {
+            "type": "reasoning.summary",
+            "summary": "**Designing vector editorial layout**\n\nI\u2019m thinking of adding 8 rectangular sections with thin lines in salmon and gold for separation. The sections will be cream off-white with subtle shadows. I want dotted connection lines linking a magnifying glass to the other sections, possibly in gold or salmon. There should be a triangular accent in mustard gold at the upper-right corner. I\u2019ll ensure there's ample lower margin space for the headline overlay and incorporate geometric paper-cut shapes in navy tones. Finally, I\u2019ll aim for clean lines and minimalism.",
+            "format": "openai-responses-v1",
+            "index": 0
+          },
+          {
+            "type": "reasoning.encrypted",
+            "data": "gAAAAABqCuGTDqpF1u5ktxYTOtAi-lNoJokUuGvU2XBkBxGxCiQhNBQb-m6R3tkpJWnqnWo0P0WUCC4h6dbVAnrdOtxhfLgkS6Lj1h6eR81cmZI4vIrHsbxdqTH3J7EVM7tMl8WxtFRsvfydaTF5znOXASqqg-oglQjUZ_wbgHl9BoxxYxBGBn75xwNagWqXZ-Ebzx_lTsxCv5serhSOc8iLTH7DnbCJW_NWnu1LwUAvVSWq2Kgz6McxbRMF4yeSBviTUXa5UjrkKeE9ve7UPjlldXKtMXHHoviB84wSmWmF5NKhopG4AxR0-9h0uOa4sPh15mNT0FsAemc5aX7qp60oYnvnA0Ab6g536WUOH9XEDyVgy0FuP7JGJjZIIXONqLwNEmOJcW3zj--juVLqoDmjm4_CAUTMq3UyfqFXVCct20I20M2Z32mkhYnmt1WNfgwTY2jv4rzRnoszm8IUGCkdY1MC3bxuWoiTtk53675Zp78KFcBIJBd79l_Q45XzyXrI9pmBCY6E4sb7EpHA0ewlpypG_HRfhl3Ny8xJ3aM8WhvK--pCFqvDdHZegLwKNvmXn68nnNtVkBKgAP2TiZUTCgJrS0e_YpCsxJAg28AIqLiQdcnMlpziyakC-pPDgYt1SlfcAHXURdrqaCWPIWvZlLpYRyKGhKTDsRNK1pdjpukGomDiYFdd7_wuded6IQhrmjOZULvyRfW0sTpjYh1E-AGxwIn-NIkBVbaux5N9D8A2smbCm0pMTH4ETv8unJnAy2OTr6E02_KmsdLWm76AbuE70n9TkytJ4oCR9ubXSq8n0hhOi-EwwuCh1YsbQ44YbW9cyBHdhhp5RpTSHgUigeb2BEFYjfUwCiUzY7epePSS8tOQieXk-krUop1Hc-BubgH1kYKCikQIUtdmxE8RJ0IkhCr2wq28PRO5ymQwtAeHIIkjL854IfSMm5ZldGYYas9yGXNSKmV_J5sx9f0tNURt5I4i9P9YOlSuPlpzfCqTezGpznpkPudhV5oDxXIoiQ2mOp6pKWSJgdbGVA6huVaW-ZerWsArH2Qt8wXqgqgUoX5T1Z8rarPGDVg5IO49bf_879O5DIdTh9nE9T_84xP99_AbiCH-21kPnDVOS3aIiWONl0r5ib8RHnbsq1CO4igT-3lPt8flxijKhnmMlrXVJg7_px0O8LTuFgS7wJ9tIJAIUq981RRNIaW00OLxLY67E2WDozzmVuJv-td6JByMZ1UQOS5a-er4TB_GG_t1RzmCj5Y1p_6dfFXqZRr20ifPhZ-n2J6nmujMcaKSqob4GQCa05Q679mxdghmlGjhja9a9NdWljOuLPcjvtkbOcCNcYw_cgsQM70ByRfzNlCOXgeBt49ymwWCZFVVW92QqAe02Y8SKwZhdi_K3Bkkt_5LXRXNytP0j4skBhuMJgN4XqBlPvMTra5V7aHFX-yd6J2KGDXG6Twm1W-tc3iU_TPts0Dbc91XBAdKbpE3We8cGAwS9SGewnYafJQXELk69yIQWxmGNsQm2VK3PYJ-VjbANCwagYYZZUw8N3PD8Yn8libvK3BlnPBnwPLv9HNwj16MyifGKVCZQD5ftanTyZzYwnIfmGNMSos4-DNkQUs0ItZHjaUO0z0VNFS19XuYeFqa-_kmOKwKdMxJTR6JrOvGQzOpcwJ-sQaFAr7JzK6dFjjinWttpKOvXkfX-r-5Zs7XFPLuYsLV4eOu1KBMY_BFTHfPdfiPl9Zg91TBH_TtgxLGA03f6GXhXq3YDZv80CoI2KGrgT_QD3PMF3KXHOWVDtoylKTB_3r8yc-3aB-AWvHTXmMTnGQNTXaMuXacu9G8V9omc5gKEeivkAGVGGRIW9kCvUiMVl3wyVvEyu-IhiII4nyoQrjjyldUcC2OphvdZ7_ZXzc6q-fVREltx4QVGOQW2qk658MSaEiCuyuUKYWkEcwapynMomCVDkWyhmF8FYyhNbn-3p8REzxmiAN1R5qXztBpoa-jNgRUnte3NOMihe0BETfA18tUoUYyJ9664EslWil2QlBHaxwBVwECAC4vz5-1D6dF4p9fV-LMn9DVYDexUbBoSvMdzlLiYfsw5bHluq3w4EtRTDkfihQb9YtKsn6z_rzrSeuNQDnTv9ZKTxI5QvPYUXTsGCsQegMBDemoHaObovCw0HrhDyCSViqaid8CuGVeknLTGilrAInYnLzbjrthatZew1DYEy1TM-VZ-oDZqPsWLK1w6vMb5g5HNqVcdwl0dDsIEbxsxwBBp9-jR_IFPobyl2zMMUkojBdE3WT8AcNtzPH-KJ7z4xNjy_IiXnL_ijbrRTBAW5Q-6Jtqgv7zGER0M6_8CWeqGhQ03jm_cW0HQTrGXJEuUXBbrAD4gmwVH2YeGVs5cQ9ZUS7L9PIH1uPqtMyfNpN8qi7hDTK-E778jR8G5OZ-9zPUM9sSANAar46tzXJBjXseerGvkiNPK0OzSRCSSlIajZbi4BEeNX5XcEYJ4SDvzgexBkjFSCGBveFcwTQlyUZOtTd5WyP1J2SYIcQ9ROHoJ6jANL-ntWp_whawDFru5eh6JLA3q_-jW5AwZm0AcKqGnq_G4azLabi9-GSDMPBi4ckr8GZU6GgoZAf8I2kCWDFQTDBYn3EPZj9kNPsjNxl8skcEmSBTbuGXNZSvl_Nc5ByXphuaEU8HGVr-ibT2663gKj5gEiSreRKuoFmel7mOVoBaqg58PAkcBV_XNut0Ze632nSHtS3fO6S87qfqef7hmjVP1a4c4Tc6Tccjxw-atLOx6gtxIMSsGNPSej0opvhyBQg3hgV1LUn2NM1fop-G8b_MosH1v-rDBuwYsMTPh27n9g7pY_Ts7c0Lw9d8S7ya_GI3UfeN7ECYgMBnpz-l39qgNJHME-WJ6mKrBOTevX-U7TBjk1vLNqiXvNefTUscqSszdcL4dCX_vxQ9HSEyVUXNHmIUqH6_P4j45GtZDPV8h18sI4gkivW5DkmY-0SNv999lsy2hkC9kpfUzj3u_3Q_XZqr7uY9s0vo13aApjo8HQ0U7hT_Ppz74MsWOl8FrMGM-6mPhUhs6k7KkuI-F41QhmE3q7jryQ0

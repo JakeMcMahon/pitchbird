@@ -1,0 +1,127 @@
+{
+  "icons_to_download": [],
+
+  "page_word_economy": {
+    "kicker_num": "07:",
+    "kicker_label": "Word economy",
+    "h2": "Cut to 500 words.\nThen cut again.",
+    "intro": "The 400–500 word limit is not a stylistic preference. It is the threshold above which investors stop reading. Storydoc's benchmark across thousands of one-pagers is unambiguous: above 500 words, the document looks unedited — and the reader skips to the exit. The discipline of cutting is the work. Here is how to do it.",
+    "principle_blocks": [
+      {
+        "label": "Start with a word count",
+        "icon": "pencil-simple-line",
+        "rule": "Paste your draft into any word processor. If it reads over 500 words, you are not done yet. Count before you edit — not after.",
+        "example_bloated": "Our proprietary, AI-powered platform leverages cutting-edge machine learning algorithms to deliver personalised, data-driven insights that help enterprise customers optimise their operational workflows and significantly reduce costs.",
+        "example_tight": "Our AI platform cuts enterprise operating costs by 30% in under 90 days."
+      },
+      {
+        "label": "Kill the adjectives first",
+        "icon": "warning-octagon",
+        "rule": "Read every adjective and adverb. Ask: does this add data or does it add enthusiasm? Enthusiasm is free — data is not. Delete the enthusiasm. Every 'innovative', 'revolutionary', 'transformative', and 'world-class' costs you credibility, not goodwill.",
+        "example_bloated": "Our highly experienced, passionate team of world-class experts has developed a truly innovative solution.",
+        "example_tight": "Our team has built and exited two SaaS companies. The solution is in pilot with three enterprise clients."
+      },
+      {
+        "label": "One sentence per idea",
+        "icon": "book-open-text",
+        "rule": "A sentence with three clauses is three sentences that haven't been separated yet. If a sentence runs past 20 words, break it. Read it aloud — if you run out of breath, it's too long.",
+        "example_bloated": "We are targeting the rapidly growing SME market segment in the DACH region, which represents an addressable market of over €4 billion annually and has historically been underserved by existing SaaS providers.",
+        "example_tight": "Target: SMEs in DACH. Addressable market: €4bn. Underserved by every existing SaaS provider."
+      },
+      {
+        "label": "Replace paragraphs with bullets",
+        "icon": "chart-bar-horizontal",
+        "rule": "Three consecutive sentences that list related things are a bullet list in disguise. Make them bullets. Bullets are faster to scan, harder to skip, and — critically — they take up less vertical space on the page.",
+        "example_bloated": "The funding will be used to expand our sales team, accelerate product development, and build out our customer success function to support expected growth.",
+        "example_tight": "Use of funds: sales team (40%) · product (35%) · customer success (25%)"
+      },
+      {
+        "label": "The five-word test for your headline",
+        "icon": "lightning",
+        "rule": "Can you summarise your business in five words? If not, the headline is doing too much. The job of the headline is to make the investor read the next line — not explain everything. A headline that tries to explain everything explains nothing.",
+        "example_bloated": "Building the future of sustainable urban mobility for the next generation of city commuters.",
+        "example_tight": "EV scooter rentals for cities."
+      }
+    ],
+    "closing_note": "Cutting is not about losing content. It is about finding the 50 words that carry the other 450. When you have cut everything that doesn't earn its place, what remains is the argument."
+  },
+
+  "page_first_60_seconds": {
+    "kicker_num": "08:",
+    "kicker_label": "First 60 seconds",
+    "h2": "What they read,\nin what order.",
+    "intro": "Investors don't read a one-pager. They scan it — in a Z-shape, top-left to bottom-right — and decide in the first 15 seconds whether to keep going. 32% of decision-makers drop off before that window closes. (Storydoc, 2024) Understanding their reading path is the single most actionable thing you can do to improve the document.",
+    "sequence": [
+      {
+        "window": "0–5 sec",
+        "what": "Header: logo, company name, and tagline.",
+        "investor_question": "'Do I recognise this space? Is this category interesting to me?'",
+        "guidance": "This is identity and category signal. The name and logo anchor everything. The tagline must name the category and the outcome — not a slogan. If the investor can't place the business in five seconds, the rest is irrelevant."
+      },
+      {
+        "window": "5–15 sec",
+        "what": "Headline + USP — the one sentence that earns the next 45 seconds.",
+        "investor_question": "'Is this a big enough problem? Is this approach credible?'",
+        "guidance": "This is the hinge. Lead with the outcome, not the mechanism. 'We help enterprise HR teams cut onboarding time by half' beats 'We are an AI-powered HR automation platform.' The investor is asking whether this problem is worth their portfolio's attention. Answer that question — not how the product works."
+      },
+      {
+        "window": "15–30 sec",
+        "what": "Traction and team — the proof that this is real.",
+        "investor_question": "'Is there evidence this works? Can I trust who is building it?'",
+        "guidance": "Investors spend more time on team than any other section — an average of 62 seconds in pitch decks. (PitchGrade / DocSend Data, 2024) In a one-pager, that scrutiny compresses into a few lines. One credibility signal per founder. One traction proof point with a number. Revenue, signups, pilots, LOIs — whichever you have. A number beats a paragraph of optimism."
+      },
+      {
+        "window": "30–60 sec",
+        "what": "Investment ask and contact.",
+        "investor_question": "'What exactly do they need? How do I respond?'",
+        "guidance": "Companies leading with traction metrics close funding rounds 6.4 weeks faster than those leading with vision statements. (Funding Blueprint, 2026) By the time the investor reaches the ask, they have already decided if they are interested. Make the ask specific: the amount, the instrument (SAFE or equity), the close date. Then make it trivially easy to respond — email, phone, LinkedIn, bottom-right, every time."
+      }
+    ],
+    "rule_of_8_lines": "If your revenue model is not visible in the first eight lines of the document, 71% of readers never see it. (River Editor, 2026) That is not a layout preference. It is a structural requirement. Count the lines in your draft. The problem, the model, and the traction must all land above that threshold. If they don't, move them — before you send anything."
+  },
+
+  "page_pressure_test": {
+    "kicker_num": "09:",
+    "kicker_label": "Pressure-test",
+    "h2": "Five tests before\nyou hit send.",
+    "intro": "You do not need analytics software to know whether a one-pager works. You need five disciplined tests — each of which surfaces a different failure mode. Run all five. They take less than a week. They will save you from sending something that quietly fails and never tells you why.",
+    "tests": [
+      {
+        "name": "Read it aloud",
+        "icon": "megaphone-simple",
+        "how": "Print the document or open it on a screen, and read every word out loud — at normal speaking pace, without pausing to correct yourself mid-sentence.",
+        "pass_signal": "You read it straight through without hesitation. The pace feels like a confident conversation.",
+        "fail_signal": "You stumble, slow down, or have to re-read a sentence to understand it. Every stumble is a sentence that is too dense, too jargon-heavy, or too long. Fix each one before testing again."
+      },
+      {
+        "name": "Show it to three advisors — separately",
+        "icon": "user-focus",
+        "how": "Send the document to three people who understand your space but are not inside your company. Brief them identically: 'Read this as you would if it came cold. Tell me what's unclear, what's missing, and what you'd change.' Do this separately — never in a group — so you get independent reactions.",
+        "pass_signal": "Feedback is idiosyncratic. Each person flags something different — minor, specific, fixable.",
+        "fail_signal": "Two or more people flag the same thing. That is not a matter of preference. That is a broken element. Fix it — without debate."
+      },
+      {
+        "name": "The 5-second test with five founders",
+        "icon": "timer",
+        "how": "Send the document to five founders — peers who are not in your company and do not know your pitch. Ask them: 'After five seconds of looking at this, what does the company do?' Collect their exact words, not their paraphrases.",
+        "pass_signal": "Four out of five describe the business accurately in one sentence. The category and the value are landing.",
+        "fail_signal": "Fewer than three get it right, or descriptions vary wildly. The headline is not doing its job. Rewrite and retest."
+      },
+      {
+        "name": "Print it",
+        "icon": "device-mobile",
+        "how": "Print the one-pager at 100% scale on a standard A4 or letter-size sheet. Look at it from arm's length before you read a word.",
+        "pass_signal": "The hierarchy is visible. The headline stands out. There is clear white space. It looks like a professional document.",
+        "fail_signal": "It looks grey, dense, or cramped. The font is below 10pt. There is no clear visual anchor. If it fails on paper, it fails on screen too — fix the layout before you send."
+      },
+      {
+        "name": "Compare against the 8-must-haves checklist",
+        "icon": "check-circle",
+        "how": "Open page 02 of this guide. Go through all eight must-haves one by one — company name, contact, profile, business idea, USP, roadmap, investment ask, investment highlights. Mark each as present or absent on your draft.",
+        "pass_signal": "All eight are on the page. Each is visible without hunting for it.",
+        "fail_signal": "One or more is missing, vague, or buried below the fold. An incomplete one-pager is an immediate disqualifier — not a work in progress. Add what's missing before the document leaves your hands."
+      }
+    ],
+    "closing_quote": "The one-pager doesn't fail at the send. It fails at the desk, before the investor ever sees it. These five tests catch what founder-proximity blinds you to."
+  }
+}

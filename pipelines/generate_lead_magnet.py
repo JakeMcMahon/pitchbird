@@ -78,6 +78,39 @@ META = {
             ("Traction-first sequencing", "Faster closes by 6.4 weeks", "green", "Funding Blueprint's analysis found that companies leading with traction metrics — not vision statements — close funding rounds <strong>6.4 weeks faster</strong>. The first thing the investor reads sets the frame for everything that follows.", "Lead with your best proof point. Vision supports traction. Not the other way around.", "Funding Blueprint, 2026"),
         ],
         "examples_framework": "What all strong one-pagers share: the problem is named in one line, the ask is on the page, the team is visible, and it fits on a single sheet without shrinking the font below 10pt.",
+        "word_economy_intro": "The 400–500 word limit is not a stylistic preference. It is the threshold above which investors stop reading. Storydoc's benchmark across thousands of one-pagers is unambiguous: above 500 words, the document looks unedited — and the reader skips to the exit. The discipline of cutting is the work.",
+        "word_economy": [
+            ("Start with a word count", "pencil-simple-line", "Paste your draft into any word processor. If it reads over 500 words, you are not done yet. Count before you edit — not after.", "Our proprietary, AI-powered platform leverages cutting-edge machine learning algorithms to deliver personalised, data-driven insights that help enterprise customers optimise their operational workflows and significantly reduce costs.", "Our AI platform cuts enterprise operating costs by 30% in under 90 days."),
+            ("Kill the adjectives first", "warning-octagon", "Ask every adjective and adverb: does this add data, or does it add enthusiasm? Enthusiasm is free; data is not. Every 'innovative', 'revolutionary', 'world-class' costs you credibility, not goodwill.", "Our highly experienced, passionate team of world-class experts has developed a truly innovative solution.", "Our team has built and exited two SaaS companies. The solution is in pilot with three enterprise clients."),
+            ("One sentence per idea", "book-open-text", "A sentence with three clauses is three sentences that haven't been separated yet. If a sentence runs past 20 words, break it. Read it aloud — if you run out of breath, it's too long.", "We are targeting the rapidly growing SME market segment in the DACH region, which represents an addressable market of over €4 billion annually and has historically been underserved by existing SaaS providers.", "Target: SMEs in DACH. Addressable market: €4bn. Underserved by every existing SaaS provider."),
+            ("Replace paragraphs with bullets", "chart-bar-horizontal", "Three consecutive sentences listing related things are a bullet list in disguise. Bullets scan faster, skip slower, and — critically — take up less vertical space on the page.", "The funding will be used to expand our sales team, accelerate product development, and build out our customer success function to support expected growth.", "Use of funds: sales (40%) · product (35%) · customer success (25%)"),
+            ("The five-word test", "lightning", "Can you summarise the business in five words? If not, the headline is doing too much. The headline's job is to make the investor read the next line — not explain everything.", "Building the future of sustainable urban mobility for the next generation of city commuters.", "EV scooter rentals for cities."),
+        ],
+        "word_economy_closing": "Cutting is not about losing content. It is about finding the 50 words that carry the other 450. When you have cut everything that doesn't earn its place, what remains is the argument.",
+        "first_60_intro": "Investors don't read a one-pager. They scan it — in a Z-shape, top-left to bottom-right — and decide in the first 15 seconds whether to keep going. 32% drop off before that window closes. (Storydoc, 2024) Understanding their path is the single most actionable thing you can do.",
+        "first_60_sequence": [
+            ("0–5 sec", "Header: logo, company name, tagline.", "Do I recognise this space? Is this category interesting to me?", "Identity and category signal. The tagline must name the category and the outcome — not a slogan. If the investor can't place the business in five seconds, the rest is irrelevant."),
+            ("5–15 sec", "Headline + USP — the sentence that earns the next 45 seconds.", "Is this a big enough problem? Is this approach credible?", "Lead with the outcome, not the mechanism. 'We help enterprise HR teams cut onboarding by half' beats 'We are an AI-powered HR automation platform.'"),
+            ("15–30 sec", "Traction and team — the proof this is real.", "Is there evidence this works? Can I trust who is building it?", "Investors spend an average of 62 seconds on team in pitch decks. (PitchGrade / DocSend, 2024) In a one-pager that scrutiny compresses into a few lines. One credibility signal per founder. One traction proof with a number."),
+            ("30–60 sec", "Investment ask and contact.", "What exactly do they need? How do I respond?", "Companies leading with traction close 6.4 weeks faster than those leading with vision. (Funding Blueprint, 2026) Make the ask specific: amount, instrument, close date. Then make response trivial — email, phone, LinkedIn, bottom-right."),
+        ],
+        "first_60_rule": "<strong>The 8-line rule.</strong> If your revenue model is not visible in the first eight lines of the document, 71% of readers never see it. (River Editor, 2026) That is not a layout preference — it is a structural requirement. Count the lines in your draft. The problem, the model, and the traction must all land above that threshold.",
+        "pressure_test_intro": "You do not need analytics software to know whether a one-pager works. You need five disciplined tests — each surfaces a different failure mode. They take less than a week. They will save you from sending something that quietly fails and never tells you why.",
+        "pressure_tests": [
+            ("Read it aloud", "megaphone-simple", "Print the document or open it on a screen, and read every word out loud at normal speaking pace — without pausing to correct yourself mid-sentence.", "Read straight through without hesitation. Pace feels like a confident conversation.", "You stumble, slow down, or have to re-read a sentence. Every stumble is a sentence that is too dense or too long."),
+            ("Three advisors, separately", "user-focus", "Send to three people who understand your space but are not inside your company. Same brief: 'Read this cold. Tell me what's unclear, what's missing.' Never as a group.", "Each person flags something different — minor, specific, fixable.", "Two or more flag the same thing. That is not preference. It's a broken element. Fix it."),
+            ("The 5-second test, with 5 founders", "timer", "Send to five founders — peers who do not know your pitch. Ask: 'After five seconds, what does this company do?' Collect their exact words.", "Four of five describe the business accurately in one sentence.", "Fewer than three get it right, or descriptions vary wildly. The headline isn't doing its job."),
+            ("Print it", "device-mobile", "Print the one-pager at 100% scale on A4 or letter. Look at it from arm's length before reading a word.", "Hierarchy is visible. Headline stands out. Clear white space. Looks like a professional document.", "Looks grey, dense, or cramped. Font below 10pt. No clear visual anchor. Fails on paper = fails on screen."),
+            ("The 8-must-haves checklist", "check-circle", "Open page 03 of this guide. Walk through all eight must-haves — name, contact, profile, business idea, USP, roadmap, ask, highlights. Mark each on your draft.", "All eight are present. Each is visible without hunting for it.", "One or more missing, vague, or buried. An incomplete one-pager is a disqualifier — not a work in progress."),
+        ],
+        "pressure_test_closing": "The one-pager doesn't fail at the send. It fails at the desk, before the investor ever sees it. These five tests catch what founder-proximity blinds you to.",
+        "about_paragraphs": [
+            "<strong>Magdalena Reith</strong> is the founder of Pitchbird, an agency specialising in pitch deck design and startup consulting. Since founding Pitchbird in 2015, Magdalena has helped <strong>over 10,000 startups</strong> across a variety of industries tell their stories and secure funding.",
+            "With a background in global companies spanning business development, investor relations, and design, Magdalena brings a multidisciplinary perspective to her work with founders. Her expertise includes <strong>crafting compelling investor documents, delivering impactful corporate presentations, and providing personalised pitch coaching</strong> to help startups refine their messaging.",
+            "In addition to running Pitchbird, <strong>Magdalena is a frequent speaker and pitch coach for startup programs including Burda Bootcamp and Startup SAFARI</strong>. She has hosted Pitch Masterclasses at Startup SAFARI events, helping founders at all levels shine on stage.",
+            "When she's not working with startups, you can find Magdalena enjoying the vibrant scene in Munich and connecting with fellow entrepreneurs.",
+            "Connect with her on LinkedIn or learn more about Pitchbird's services at pitchbird.de.",
+        ],
         "failures": [
             ("Runs to more than one page", "The investor stops at the scroll. Immediate disqualifier.", "Hard-cut at one page. If it doesn't fit, the message isn't tight enough yet.", "Storydoc, 2024"),
             ("Revenue model buried below line 8", "71% of readers never reach it. They assume you're pre-revenue or hiding something.", "Place the revenue model in the top half of the page, on the Z-scan path.", "River Editor, 2026"),
@@ -295,6 +328,47 @@ def html(meta):
         f'<div class="opt-body-desc">{desc}</div></div></div>'
         for label, icon, desc in meta["optimization"][:4]
     )
+
+    # Word economy (new page)
+    we_html = "".join(
+        f'<div class="we-block"><div class="we-icon">{icon_svg(icon)}</div>'
+        f'<div><div class="we-label">{label}</div>'
+        f'<div class="we-rule">{rule}</div>'
+        f'<div class="we-example">'
+        f'<div class="we-example-bloated">{bloated}</div>'
+        f'<div class="we-example-tight">{tight}</div>'
+        f'</div></div></div>'
+        for label, icon, rule, bloated, tight in meta["word_economy"]
+    )
+
+    # First 60 seconds
+    t60_html = "".join(
+        f'<div class="t60-row">'
+        f'<div class="t60-window">{window}</div>'
+        f'<div><div class="t60-what-label">They look at</div>'
+        f'<div class="t60-what">{what}</div>'
+        f'<div class="t60-guidance">{guidance}</div></div>'
+        f'<div><div class="t60-q-label">Their question</div>'
+        f'<div class="t60-q">&ldquo;{q}&rdquo;</div></div>'
+        f'</div>'
+        for window, what, q, guidance in meta["first_60_sequence"]
+    )
+
+    # Pressure test
+    pt_html = "".join(
+        f'<div class="pt-row">'
+        f'<div class="pt-icon">{icon_svg(icon)}</div>'
+        f'<div><div class="pt-name">{name}</div>'
+        f'<div class="pt-how">{how}</div></div>'
+        f'<div class="pt-signals">'
+        f'<div class="pt-pass">{pass_signal}</div>'
+        f'<div class="pt-fail">{fail_signal}</div>'
+        f'</div></div>'
+        for name, icon, how, pass_signal, fail_signal in meta["pressure_tests"]
+    )
+
+    # About paragraphs
+    about_html = "".join(f"<p>{p}</p>" for p in meta["about_paragraphs"])
 
     # Failures (page 9)
     failures_html = "".join(
@@ -1178,6 +1252,475 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   margin-bottom: 1mm;
 }}
 
+/* ===== Visual cover (page 0) ===== */
+.vcover {{
+  background: var(--navy);
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+}}
+.vcover-tri-tl {{
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 130mm 0 0 95mm;
+  border-color: var(--gold) transparent transparent transparent;
+  z-index: 1;
+}}
+.vcover-tri-br {{
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 58mm 46mm 0;
+  border-color: transparent var(--gold) transparent transparent;
+  z-index: 1;
+}}
+.vcover-band {{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14mm 22mm 0;
+  z-index: 3;
+}}
+.vcover-band img {{ height: 17mm; }}
+.vcover-band .url {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 10pt;
+  color: var(--paper);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}}
+.vcover-hero-wrap {{
+  position: absolute;
+  top: 64mm;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130mm;
+  height: 100mm;
+  z-index: 2;
+}}
+.vcover-hero-wrap img {{
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 4mm;
+}}
+.vcover-title {{
+  position: absolute;
+  bottom: 38mm;
+  left: 22mm;
+  right: 22mm;
+  z-index: 3;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 44pt;
+  line-height: 1.04;
+  color: var(--paper);
+  letter-spacing: -0.03em;
+  max-width: 150mm;
+}}
+.vcover-title .g {{ color: var(--gold); }}
+.vcover-tag {{
+  position: absolute;
+  bottom: 24mm;
+  left: 22mm;
+  z-index: 3;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 10pt;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  text-transform: uppercase;
+}}
+
+/* ===== About author page ===== */
+.about-h1 {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 42pt;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 8mm;
+}}
+.about-h1 .black {{ color: var(--ink); }}
+.about-h1 .gold {{ color: var(--gold); }}
+.about-body p {{
+  font-family: Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin-bottom: 3mm;
+  max-width: 158mm;
+}}
+.about-body strong {{ color: var(--ink); font-weight: 700; }}
+.about-portrait-row {{
+  display: flex;
+  align-items: center;
+  gap: 6mm;
+  margin-top: 6mm;
+}}
+.about-portrait {{
+  width: 30mm;
+  height: 30mm;
+  border-radius: 50%;
+  background: #F4F1EA;
+  overflow: hidden;
+  flex-shrink: 0;
+}}
+.about-portrait img {{ width: 100%; height: 100%; object-fit: cover; }}
+.about-linkedin {{
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  font-family: Arial, sans-serif;
+  font-size: 11pt;
+  color: var(--ink);
+  text-decoration: underline;
+}}
+.about-linkedin .li-icon {{
+  width: 8mm; height: 8mm;
+  background: #0A66C2;
+  border-radius: 1.5mm;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: 9pt;
+}}
+
+/* ===== Find us / contact CTA (last page) ===== */
+.findus {{
+  background: var(--navy);
+  height: 297mm;
+  color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}}
+.findus-tri {{
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 95mm 75mm 0;
+  border-color: transparent var(--gold) transparent transparent;
+}}
+.findus-band {{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14mm 22mm 0;
+  z-index: 3;
+}}
+.findus-band img {{ height: 17mm; }}
+.findus-band .url {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 10pt;
+  color: var(--paper);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}}
+.findus-inner {{
+  position: relative;
+  padding: 60mm 22mm 32mm;
+  z-index: 2;
+}}
+.findus-eyebrow {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 11pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8mm;
+}}
+.findus-h1 {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 56pt;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-bottom: 14mm;
+}}
+.findus-h1 .gold {{ color: var(--gold); }}
+.findus-lede {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14pt;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.8);
+  max-width: 130mm;
+  margin-bottom: 16mm;
+  letter-spacing: -0.015em;
+}}
+.findus-rows {{ display: flex; flex-direction: column; gap: 0; max-width: 145mm; }}
+.findus-row {{
+  display: grid;
+  grid-template-columns: 38mm 1fr;
+  gap: 6mm;
+  align-items: center;
+  padding: 5mm 0;
+  border-top: 1pt solid rgba(255,255,255,0.18);
+}}
+.findus-row-label {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 9pt;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}}
+.findus-row-value {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14pt;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+}}
+.findus-cta {{
+  margin-top: 14mm;
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 5mm 9mm;
+  border-radius: 2mm;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 12pt;
+  letter-spacing: -0.01em;
+}}
+
+/* ===== Word economy page ===== */
+.we-grid {{ display: flex; flex-direction: column; gap: 2mm; margin-top: 3mm; }}
+.we-block {{
+  background: #F4F1EA;
+  border-radius: 3mm;
+  padding: 3mm 5mm;
+  display: grid;
+  grid-template-columns: 9mm 1fr;
+  gap: 4mm;
+  align-items: start;
+}}
+.we-icon {{
+  width: 10mm; height: 10mm;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5mm;
+}}
+.we-icon svg {{ width: 5.5mm; height: 5.5mm; color: var(--gold); }}
+.we-label {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 10.5pt;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5mm;
+}}
+.we-rule {{
+  font-family: Arial, sans-serif;
+  font-size: 8.8pt;
+  line-height: 1.4;
+  color: var(--ink-2);
+  margin-bottom: 1.5mm;
+}}
+.we-example {{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+  margin-top: 1mm;
+}}
+.we-example-bloated, .we-example-tight {{
+  padding: 1.8mm 2.5mm 1.8mm 6mm;
+  border-radius: 2mm;
+  font-family: Arial, sans-serif;
+  font-size: 7.8pt;
+  line-height: 1.35;
+  position: relative;
+}}
+.we-example-bloated {{ background: #FBEFEB; color: #4A1E14; }}
+.we-example-tight {{ background: #FDF6E6; color: var(--ink); }}
+.we-example-bloated::before {{
+  content: "—";
+  position: absolute;
+  left: 2mm; top: 2mm;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 10pt;
+  color: #C45641;
+}}
+.we-example-tight::before {{
+  content: "+";
+  position: absolute;
+  left: 2mm; top: 2mm;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 11pt;
+  color: #1A7240;
+}}
+.we-closing {{
+  margin-top: 5mm;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-size: 10pt;
+  color: var(--muted);
+}}
+
+/* ===== First 60 seconds page ===== */
+.t60-grid {{ display: flex; flex-direction: column; gap: 0; margin-top: 4mm; }}
+.t60-row {{
+  display: grid;
+  grid-template-columns: 26mm 1fr 1fr;
+  gap: 5mm;
+  padding: 3mm 0;
+  border-top: 1.4pt solid var(--line);
+  align-items: start;
+}}
+.t60-row:first-of-type {{ border-top: 1.4pt solid var(--ink); }}
+.t60-window {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 15pt;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}}
+.t60-what-label, .t60-q-label {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 8pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 1.5mm;
+}}
+.t60-what {{
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.4;
+  color: var(--ink-2);
+}}
+.t60-guidance {{
+  font-family: Arial, sans-serif;
+  font-size: 8.5pt;
+  line-height: 1.4;
+  color: var(--ink-2);
+  margin-top: 1.5mm;
+}}
+.t60-q {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 10pt;
+  line-height: 1.4;
+  color: var(--ink);
+}}
+.t60-rule {{
+  margin-top: 4mm;
+  background: var(--navy);
+  color: var(--paper);
+  border-radius: 4mm;
+  padding: 5mm 7mm;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.45;
+}}
+.t60-rule strong {{ color: var(--gold); }}
+
+/* ===== Pressure test page ===== */
+.pt-grid {{ display: flex; flex-direction: column; gap: 3mm; margin-top: 4mm; }}
+.pt-row {{
+  display: grid;
+  grid-template-columns: 10mm 50mm 1fr;
+  gap: 4mm;
+  padding: 4mm 5mm;
+  background: #F4F1EA;
+  border-radius: 3mm;
+  align-items: start;
+}}
+.pt-icon {{
+  width: 10mm; height: 10mm;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5mm;
+}}
+.pt-icon svg {{ width: 5.5mm; height: 5.5mm; color: var(--navy); }}
+.pt-name {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 11pt;
+  letter-spacing: -0.015em;
+  margin-bottom: 1mm;
+}}
+.pt-how {{
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.4;
+  color: var(--ink-2);
+}}
+.pt-signals {{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5mm;
+  font-family: Arial, sans-serif;
+  font-size: 8.5pt;
+}}
+.pt-pass, .pt-fail {{
+  padding-left: 6mm;
+  position: relative;
+  line-height: 1.4;
+}}
+.pt-pass {{ color: #0E5731; }}
+.pt-fail {{ color: #8C3C2A; }}
+.pt-pass::before {{
+  content: "✓";
+  position: absolute;
+  left: 1mm; top: 0;
+  font-weight: 900;
+  color: #1A7240;
+}}
+.pt-fail::before {{
+  content: "✗";
+  position: absolute;
+  left: 1mm; top: 0;
+  font-weight: 900;
+  color: #C45641;
+}}
+.pt-closing {{
+  margin-top: 4mm;
+  background: var(--navy);
+  color: var(--paper);
+  border-radius: 4mm;
+  padding: 6mm 8mm 6mm 18mm;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 13pt;
+  line-height: 1.4;
+  letter-spacing: -0.018em;
+  position: relative;
+}}
+.pt-closing::before {{
+  content: "\\201C";
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 48pt;
+  color: var(--gold);
+  position: absolute;
+  top: -1mm; left: 5mm;
+  line-height: 1;
+}}
+
 /* ===== Optimisation capstone band (page 9) ===== */
 .opt-capstone {{
   margin-top: 10mm;
@@ -1419,6 +1962,23 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 </head>
 <body>
 
+<!-- ============= PAGE 0 — VISUAL COVER ============= -->
+<div class="page vcover">
+  <div class="vcover-tri-tl"></div>
+  <div class="vcover-tri-br"></div>
+  <div class="vcover-band">
+    <img src="{LOGO}" alt="Pitchbird">
+    <div class="url">www.pitchbird.de</div>
+  </div>
+  <div class="vcover-hero-wrap">
+    <img src="{img_path('visual-cover-hero')}" alt="">
+  </div>
+  <div class="vcover-tag">Pitchbird · Founder Guide</div>
+  <div class="vcover-title">
+    <span>The Power of </span><span class="g">the One Pager</span>
+  </div>
+</div>
+
 <!-- ============= PAGE 1 — COVER (type-led, Figma-matching) ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
@@ -1476,7 +2036,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 
 <!-- ============= PAGE 3 — THE 8 MUST-HAVES ============= -->
 <div class="page">
-  {header('www.magdalenareith.com')}
+  {header('www.pitchbird.de')}
   <div class="body">
     {kicker('02:', 'The framework')}
     <h2>The eight non-negotiables</h2>
@@ -1521,7 +2081,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 
 <!-- ============= PAGE 5 — ANATOMY MAP ============= -->
 <div class="page">
-  {header('www.magdalenareith.com')}
+  {header('www.pitchbird.de')}
   <div class="body">
     {kicker('04:', 'Anatomy')}
     <h2>Where everything goes on the page</h2>
@@ -1567,7 +2127,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 
 <!-- ============= PAGE 7 — REAL-WORLD EXAMPLES ============= -->
 <div class="page">
-  {header('www.magdalenareith.com')}
+  {header('www.pitchbird.de')}
   <div class="body">
     {kicker('06:', 'Examples')}
     <h2>What strong one-pagers look like in practice</h2>
@@ -1584,16 +2144,14 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 8 — MEASUREMENT ============= -->
+<!-- ============= PAGE 9 — WORD ECONOMY ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
-    {kicker('07:', 'Measurement')}
-    <h2>Track what actually matters</h2>
-    <p style="max-width:155mm;">A one-pager that no-one measures is a guess in a folder. Five signals tell you whether it's doing the job — and which line is doing the heavy lifting.</p>
-    <div class="callouts" style="grid-template-columns:1fr 1fr;">
-      {analytics_html}
-    </div>
+    {kicker('07:', 'Word economy')}
+    <h2>Cut to 500 words. Then cut again.</h2>
+    <p style="max-width:160mm;">The 400–500 word limit is the threshold above which investors stop reading. (Storydoc, 2024) The discipline of cutting is the work — and here is how to do it.</p>
+    <div class="we-grid">{we_html}</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -1604,23 +2162,15 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 9 — OPTIMISATION ============= -->
+<!-- ============= PAGE 10 — FIRST 60 SECONDS ============= -->
 <div class="page">
-  {header('www.magdalenareith.com')}
+  {header('www.pitchbird.de')}
   <div class="body">
-    {kicker('08:', 'Optimisation')}
-    <h2>Four moves that compound</h2>
-    <p style="max-width:155mm;">No single tweak doubles your conversion. Four disciplined moves, run over six weeks, almost always do. These are the moves Pitchbird runs first whenever a one-pager underperforms.</p>
-    <div class="opt-grid">{opt_html}</div>
-    <div class="opt-capstone">
-      <div class="opt-capstone-img">
-        <img src="{img_path('page2-funnel')}" alt="">
-      </div>
-      <div class="opt-capstone-body">
-        <div class="opt-capstone-eyebrow">The iteration discipline</div>
-        <div class="opt-capstone-text">Ship a version on Monday. Measure on Friday. Edit on Sunday. The one-pager you send in month three should be unrecognisable from month one — and the conversion rate will show it.</div>
-      </div>
-    </div>
+    {kicker('08:', 'First 60 seconds')}
+    <h2>What they read,<br>in what order.</h2>
+    <p style="max-width:160mm;">{meta['first_60_intro']}</p>
+    <div class="t60-grid">{t60_html}</div>
+    <div class="t60-rule">{meta['first_60_rule']}</div>
   </div>
   <div class="foot">
     <span>The Power of the One Pager</span>
@@ -1631,11 +2181,30 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   </div>
 </div>
 
-<!-- ============= PAGE 10 — FAILURE MODES ============= -->
+<!-- ============= PAGE 11 — PRESSURE-TEST ============= -->
 <div class="page">
   {header('www.pitchbird.de')}
   <div class="body">
-    {kicker('09:', 'Failure modes')}
+    {kicker('09:', 'Pressure-test')}
+    <h2>Five tests before<br>you hit send.</h2>
+    <p style="max-width:160mm;">{meta['pressure_test_intro']}</p>
+    <div class="pt-grid">{pt_html}</div>
+    <div class="pt-closing">{meta['pressure_test_closing']}</div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">10</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 12 — FAILURE MODES ============= -->
+<div class="page">
+  {header('www.pitchbird.de')}
+  <div class="body">
+    {kicker('10:', 'Failure modes')}
     <h2>Why investors stop reading — and where</h2>
     <p style="max-width:155mm;">Each failure below maps to a specific drop-off point in investor attention. Know them before you send.</p>
     <div class="failures">{failures_html}</div>
@@ -1643,7 +2212,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot">
     <span>The Power of the One Pager</span>
     <div class="foot-right">
-      <span class="page-num">10</span>
+      <span class="page-num">11</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
@@ -1656,7 +2225,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
     <div class="hdr-url">www.pitchbird.de</div>
   </div>
   <div class="body" style="padding-top:34mm;">
-    {kicker('10:', 'Trade-offs')}
+    {kicker('11:', 'Trade-offs')}
     <h2>What it gives you<br>— and what it can't</h2>
     <div class="adv-lim">
       <div class="adv">
@@ -1682,7 +2251,72 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   <div class="foot foot-dark">
     <span>Pitchbird · Founder Guide</span>
     <div class="foot-right">
-      <span class="page-num">11</span>
+      <span class="page-num">12</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 14 — ABOUT THE AUTHOR ============= -->
+<div class="page">
+  {header('www.pitchbird.de')}
+  <div class="body">
+    <div class="about-h1">
+      <span class="black">About the</span> <span class="gold">Author</span>
+    </div>
+    <div class="about-body">{about_html}</div>
+    <div class="about-portrait-row">
+      <div class="about-portrait"><img src="{img_path('magdalena-portrait')}" alt="Magdalena Reith"></div>
+      <a class="about-linkedin" href="https://www.linkedin.com/in/magdalena-reith-370108a1/">
+        <span class="li-icon">in</span>
+        <span>Connect with Magdalena</span>
+      </a>
+    </div>
+  </div>
+  <div class="foot">
+    <span>The Power of the One Pager</span>
+    <div class="foot-right">
+      <span class="page-num">13</span>
+      <span class="foot-arrow">{arrow}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PAGE 15 — FIND US ============= -->
+<div class="page findus">
+  <div class="findus-tri"></div>
+  <div class="findus-band">
+    <img src="{LOGO}" alt="Pitchbird">
+    <div class="url">www.pitchbird.de</div>
+  </div>
+  <div class="findus-inner">
+    <div class="findus-eyebrow">Find us</div>
+    <div class="findus-h1">Let's make<br>your one-pager <span class="gold">land.</span></div>
+    <div class="findus-lede">Pitchbird helps founders craft pitch documents that earn the meeting. From a single one-pager review to a full investor-document overhaul — we're a message away.</div>
+    <div class="findus-rows">
+      <div class="findus-row">
+        <div class="findus-row-label">Website</div>
+        <div class="findus-row-value">pitchbird.de</div>
+      </div>
+      <div class="findus-row">
+        <div class="findus-row-label">Email</div>
+        <div class="findus-row-value">office@pitchbird.de</div>
+      </div>
+      <div class="findus-row">
+        <div class="findus-row-label">Phone</div>
+        <div class="findus-row-value">+49 (0) 160 97026216</div>
+      </div>
+      <div class="findus-row">
+        <div class="findus-row-label">LinkedIn</div>
+        <div class="findus-row-value">linkedin.com/in/magdalena-reith-370108a1</div>
+      </div>
+    </div>
+    <div class="findus-cta">Book a one-pager review →</div>
+  </div>
+  <div class="foot foot-dark">
+    <span>Pitchbird · Founder Guide</span>
+    <div class="foot-right">
+      <span class="page-num">14</span>
       <span class="foot-arrow">{arrow}</span>
     </div>
   </div>
