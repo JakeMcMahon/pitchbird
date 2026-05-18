@@ -137,7 +137,112 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 }
 .foot-arrow svg { display: block; }
 
-/* ===== COVER ===== */
+/* ===== COVER v2 (type-led, Figma-matching) ===== */
+.cover-v2-body { padding: 14mm 18mm 6mm; }
+.cover-eyebrow {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 9.5pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8mm;
+}
+.cover-h1 {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 44pt;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 10mm;
+}
+.cover-h1 .g { color: var(--gold); }
+.cover-h1 .n { color: var(--ink); }
+.cover-lede {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13pt;
+  line-height: 1.4;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 6mm;
+}
+.cover-p {
+  font-family: Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin-bottom: 4mm;
+}
+.cover-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 2mm 0 6mm;
+}
+.cover-bullets li {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1.55;
+  color: var(--ink);
+  padding-left: 8mm;
+  position: relative;
+  margin-bottom: 1.5mm;
+}
+.cover-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 2.5mm;
+  width: 3.5mm; height: 3.5mm;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.cover-sign {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 11pt;
+  color: var(--ink);
+  margin-top: 4mm;
+}
+.cover-quote-band {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 70mm;
+  background: var(--navy);
+  padding: 14mm 18mm 12mm;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.cover-quote-inner {
+  position: relative;
+  max-width: 130mm;
+  padding-left: 14mm;
+}
+.cover-quote-mark {
+  position: absolute;
+  top: -10mm; left: 0;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 80pt;
+  color: var(--gold);
+  line-height: 1;
+}
+.cover-quote-text {
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18pt;
+  line-height: 1.3;
+  color: var(--paper);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.cover-quote-arrow {
+  align-self: flex-end;
+}
+.cover-quote-arrow svg circle { fill: var(--gold); }
+
+/* ===== COVER (old, kept for fallback) ===== */
 .cover {
   background: var(--navy);
   color: var(--paper);
@@ -292,12 +397,15 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 .illus {
   background: #F8F1E0;
   border-radius: 4mm;
-  padding: 8mm;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 88mm;
+  overflow: hidden;
 }
+.illus-navy { background: var(--navy); }
+.illus img { width: 100%; height: 100%; object-fit: cover; }
 .illus img { max-width: 100%; max-height: 100%; }
 .illus-cap {
   font-family: Arial, sans-serif;
@@ -370,7 +478,12 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
   font-style: italic;
   letter-spacing: -0.01em;
 }
-.callout-emoji { font-size: 13pt; }
+.callout-icon { width: 9mm; height: 9mm; display: inline-flex; align-items: center; }
+.callout-icon svg { width: 9mm; height: 9mm; }
+.callout-peach    .callout-icon svg { color: #C77A0A; }
+.callout-blue     .callout-icon svg { color: #1B6FA8; }
+.callout-green    .callout-icon svg { color: #1A7240; }
+.callout-lavender .callout-icon svg { color: #5B408C; }
 .callout-headline {
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 900;
@@ -524,26 +637,31 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 </head>
 <body>
 
-<!-- ============= PAGE 1 — COVER ============= -->
-<div class="page cover">
-  <div class="cover-gold-tri"></div>
-  <div class="cover-gold-corner"></div>
-  <div class="cover-mark">
-    <div class="ring-1"></div>
-    <div class="ring-2"></div>
-    <div class="ring-3"></div>
+<!-- ============= PAGE 1 — COVER (type-led, Figma-matching) ============= -->
+<div class="page">
+  
+<div class="hdr">
+  <img class="hdr-logo" src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
+  <div class="hdr-url">www.pitchbird.de</div>
+</div>
+  <div class="body cover-v2-body">
+    <div class="cover-eyebrow">Pitchbird · Founder Guide · Chapter 7</div>
+    <h1 class="cover-h1">
+      <span class="g">The Power of</span> <span class="n">the One Pager</span>
+    </h1>
+    <p class="cover-lede">Investors decide whether to take your call in less than 15 seconds. The one-pager is the document that has to survive that test.</p>
+    <p class="cover-p">A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners — usually without you in the conversation.</p><p class="cover-p">Drawing on Pitchbird's work with thousands of founders, this guide distils the eight non-negotiables every one-pager needs, the four upgrades that turn competent into memorable, and the design principles that respect how investors actually read.</p><p class="cover-p">In the following pages, you'll learn:</p>
+    <ul class="cover-bullets">
+      <li>The 8 elements every one-pager must have</li><li>The 4 high-leverage additions to consider</li><li>How investors scan — and what to put where their eyes go</li><li>When the one-pager helps and when it limits you</li>
+    </ul>
+    <p class="cover-sign">Magdalena Reith · Founder, Pitchbird</p>
   </div>
-  <div class="cover-band">
-    <img src="file:///root/pitchbird/lm-images/one-pager/pitchbird-logo.png" alt="Pitchbird">
-    <div class="hdr-url">www.pitchbird.de</div>
-  </div>
-  <div class="cover-inner">
-    <div>
-      <div class="cover-tag">Pitchbird · Founder Guide</div>
-      <div class="cover-title">The Power of the One Pager</div>
-      <div class="cover-sub">Capturing your startup in a single, investor-ready snapshot</div>
-      <div class="cover-author">By Magdalena Reith · Founder, Pitchbird</div>
+  <div class="cover-quote-band">
+    <div class="cover-quote-inner">
+      <div class="cover-quote-mark">&ldquo;</div>
+      <p class="cover-quote-text">Well-designed one-pagers turn cold inboxes into conversations that change everything.</p>
     </div>
+    <div class="cover-quote-arrow"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.4" fill="#03112A"/><circle cx="2" cy="6" r="1.4" fill="#03112A"/><circle cx="6" cy="6" r="1.4" fill="#03112A"/><circle cx="2" cy="10" r="1.4" fill="#03112A"/><circle cx="6" cy="10" r="1.4" fill="#03112A"/><circle cx="10" cy="10" r="1.4" fill="#03112A"/><circle cx="2" cy="14" r="1.4" fill="#03112A"/><circle cx="6" cy="14" r="1.4" fill="#03112A"/><circle cx="10" cy="14" r="1.4" fill="#03112A"/><circle cx="14" cy="14" r="1.4" fill="#03112A"/><circle cx="2" cy="18" r="1.4" fill="#03112A"/><circle cx="6" cy="18" r="1.4" fill="#03112A"/><circle cx="10" cy="18" r="1.4" fill="#03112A"/><circle cx="14" cy="18" r="1.4" fill="#03112A"/><circle cx="18" cy="18" r="1.4" fill="#03112A"/><circle cx="2" cy="22" r="1.4" fill="#03112A"/><circle cx="6" cy="22" r="1.4" fill="#03112A"/><circle cx="10" cy="22" r="1.4" fill="#03112A"/><circle cx="14" cy="22" r="1.4" fill="#03112A"/><circle cx="2" cy="26" r="1.4" fill="#03112A"/><circle cx="6" cy="26" r="1.4" fill="#03112A"/><circle cx="10" cy="26" r="1.4" fill="#03112A"/><circle cx="2" cy="30" r="1.4" fill="#03112A"/><circle cx="6" cy="30" r="1.4" fill="#03112A"/><circle cx="2" cy="34" r="1.4" fill="#03112A"/></svg></div>
   </div>
 </div>
 
@@ -569,7 +687,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
         </div>
       </div>
       <div>
-        <div class="illus"><img src="file:///root/pitchbird/lm-images/one-pager/concept-magnifier.png" alt=""></div>
+        <div class="illus illus-navy"><img src="file:///root/pitchbird/lm-images/one-pager/page2-concept.png" alt=""></div>
         <div class="illus-cap">Treat the one-pager as the most-circulated document you will ever make. Because it is.</div>
       </div>
     </div>
@@ -671,7 +789,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 <div class="callout callout-peach">
   <div class="callout-head-row">
     <div class="callout-pill"><span class="callout-pill-label">Problem</span></div>
-    <div class="callout-emoji">🎯</div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M176,128a48,48,0,1,1-48-48A48,48,0,0,1,176,128Z" opacity="0.2"/><path d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"/></svg></div>
   </div>
   <div class="callout-headline">Frame the pain in market terms before you frame yourself.</div>
   <div class="callout-body">Investors connect with the problem first. Make them feel it before you sell the cure.</div>
@@ -679,7 +797,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 <div class="callout callout-blue">
   <div class="callout-head-row">
     <div class="callout-pill"><span class="callout-pill-label">Solution</span></div>
-    <div class="callout-emoji">💊</div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,104a79.86,79.86,0,0,1-30.59,62.92A24.29,24.29,0,0,0,168,186v6a8,8,0,0,1-8,8H96a8,8,0,0,1-8-8v-6a24.11,24.11,0,0,0-9.3-19A79.87,79.87,0,0,1,48,104.45C47.76,61.09,82.72,25,126.07,24A80,80,0,0,1,208,104Z" opacity="0.2"/><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.5C39.74,56.83,78.26,17.15,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.64,71.64,0,0,0,27.64,56.3h0A32,32,0,0,1,96,186v6h24V147.31L90.34,117.66a8,8,0,0,1,11.32-11.32L128,132.69l26.34-26.35a8,8,0,0,1,11.32,11.32L136,147.31V192h24v-6a32.12,32.12,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Z"/></svg></div>
   </div>
   <div class="callout-headline">Show how your business removes that pain. Two lines, max.</div>
   <div class="callout-body">Lead with the outcome — not the mechanism. Save the how for the deck.</div>
@@ -687,7 +805,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 <div class="callout callout-green">
   <div class="callout-head-row">
     <div class="callout-pill"><span class="callout-pill-label">Traction</span></div>
-    <div class="callout-emoji">📈</div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,56v64L168,56Z" opacity="0.2"/><path d="M232,48H168a8,8,0,0,0-5.66,13.66L188.69,88,136,140.69l-34.34-34.35a8,8,0,0,0-11.32,0l-72,72a8,8,0,0,0,11.32,11.32L96,123.31l34.34,34.35a8,8,0,0,0,11.32,0L200,99.31l26.34,26.35A8,8,0,0,0,240,120V56A8,8,0,0,0,232,48Zm-8,52.69L187.31,64H224Z"/></svg></div>
   </div>
   <div class="callout-headline">Prove customers want it. Revenue, signups, LOIs — whichever you have.</div>
   <div class="callout-body">Proof beats promise. One data point trumps a paragraph of optimism.</div>
@@ -695,7 +813,7 @@ p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: v
 <div class="callout callout-lavender">
   <div class="callout-head-row">
     <div class="callout-pill"><span class="callout-pill-label">Market</span></div>
-    <div class="callout-emoji">🌍</div>
+    <div class="callout-icon"><svg class="phx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M215,168.71a96.42,96.42,0,0,1-30.54,37l-9.36-9.37a8,8,0,0,0-3.63-2.09L150,188.59a8,8,0,0,1-5.88-8.9l2.38-16.2a8,8,0,0,1,4.84-6.22l30.46-12.66a8,8,0,0,1,8.47,1.49ZM159.89,105,182.06,79.2A8,8,0,0,0,184,74V50A96,96,0,0,0,50.49,184.65l9.92-6.52A8,8,0,0,0,64,171.49l.21-36.23a8.06,8.06,0,0,1,1.35-4.41l20.94-31.3a8,8,0,0,1,11.34-2l19.81,13a8.06,8.06,0,0,0,5.77,1.45l31.46-4.26A8,8,0,0,0,159.89,105Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,16a87.5,87.5,0,0,1,48,14.28V74L153.83,99.74,122.36,104l-.31-.22L102.38,90.92A16,16,0,0,0,79.87,95.1L58.93,126.4a16,16,0,0,0-2.7,8.81L56,171.44l-3.27,2.15A88,88,0,0,1,128,40ZM62.29,186.47l2.52-1.65A16,16,0,0,0,72,171.53l.21-36.23L93.17,104a3.62,3.62,0,0,0,.32.22l19.67,12.87a15.94,15.94,0,0,0,11.35,2.77L156,115.59a16,16,0,0,0,10-5.41l22.17-25.76A16,16,0,0,0,192,74V67.67A87.87,87.87,0,0,1,211.77,155l-16.14-14.76a16,16,0,0,0-16.93-3l-30.46,12.65a16.08,16.08,0,0,0-9.68,12.45l-2.39,16.19a16,16,0,0,0,11.77,17.81L169.4,202l2.36,2.37A87.88,87.88,0,0,1,62.29,186.47ZM185,195l-4.3-4.31a16,16,0,0,0-7.26-4.18L152,180.85l2.39-16.19L184.84,152,205,170.48A88.43,88.43,0,0,1,185,195Z"/></svg></div>
   </div>
   <div class="callout-headline">Who you sell to, and the competitive landscape they live in.</div>
   <div class="callout-body">Investors want a beachhead, not 'everyone'. Show the wedge first.</div>

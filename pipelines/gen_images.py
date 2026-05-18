@@ -11,37 +11,36 @@ OUT = pathlib.Path("/root/pitchbird/lm-images/one-pager")
 OUT.mkdir(parents=True, exist_ok=True)
 
 STYLE_ANCHOR = (
-    "Editorial flat vector illustration for a premium investor guide. "
-    "Restricted palette ONLY: deep navy #0F1B3D, mustard gold #F4B82E, "
-    "warm salmon #F5896A, cream #F8F6F1, off-white. Soft paper-grain "
-    "texture. Geometric paper-cut layered shapes, clean confident lines, "
-    "generous negative space. NO text, NO letters, NO numbers, NO faces, "
-    "NO watermarks, NO logos. Pentagram / It's Nice That editorial feel. "
-    "Cream off-white background, no harsh white."
+    "Bold flat vector illustration in a premium business publication "
+    "style. Strict palette ONLY: deep navy #03112A, mustard gold #FBB03B, "
+    "bright sky blue #2A98D9, off-white #F5F2EC. SOLID DEEP NAVY "
+    "background filling the entire image — NO cream, NO white background, "
+    "NO paper texture. Bold geometric shapes, large flat color fills, "
+    "thick confident lines, generous negative space. NO text, NO letters, "
+    "NO numbers, NO faces, NO watermarks, NO logos. Style: Mailchimp / "
+    "Stripe illustration system — graphic, modern, instantly readable at "
+    "small sizes."
 )
 
 IMAGES = {
-    "cover-hero": (
-        "Hero composition for a book chapter cover about 'the one pager' for "
-        "startup founders. Centered: a single sheet of paper tilted at a 12 "
-        "degree angle, slightly overlapping a smaller folded paper behind it. "
-        "Mustard gold geometric triangle bleeding from the upper-right corner. "
-        "A small salmon dot in the lower-left as visual rhythm. Composition "
-        "leaves the lower third empty for headline overlay. " + STYLE_ANCHOR
+    "page2-concept": (
+        "Bold flat illustration on solid deep navy #03112A background. "
+        "Centered: a single off-white #F5F2EC rectangular sheet of paper "
+        "tilted at 8 degrees, divided into 6 labeled blocks suggesting a "
+        "one-page business summary — block outlines visible but no real "
+        "text. A bright gold #FBB03B circle (representing focus / a stamp) "
+        "overlaps the top-right corner of the paper. A small bright blue "
+        "#2A98D9 square sits on the lower-left corner of the paper as a "
+        "highlighted section. Generous navy negative space around the "
+        "paper. " + STYLE_ANCHOR
     ),
-    "design-principles": (
-        "Illustration of layout and hierarchy: three abstract document panels "
-        "arranged in a staggered diagonal cascade, each panel showing simple "
-        "horizontal line patterns suggesting paragraphs and one gold "
-        "rectangle suggesting a highlighted block. A salmon arrow flows "
-        "between them suggesting visual flow. Centered square composition. "
-        + STYLE_ANCHOR
-    ),
-    "cta-consultation": (
-        "Two minimalist coffee cups on saucers facing each other across a "
-        "subtle cream tabletop, suggesting a founder-investor conversation. "
-        "Soft gold steam curls rise from one cup. A tiny salmon notepad sits "
-        "to the side. Generous negative space. " + STYLE_ANCHOR
+    "page2-funnel": (
+        "Bold flat illustration on solid deep navy #03112A background. "
+        "An inverted funnel made of three stacked horizontal bars in "
+        "off-white, narrowing toward the bottom — top bar widest, bottom "
+        "bar narrowest. The bottom bar is bright gold #FBB03B. Suggests "
+        "qualification / filtering of investors. A tiny bright blue circle "
+        "sits inside the gold bar. Centered square composition. " + STYLE_ANCHOR
     ),
 }
 

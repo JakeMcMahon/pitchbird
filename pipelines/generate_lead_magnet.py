@@ -14,12 +14,35 @@ import argparse, subprocess, pathlib
 ROOT = pathlib.Path("/root/pitchbird/lm")
 IMG = pathlib.Path("/root/pitchbird/lm-images/one-pager")
 
+ICON_DIR = pathlib.Path("/root/pitchbird/lm-images/icons")
+
+
+def icon_svg(name):
+    """Read a Phosphor duotone SVG, return its raw markup with class injected."""
+    txt = (ICON_DIR / f"{name}.svg").read_text()
+    return txt.replace("<svg ", '<svg class="phx" ', 1)
+
+
 META = {
     "one-pager": {
         "slug": "one-pager",
         "title": "The Power of the One Pager",
+        "title_split": ("The Power of", "the One Pager"),
         "subtitle": "Capturing your startup in a single, investor-ready snapshot",
         "author": "Magdalena Reith · Founder, Pitchbird",
+        "cover_lede": "Investors decide whether to take your call in less than 15 seconds. The one-pager is the document that has to survive that test.",
+        "cover_body": [
+            "A pitch deck wins the room. The one-pager wins the chance to be in the room. It travels in inboxes, sits on phone screens, and gets forwarded between partners — usually without you in the conversation.",
+            "Drawing on Pitchbird's work with thousands of founders, this guide distils the eight non-negotiables every one-pager needs, the four upgrades that turn competent into memorable, and the design principles that respect how investors actually read.",
+            "In the following pages, you'll learn:",
+        ],
+        "cover_bullets": [
+            "The 8 elements every one-pager must have",
+            "The 4 high-leverage additions to consider",
+            "How investors scan — and what to put where their eyes go",
+            "When the one-pager helps and when it limits you",
+        ],
+        "cover_quote": "Well-designed one-pagers turn cold inboxes into conversations that change everything.",
         "stat": "32%",
         "stat_caption": "of decision-makers drop off after 15 seconds of reading a one-pager.",
         "stat_source": "Storydoc, 2024",
@@ -34,10 +57,10 @@ META = {
             ("Investment highlights", "The three or four reasons this allocation pays back. Punchy, not vague."),
         ],
         "nice_callouts": [
-            ("Problem", "peach", "🎯", "Frame the pain in market terms before you frame yourself.", "Investors connect with the problem first. Make them feel it before you sell the cure."),
-            ("Solution", "blue", "💊", "Show how your business removes that pain. Two lines, max.", "Lead with the outcome — not the mechanism. Save the how for the deck."),
-            ("Traction", "green", "📈", "Prove customers want it. Revenue, signups, LOIs — whichever you have.", "Proof beats promise. One data point trumps a paragraph of optimism."),
-            ("Market", "lavender", "🌍", "Who you sell to, and the competitive landscape they live in.", "Investors want a beachhead, not 'everyone'. Show the wedge first."),
+            ("Problem", "peach", "target", "Frame the pain in market terms before you frame yourself.", "Investors connect with the problem first. Make them feel it before you sell the cure."),
+            ("Solution", "blue", "lightbulb-filament", "Show how your business removes that pain. Two lines, max.", "Lead with the outcome — not the mechanism. Save the how for the deck."),
+            ("Traction", "green", "trend-up", "Prove customers want it. Revenue, signups, LOIs — whichever you have.", "Proof beats promise. One data point trumps a paragraph of optimism."),
+            ("Market", "lavender", "globe-hemisphere-east", "Who you sell to, and the competitive landscape they live in.", "Investors want a beachhead, not 'everyone'. Show the wedge first."),
         ],
         "design_principles": [
             ("Content is king", "Clarity first. Strong narrative — problem, solution, impact. Hierarchy via headings, sub-heads, and bullets that guide the eye."),
@@ -105,13 +128,13 @@ def kicker(num, label):
     return f'<div class="kicker"><span class="kicker-num">{num}</span><span class="kicker-label">{label}</span></div>'
 
 
-def callout_card(theme, label, emoji, headline, body):
+def callout_card(theme, label, icon_name, headline, body):
     """Pain-Point/Solutions style card. theme in: peach, blue, green, lavender."""
     return f"""
 <div class="callout callout-{theme}">
   <div class="callout-head-row">
     <div class="callout-pill"><span class="callout-pill-label">{label}</span></div>
-    <div class="callout-emoji">{emoji}</div>
+    <div class="callout-icon">{icon_svg(icon_name)}</div>
   </div>
   <div class="callout-headline">{headline}</div>
   <div class="callout-body">{body}</div>
@@ -294,7 +317,112 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 }}
 .foot-arrow svg {{ display: block; }}
 
-/* ===== COVER ===== */
+/* ===== COVER v2 (type-led, Figma-matching) ===== */
+.cover-v2-body {{ padding: 14mm 18mm 6mm; }}
+.cover-eyebrow {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 9.5pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8mm;
+}}
+.cover-h1 {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 44pt;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 10mm;
+}}
+.cover-h1 .g {{ color: var(--gold); }}
+.cover-h1 .n {{ color: var(--ink); }}
+.cover-lede {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13pt;
+  line-height: 1.4;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 6mm;
+}}
+.cover-p {{
+  font-family: Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin-bottom: 4mm;
+}}
+.cover-bullets {{
+  list-style: none;
+  padding: 0;
+  margin: 2mm 0 6mm;
+}}
+.cover-bullets li {{
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1.55;
+  color: var(--ink);
+  padding-left: 8mm;
+  position: relative;
+  margin-bottom: 1.5mm;
+}}
+.cover-bullets li::before {{
+  content: "";
+  position: absolute;
+  left: 0; top: 2.5mm;
+  width: 3.5mm; height: 3.5mm;
+  background: var(--gold);
+  border-radius: 50%;
+}}
+.cover-sign {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 11pt;
+  color: var(--ink);
+  margin-top: 4mm;
+}}
+.cover-quote-band {{
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 70mm;
+  background: var(--navy);
+  padding: 14mm 18mm 12mm;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}}
+.cover-quote-inner {{
+  position: relative;
+  max-width: 130mm;
+  padding-left: 14mm;
+}}
+.cover-quote-mark {{
+  position: absolute;
+  top: -10mm; left: 0;
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 80pt;
+  color: var(--gold);
+  line-height: 1;
+}}
+.cover-quote-text {{
+  font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18pt;
+  line-height: 1.3;
+  color: var(--paper);
+  letter-spacing: -0.02em;
+  margin: 0;
+}}
+.cover-quote-arrow {{
+  align-self: flex-end;
+}}
+.cover-quote-arrow svg circle {{ fill: var(--gold); }}
+
+/* ===== COVER (old, kept for fallback) ===== */
 .cover {{
   background: var(--navy);
   color: var(--paper);
@@ -449,12 +577,15 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 .illus {{
   background: #F8F1E0;
   border-radius: 4mm;
-  padding: 8mm;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 88mm;
+  overflow: hidden;
 }}
+.illus-navy {{ background: var(--navy); }}
+.illus img {{ width: 100%; height: 100%; object-fit: cover; }}
 .illus img {{ max-width: 100%; max-height: 100%; }}
 .illus-cap {{
   font-family: Arial, sans-serif;
@@ -527,7 +658,12 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
   font-style: italic;
   letter-spacing: -0.01em;
 }}
-.callout-emoji {{ font-size: 13pt; }}
+.callout-icon {{ width: 9mm; height: 9mm; display: inline-flex; align-items: center; }}
+.callout-icon svg {{ width: 9mm; height: 9mm; }}
+.callout-peach    .callout-icon svg {{ color: #C77A0A; }}
+.callout-blue     .callout-icon svg {{ color: #1B6FA8; }}
+.callout-green    .callout-icon svg {{ color: #1A7240; }}
+.callout-lavender .callout-icon svg {{ color: #5B408C; }}
 .callout-headline {{
   font-family: 'Mulish', Arial, sans-serif;
   font-weight: 900;
@@ -681,26 +817,27 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
 </head>
 <body>
 
-<!-- ============= PAGE 1 — COVER ============= -->
-<div class="page cover">
-  <div class="cover-gold-tri"></div>
-  <div class="cover-gold-corner"></div>
-  <div class="cover-mark">
-    <div class="ring-1"></div>
-    <div class="ring-2"></div>
-    <div class="ring-3"></div>
+<!-- ============= PAGE 1 — COVER (type-led, Figma-matching) ============= -->
+<div class="page">
+  {header('www.pitchbird.de')}
+  <div class="body cover-v2-body">
+    <div class="cover-eyebrow">Pitchbird · Founder Guide · Chapter 7</div>
+    <h1 class="cover-h1">
+      <span class="g">{meta['title_split'][0]}</span> <span class="n">{meta['title_split'][1]}</span>
+    </h1>
+    <p class="cover-lede">{meta['cover_lede']}</p>
+    {''.join(f'<p class="cover-p">{p}</p>' for p in meta['cover_body'])}
+    <ul class="cover-bullets">
+      {''.join(f'<li>{b}</li>' for b in meta['cover_bullets'])}
+    </ul>
+    <p class="cover-sign">{meta['author']}</p>
   </div>
-  <div class="cover-band">
-    <img src="{LOGO}" alt="Pitchbird">
-    <div class="hdr-url">www.pitchbird.de</div>
-  </div>
-  <div class="cover-inner">
-    <div>
-      <div class="cover-tag">Pitchbird · Founder Guide</div>
-      <div class="cover-title">{meta['title']}</div>
-      <div class="cover-sub">{meta['subtitle']}</div>
-      <div class="cover-author">By {meta['author']}</div>
+  <div class="cover-quote-band">
+    <div class="cover-quote-inner">
+      <div class="cover-quote-mark">&ldquo;</div>
+      <p class="cover-quote-text">{meta['cover_quote']}</p>
     </div>
+    <div class="cover-quote-arrow">{arrow}</div>
   </div>
 </div>
 
@@ -722,7 +859,7 @@ p {{ font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: 
         </div>
       </div>
       <div>
-        <div class="illus"><img src="{img_path('concept-magnifier')}" alt=""></div>
+        <div class="illus illus-navy"><img src="{img_path('page2-concept')}" alt=""></div>
         <div class="illus-cap">Treat the one-pager as the most-circulated document you will ever make. Because it is.</div>
       </div>
     </div>
